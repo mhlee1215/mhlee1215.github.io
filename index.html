@@ -1,1 +1,695 @@
-Hello World123
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, target-densityDpi=device-dpi">
+    <script src="resources/js/jquery-3.6.4.min.js"></script>
+    <script src="resources/js/swiper-bundle.min.js"></script>
+    <script src="resources/js/ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <script src="resources/js/cursor.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
+
+    <!-- Include i18next library -->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <!-- Include i18nextXHRBackend plugin to load translations -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@2.6.1/i18nextHttpBackend.min.js"></script>
+    
+    
+    <!-- Include custom script -->
+    <script src="resources/js/i18next_script.js"></script>
+
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
+    <!-- <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.8.0c'></script> -->
+    <script src="resources/js/ScrollTrigger.min.js"></script>
+
+    <preference name="KeyboardShrinksView" value="false" />
+    <title>ARK</title>
+</head>
+<body>
+    <!-- Mouse Cursor -->
+    <div id="custom_cursor">
+        <div class="custom_cursor_inner">
+            <div class="custom_hover_circle">
+            </div>
+        </div>
+    </div>
+    <div id="custom_cursor_text">
+        <div class="custom_cursor_inner">
+            <div class="custom_hover_text">
+                <span>View More</span>
+                <span class="click">Click</span>
+            </div>
+        </div>
+    </div>
+    <!-- //Mouse Cursor -->
+
+    <!-- Header -->
+    <header id="header"><div>
+        <h1><button type="button">ARK</button></h1>
+        <button type="button">Menu</button>
+        <div>
+            <button type="button" title="Close menu">x</button>
+            <aside>
+                <button type="button" onclick="$(this).next('ul').slideToggle('fast')" class="flag_global">Choose Country</button>
+                <ul style="display: none;">
+                    <li><a href="" class="flag_korea">South Korea</a></li>
+                    <li><a href="" class="flag_hongkong">Hongkong</a></li>
+                    <li><a href="" class="flag_china">China</a></li>
+                </ul>
+            </aside>
+            <nav>
+                <a href="#howitworks" class="current">How it Works</a>
+                <a href="#production">Production</a>
+                <a href="#logistics">Logistics</a>
+                <a href="#fulfillment">Fulfillment</a>
+                <a href="#management">Management Software</a>
+            </nav>
+        </div>
+    </div></header>
+    <!-- //Header -->
+
+    <!-- Vi -->
+    <section class="vi">
+        <header>
+            <h1>ARK with Global Inc.</h1>
+            <p id="vi_header_p"></p>
+            <ul>
+                <li><a onclick="changeLanguage('en')" class="flag_global">Global</a></li>
+                <li><a onclick="changeLanguage('ko')" class="flag_korea">South Korea</a></li>
+                <li><a onclick="changeLanguage('zh')" class="flag_hongkong">HongKong</a></li>
+                <li><a onclick="changeLanguage('zh')" class="flag_china">China</a></li>
+            </ul>
+            <aside>
+                <span>Follow us</span>
+                <a href="" class="instagram">Instagram</a>
+                <a href="" class="twitter">twitter X</a>
+            </aside>
+        </header>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"></li>
+                <li class="swiper-slide"></li>
+                <li class="swiper-slide"></li>
+            </ul>
+        </div>
+        <div class="swiper-pagination swiper-pagination-vi"></div>
+    </section>
+    <!-- //Vi -->
+
+    <!-- How it works -->
+    <section class="howitworks" id="howitworks">
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"></li>
+                <li class="swiper-slide"></li>
+                <li class="swiper-slide"></li>
+            </ul>
+        </div>
+        <div class="swiper-pagination pagination-how-it-works"></div>
+    </section>
+    <!-- //How it works -->
+
+    <!-- Production -->
+    <div class="production" id="production">
+        <ul class="thumb">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><div>
+                    <h2><span>Production</span></h2>
+                    <h3>Global Network</h3>
+                    <p id="production_swiper_global_network_p"></p>
+                </div></li>
+                <li class="swiper-slide"><div>
+                    <h2><span>Production</span></h2>
+                    <h3>Entire Process</h3>
+                    <p>We work closely with you throughout the entire production process, from development to design, manufacturing, and packaging.</p>
+                </div></li>
+                <li class="swiper-slide"><div>
+                    <h2><span>Production</span></h2>
+                    <h3>Experience</h3>
+                    <p>Our extensive experience in manufacturing a wide range of products will meet your needs, no matter what type of product your business deals with.</p>
+                </div></li>
+            </ul>
+        </div>
+        <div class="pagination"></div>
+    </div>
+    <!-- //Production -->
+
+    <!-- Logistics -->
+    <div class="logistics" id="logistics">
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><div>
+                    <h2><span>Logistics</span></h2>
+                    <p>Our team of import/export freight specialists ensures the safe and secure transportation of your valuable cargo, providing you with peace of mind and reliable service every step of the way.</p>
+                </div></li>
+                <li class="swiper-slide"><div>
+                    <h2><span>Logistics</span></h2>
+                    <p>We partner with local forwarding companies to deliver comprehensive international and domestic transportation solutions, including ocean freight, air freight, and ground trucking services.</p>
+                </div></li>
+            </ul>
+        </div>
+        <ul class="thumb">
+            <li class="selected"></li>
+            <li></li>
+        </ul>
+        <div class="pagination2"></div>
+    </div>
+    <!-- //Logistics -->
+
+    <!-- Fullfillment bug fixed for wide only -->
+    <div class="fulfillment_new" id="fulfillment_new">
+        <div class="fullfillment_new_inner" style="translate: none; rotate: none; scale: none; inset: 0px auto auto 0px; margin: 0px; max-width: 1500px; width: 1500px; max-height: 1260px; height: 1260px; padding: 0px; transform: translate(0px, 0px);">
+            <header  class="mc_title_wrap">
+                <h2>3PL</h2>
+                <span>Fulfillment Service</span>
+                <dl>
+                    <dt>3PL Benefits</dt>
+                    <dd>Third-Party Logistics (3PL) allows merchants of any size to scale more quickly by delegating the challenges of managing omnichannel fulfillment, inventory management, and post-purchase customer cycles.</dd>
+                </dl>
+            </header>
+            <footer  class="mc_title_wrap2">
+                <h2>3PL</h2>
+                <span>Fulfillment Service</span>
+                <dl>
+                    <dt>3PL Benefits</dt>
+                    <dd>Third-Party Logistics (3PL) allows merchants of any size to scale more quickly by delegating the challenges of managing omnichannel fulfillment, inventory management, and post-purchase customer cycles.</dd>
+                </dl>
+            </footer>
+            <div class="fullfillment_new_container" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        ORDER FULFILLMENT
+                    </h3>
+                    <p>We handle all shipping and delivery so you can focus on sales and growth.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        INTEGRATION
+                    </h3>
+                    <p>Our fulfillment software seamlessly integrates with your sales channels to connect data such as orders, inventory, and more.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        B2B FULFILLMENT
+                    </h3>
+                    <p>Our B2B fulfillment service helps you manage EDI-integrated retail orders as well as manual wholesale orders.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        RETURNS & CUSTOMER SUPPORT
+                    </h3>
+                    <p>Dealing with customer inquiries and returned orders can be made easier and more cost effective with help of our dedicated customer support team.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        CUSTOM SHIPPING SUPPLIES
+                    </h3>
+                    <p>Elevate your customer experience with personalized packaging featuring your brand logo. Our custom shipping supplies include branded shipping boxes, bubble mailers, and box tape, with the option to include your business card and promotional inserts.</p>
+                </li>
+            </div>
+        </div>
+    </div>
+    <!-- //Fullfillment bug fixed for wide only -->
+
+    <!-- 3PL -->
+    <section class="fulfillment" id="fulfillment">
+        <header>
+            <h2>3PL</h2>
+            <span>Fulfillment Service</span>
+            <dl>
+                <dt>3PL Benefits</dt>
+                <dd>Third-Party Logistics (3PL) allows merchants of any size to scale more quickly by delegating the challenges of managing omnichannel fulfillment, inventory management, and post-purchase customer cycles.</dd>
+            </dl>
+        </header>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        ORDER FULFILLMENT
+                    </h3>
+                    <p>We handle all shipping and delivery so you can focus on sales and growth.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        INTEGRATION
+                    </h3>
+                    <p>Our fulfillment software seamlessly integrates with your sales channels to connect data such as orders, inventory, and more.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        B2B FULFILLMENT
+                    </h3>
+                    <p>Our B2B fulfillment service helps you manage EDI-integrated retail orders as well as manual wholesale orders.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        RETURNS & CUSTOMER SUPPORT
+                    </h3>
+                    <p>Dealing with customer inquiries and returned orders can be made easier and more cost effective with help of our dedicated customer support team.</p>
+                </li>
+                <li class="swiper-slide">
+                    <h3>
+                        <small>fullfillment</small>
+                        CUSTOM SHIPPING SUPPLIES
+                    </h3>
+                    <p>Elevate your customer experience with personalized packaging featuring your brand logo. Our custom shipping supplies include branded shipping boxes, bubble mailers, and box tape, with the option to include your business card and promotional inserts.</p>
+                </li>
+            </ul>
+            <div class="pagination3"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <footer>
+            <h2>3PL</h2>
+            <span>Fulfillment Service</span>
+            <dl>
+                <dt>3PL Benefits</dt>
+                <dd>Third-Party Logistics (3PL) allows merchants of any size to scale more quickly by delegating the challenges of managing omnichannel fulfillment, inventory management, and post-purchase customer cycles.</dd>
+            </dl>
+        </footer>
+    </section>
+    <!-- //3PL -->
+
+    <!-- Metrics -->
+    <section class="metrics">
+        <header>
+            <h2>Our Metrics Tell the Story</h2>
+            <p>Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.</p>
+        </header>
+        <ul>
+            <li>
+                <strong>3</strong>
+                <span>OFFICES</span>
+                <em>Global office network</em>
+                <p>Strategically positioned offices in the USA, China, and Korea to meet your needs and maximize cost-efficiency</p>
+            </li>
+            <li>
+                <strong>80</strong>
+                <span>MANPOWER</span>
+                <em>Teams of specialists</em>
+                <p>Experts in design, production, logistics, fulfillment, and software/web development working together to optimize workflow</p>
+            </li>
+            <li>
+                <strong>2013</strong>
+                <span>SINCE</span>
+                <em>Extensive experience &amp;<br>knowledge</em>
+                <p>Accumulated expertise and know-how from more than 10 years of experience</p>
+            </li>
+            <li>
+                <strong>12,000</strong>
+                <span>PRODUCTS</span>
+                <em>A wide range of products</em>
+                <p>A diverse selection of high-quality products manufactured under our meticulous management and strong infrastructure</p>
+            </li>
+        </ul>
+    </section>
+    <!-- //Metrics -->
+
+    <!-- WMS Software -->
+    <section class="wms" id="management">
+        <header>
+            <h2>WMS Software</h2>
+            <p>All-In-One Management System. <br>Our comprehensive management software enables you to oversee the entire process, <br>from manufacturing your products to fulfilling your orders.</p>
+        </header>
+        <div><ul>
+            <li>
+                <em>production Management</em>
+                <p>From the early stage of product development, our software stores critical information to ensure the timely and quality production of your products.</p>
+            </li>
+            <li>
+                <em>Inbound / Outbound Management</em>
+                <p>Our management system helps you track your products from the manufacturer to the warehouse and to the customers.</p>
+            </li>
+            <li>
+                <em>Order / Inventory Management</em>
+                <p>Integrating our system with your marketplaces will expedite order fulfillment and minimize inventory errors.</p>
+            </li>
+            <li>
+                <em>Reporting</em>
+                <p>Our management software collects, organizes, and carefully analyzes a wealth of data to generate comprehensive reports, providing valuable insights for assessing and enhancing your business operations.</p>
+            </li>
+        </ul></div>
+    </section>
+    <!-- //WMS Software -->
+
+    <!-- Companies we Work with -->
+    <section class="companies">
+        <h2>Companies we Work with</h2>
+        <ul>
+            <li class="sm">SM Entertainment</li>
+            <li class="kakao">Kakao Entertainment</li>
+            <li class="forever21">Forever21</li>
+            <li class="nova">Fashion Nova</li>
+            <li class="nordstrom">Nordstrom</li>
+            <li class="beneton">United colors of Beneton.</li>
+            <li class="prediction">Prediction</li>
+            <li class="arcticfox">Arctic FOX</li>
+            <li class="line">Line Friends</li>
+            <li class="amazon">amazon</li>
+        </ul>
+    </section>
+    <!-- //Companies we Work with -->
+
+    <!-- Omnichannel Fulfillment Platform -->
+    <section class="omnichannel">
+        <header><div>
+            <h2>Omnichannel Fulfillment Platform</h2>
+            <em>Fulfillment Software Features</em>
+            <p>ARK empowers your brand to execute enterprise-class fulfillment operations.</p>
+            <div class="swiper thumb">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><img src="resources/images/omnichannel1.jpg"></li>
+                    <li class="swiper-slide"><img src="resources/images/omnichannel2.jpg"></li>
+                </ul>
+            </div>
+        </div></header>
+        <div class="swiper big">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="resources/images/omnichannel1.jpg"></li>
+                <li class="swiper-slide"><img src="resources/images/omnichannel2.jpg"></li>
+            </ul>
+        </div>
+    </section>
+    <!-- //Omnichannel Fulfillment Platform -->
+
+    <!-- ARK Services -->
+    <section class="services">
+        <header>
+            <h2>ARK Services</h2>
+            <em>4-in-1 Cloud-Based Software</em>
+            <p>3PL Partners Can Provide All of the Following:</p>
+        </header>
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <img src="resources/images/service1.jpg">
+                    <span>Focus on growing your business</span>
+                </li>
+                <li class="swiper-slide">
+                    <img src="resources/images/service2.jpg">
+                    <span>Cut costs</span>
+                </li>
+                <li class="swiper-slide">
+                    <img src="resources/images/service3.jpg">
+                    <span>Efficient storage and distribution</span>
+                </li>
+                <li class="swiper-slide">
+                    <img src="resources/images/service4.jpg">
+                    <span>Scale your business with fewer headaches</span>
+                </li>
+                <li class="swiper-slide">
+                    <img src="resources/images/service5.jpg">
+                    <span>Enter new market more easily</span>
+                </li>
+                <li class="swiper-slide">
+                    <img src="resources/images/service5.jpg">
+                    <span>Enter new market more easily</span>
+                </li>
+                <li class="swiper-slide">
+                    <img src="resources/images/service5.jpg">
+                    <span>Enter new market more easily</span>
+                </li>
+            </ul>
+            <div class="pagination4"></div>
+        </div>
+        <div class="btns">
+            <button type="button" class="btnPrev">Prev</button>
+            <button type="button" class="btnNext">Next</button>
+        </div>
+    </section>
+    <!-- //ARK Services -->
+
+    <!-- Banner -->
+    <section class="banner">
+        <h2>Inventory, orders, and shipping all in one place.</h2>
+        <p>Let’s get into the details!</p>
+        <a href="">SEND</a>
+    </section>
+    <!-- //Banner -->
+
+    <!-- ARK WITH PRODUCTS -->
+    <section class="products">
+        <header>
+            <h2>ARK WITH PRODUCTS</h2>
+            <p>Our Various Types of Products</p>
+        </header>
+        <ul>
+            <li><span>Fashion</span></li>
+            <li><span>Pop Merch</span></li>
+            <li><span>Tour Merch</span></li>
+            <li><span>Toy</span></li>
+            <li><span>Stationery</span></li>
+            <li><span>Household Goods</span></li>
+            <li><span>Cell Phone Accessaries</span></li>
+            <li><span>Custom Shipping Supplies</span></li>
+        </ul>
+    </section>
+    <!-- //ARK WITH PRODUCTS -->
+
+    <!-- Inquiry -->
+    <section class="inquiry">
+        <header>
+            <h2>Have an idea? let me know what’s on your mind. I’ll reply within 12 hours.</h2>
+            <p>The client's goal was to create a brand identity that would resonate with environmentally conscious consumers and help position their business as a leader.</p>
+        </header>
+        <form>
+            <input type="text" placeholder="Full name">
+            <input type="email" placeholder="Enter your email">
+            <select>
+                <option>Department</option>
+                <option>Department name</option>
+                <option>Department name</option>
+            </select>
+            <textarea placeholder="Message"></textarea>
+            <button type="button">SEND</button>
+        </form>
+    </section>
+    <!-- //Inquiry -->
+
+    <!-- Footer -->
+    <footer id="footer"><div>
+        <div>
+            <a href="">Terms of Service</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Contact Us</a>
+            <a href="">FAQ</a>
+        </div>
+        <div class="selects">
+            <select>
+                <option>US$ USD</option>
+                <option>KRW</option>
+                <option>CNY</option>
+            </select>
+
+            <select>
+                <option>English</option>
+                <option>Korean</option>
+                <option>Chinese</option>
+            </select>
+        </div>
+        <h1>ARK</h1>
+        <small>Copyright © 2024 ARK WITH GLOBAL All rights reserved.</small>
+    </div></footer>
+    <!-- //Footer -->
+
+    <!-- Script -->
+    <script>
+        var swiper = new Swiper(".vi .swiper", {
+            slidesPerView: "1",
+            //loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination-vi",
+                clickable: true
+            }
+        });
+        var swiper_howitworks = new Swiper(".howitworks .swiper", {
+            slidesPerView: "1",
+            //loop: true,
+            mousewheel: true,
+            direction: "vertical",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pagination-how-it-works",
+                clickable: true
+            },
+            freeMode: {
+                enabled: true,
+                sticky: true,
+                momentumBounce: true,
+            },
+        });
+
+        
+
+
+        var swiper2 = new Swiper(".production .swiper", {
+            slidesPerView: 1,
+            autoplay: {
+                delay: 500000000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pagination",
+                clickable: true
+            }
+        });
+        var swiper3 = new Swiper(".logistics .swiper", {
+            slidesPerView: 1,
+            pagination: {
+                el: ".pagination2",
+                clickable: true
+            }
+        });
+        var swiper4 = new Swiper(".fulfillment .swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            pagination: {
+                el: ".pagination3",
+                clickable: true
+            },
+            breakpoints: {
+                1281: {
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    freeMode: {
+                        enabled: true,
+                        sticky: false,
+                        momentumBounce: false,
+                    },
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: false,
+                        dragSize: 0,
+                    },
+                    mousewheel: {
+                        enabled: true,
+                        sensitivity: 0.5,
+                        releaseOnEdges: true,
+                    },
+                }
+            }
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+        var sections=$('.fullfillment_new_container');
+        console.log('w='+sections.width());
+        boxsContainer = $(".fullfillment_new_inner");
+        var scrollTween=gsap.to(sections, {
+            x:-(2520 + 150 - 900),
+            scrollTrigger: {
+            trigger: boxsContainer,
+            start: "top top",
+            pin: true,
+            pinSpacing: true,
+            scrub: 1,
+            end: "300%",
+            }
+        });
+
+        var swiper5 = new Swiper(".swiper.thumb", {
+            //loop: true,
+            slidesPerView: "auto",
+            watchSlidesProgress: true,
+        });
+        var swiper6 = new Swiper(".swiper.big", {
+            //loop: true,
+            slidesPerView: "auto",
+            thumbs: {
+                swiper: swiper5,
+            },
+        });
+
+        var swiper7 = new Swiper(".services .swiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pagination4",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".btnNext",
+                prevEl: ".btnPrev",
+            },
+            breakpoints: {
+                768: {
+                    centeredSlides: false,
+                }
+            }
+        });
+
+
+        // swiper4.on('slideChangeTransitionStart	',function(){
+        //     //$('.fulfillment').addClass('sticky');
+        //     //$('body').css('overflow', 'hidden');
+        //     console.log('slideChangeTransitionStart	');
+        // });
+        // swiper4.on('realIndexChange',function(){
+        //     //console.log('realIndexChange');
+        // });
+        // swiper4.on('progress',function(){
+        //     //console.log('progress');
+        // });
+        // swiper4.on('reachEnd', function(){
+        //     console.log('reachEnd');
+        //     //swiper4.off('setTransition');
+        //     $('.fulfillment').removeClass('sticky');
+        //     $('body').css('overflow', 'auto');
+        // });
+        // swiper4.on('reachBeginning',function(){
+        //     console.log('reachBeginning');
+        //     //swiper4.off('setTransition');
+        //     $('.fulfillment').removeClass('sticky');
+        //     $('body').css('overflow', 'auto');
+        // });
+
+
+        // let lastScrollforSwiper = 0;
+        // $(window).on('scroll', function(){
+        //     let scrollTop = $(this).scrollTop();
+        //     if(scrollTop > lastScrollforSwiper) {
+        //         console.log('down');
+        //     }
+        //     else {
+        //         swiper4.on('setTransition',function(){
+        //             $('.fulfillment').addClass('sticky');
+        //             $('body').css('overflow', 'hidden');
+        //             console.log('setTransition');
+        //         });
+        //         console.log('up');
+        //     }
+        //     lastScrollforSwiper = scrollTop;
+        // });
+    </script>
+    <!-- //Script -->
+</body>
+</html>

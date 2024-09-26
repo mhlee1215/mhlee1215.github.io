@@ -1,0 +1,29 @@
+//Responsive
+@mixin narrowest {
+    @media (max-width: 480px) {
+      @content;
+    }
+}
+@mixin narrow {
+    @media (max-width: 640px) {
+        @content;
+    }
+}
+@mixin middle {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin wide {
+    @media (min-width: 1281px) {
+        @content;
+    }
+}
+@mixin each($property, $value1, $value2) {
+    @include wide {
+        #{$property}: $value1;
+    }
+    @include middle {
+        #{$property}: $value2;
+    }
+}
