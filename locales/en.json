@@ -1,6 +1,38 @@
 {
-    "welcome": "Welcome",
     "vi_header_p": "ARK WITH GLOBAL provides efficient and streamlined end to end product services, <br>from creating products to delivering them to the final customers.",
     "production_swiper_global_network_p": "Our global office network optimizes and streamlines the production process,  ultimately saving your valuable time and energy.",
-    "description": "This is an example of multi-language support."
+    "production_swiper_entire_process_p":"We work closely with you throughout the entire production process, from development to design, manufacturing, and packaging.",
+    "production_swiper_experience_p":"Our extensive experience in manufacturing a wide range of products will meet your needs, no matter what type of product your business deals with.",
+    "logistics_swiper_slide_1_p":"Our team of import/export freight specialists ensures the safe and secure transportation of your valuable cargo, providing you with peace of mind and reliable service every step of the way.",
+    "logistics_swiper_slide_2_p":"We partner with local forwarding companies to deliver comprehensive international and domestic transportation solutions, including ocean freight, air freight, and ground trucking services.",
+    
+    
+    "fullfillment_new_3pl_benefits_dd":"Third-Party Logistics (3PL) allows merchants of any size to scale more quickly by delegating the challenges of managing omnichannel fulfillment, inventory management, and post-purchase customer cycles.",
+
+    "fullfillment_new_fullfillment_span":"ORDER FULFILLMENT",
+    "fullfillment_new_3pl_order_fullfillment_p":"We handle all shipping and delivery so you can focus on sales and growth.",
+    "fullfillment_new_integration_span":"INTEGRATION",
+    "fullfillment_new_3pl_integration_p":"Our fulfillment software seamlessly integrates with your sales channels to connect data such as orders, inventory, and more.",
+    "fullfillment_new_b2b_fullfillment_span":"B2B FULFILLMENT",
+    
+    "fullfillment_new_3pl_b2b_fullfillment_p":"Our B2B fulfillment service helps you manage EDI-integrated retail orders as well as manual wholesale orders.",
+    "fullfillment_new_returns_customer_support_span":"RETURNS & CUSTOMER SUPPORT",
+    "fullfillment_new_3pl_returns_customer_support_p":"Dealing with customer inquiries and returned orders can be made easier and more cost effective with help of our dedicated customer support team.",
+    "fullfillment_new_custom_shipping_supplies_span":"CUSTOM SHIPPING SUPPLIES",
+    "fullfillment_new_3pl_customer_shipping_supplies_p":"Elevate your customer experience with personalized packaging featuring your brand logo. Our custom shipping supplies include branded shipping boxes, bubble mailers, and box tape, with the option to include your business card and promotional inserts.",
+
+    "metrics_our_metrics_tell_the_story_p":"Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.",
+    "metrics_global_office_network_p":"Strategically positioned offices in the USA, China, and Korea to meet your needs and maximize cost-efficiency",
+    "metrics_teams_of_specialists_p":"Experts in design, production, logistics, fulfillment, and software/web development working together to optimize workflow",
+    "metrics_extensive_experience_knowledge_p":"Accumulated expertise and know-how from more than 10 years of experience",
+    "metrics_a_wide_range_of_products_p":"A diverse selection of high-quality products manufactured under our meticulous management and strong infrastructure",
+
+    "wms_software_p":"All-In-One Management System. <br>Our comprehensive management software enables you to oversee the entire process, <br>from manufacturing your products to fulfilling your orders.",
+    "wms_production_management_p":"From the early stage of product development, our software stores critical information to ensure the timely and quality production of your products.",
+    "wms_inbound_outbound_management_p":"Our management system helps you track your products from the manufacturer to the warehouse and to the customers.",
+    "wms_order_inventory_management_p":"Integrating our system with your marketplaces will expedite order fulfillment and minimize inventory errors.",
+    "wms_reporting_p":"Our management software collects, organizes, and carefully analyzes a wealth of data to generate comprehensive reports, providing valuable insights for assessing and enhancing your business operations.",
+
+    "omnichannel_fullfillment_software_features_p":"ARK empowers your brand to execute enterprise-class fulfillment operations.",
+    "services_4_in_1_cloud_based_software_p":"3PL Partners Can Provide All of the Following:"
 }

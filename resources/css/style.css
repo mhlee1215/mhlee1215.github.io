@@ -2047,7 +2047,7 @@ body {
 }
 .production .swiper .swiper-slide div h2 {
   font-weight: 400;
-  color: rgba(154, 129, 151, 0.5);
+  color: rgba(128, 10, 114, 0.5);
 }
 @media (min-width: 1281px) {
   .production .swiper .swiper-slide div h2 {
@@ -2371,14 +2371,14 @@ body {
 .fulfillment_new .fullfillment_new_inner {
   position: relative;
   height: 100vh;
-  background: #fff;
+  background: rgba(255, 255, 255, 0);
   width: 100%;
   max-width: 1920px;
   max-width: 1500px;
   margin: 0 auto;
 }
 .fulfillment_new .fullfillment_new_inner .fullfillment_new_container {
-  width: 100%;
+  width: 130%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -2817,6 +2817,40 @@ body {
   .fulfillment_new .fullfillment_new_container .swiper-slide p {
     font-size: 21px;
   }
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide p lang-ko-quot-begin {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 62.5% */
+  letter-spacing: -0.32px;
+  margin-left: -45px;
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide p lang-ko-quot-end {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150px; /* 62.5% */
+  letter-spacing: -0.32px;
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide p lang-ko {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: NanumMyeongjo;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.125px;
 }
 
 .fulfillment {
