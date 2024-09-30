@@ -41,6 +41,26 @@ function changeLanguage(lang) {
 
         // Update content after language change
         updateContent(lang);
+        updateLanguageSpecificClass(lang)
+        
+    });
+}
+
+function updateLanguageSpecificClass(lang){
+    const elements = document.querySelectorAll('*');
+
+    // Loop through each element
+    elements.forEach(element => {
+        // Iterate over classList to find any "lang-*" classes
+        element.classList.forEach(className => {
+            if (className.startsWith('lang-')) {
+                // Remove any existing language-specific class
+                element.classList.remove(className);
+            }
+        });
+
+        // Add the new language-specific class
+        element.classList.add(`lang-${lang}`);
     });
 }
 
@@ -60,8 +80,8 @@ function iterateKeysAndValues(obj, lang) {
                 const elements = document.querySelectorAll(`[id="${key}"]`);
                 elements.forEach((element, index) => {
                     element.innerHTML = i18next.t(key);
-                    element.classList.remove(...element.classList);
-                    element.classList.add(`lang-${lang}`);
+                    // element.classList.remove(...element.classList);
+                    // element.classList.add(`lang-${lang}`);
                 });
             }
         }
