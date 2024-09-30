@@ -2331,17 +2331,20 @@ body {
   }
 }
 .logistics .swiper .swiper-slide div h2 {
-  color: rgba(154, 129, 151, 0.5);
+  display: inline-block;
+  color: rgba(154, 129, 151, 0.2);
+  font-family: Poppins;
+  font-size: 125px;
+  font-style: normal;
+  font-weight: 700;
 }
-@media (min-width: 1281px) {
-  .logistics .swiper .swiper-slide div h2 {
-    font-size: 64px;
-  }
-}
-@media (max-width: 1280px) {
-  .logistics .swiper .swiper-slide div h2 {
-    font-size: 29px;
-  }
+.logistics .swiper .swiper-slide div h3 {
+  margin-top: 30px;
+  color: #9A8197;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
 }
 .logistics .swiper .swiper-slide div h2.lang-ko {
   color: rgba(145, 162, 143, 0.5);
@@ -2355,7 +2358,7 @@ body {
 }
 @media (min-width: 1281px) {
   .logistics .swiper .swiper-slide div p {
-    margin-top: 52px;
+    margin-top: 30px;
   }
 }
 @media (max-width: 1280px) {

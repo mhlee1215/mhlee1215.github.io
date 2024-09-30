@@ -922,9 +922,39 @@ body {
                 @include middle {
                     padding-right: $space;
                 }
-                h2 {
-                    @include each(font-size, 64px, 29px);
-                    color: rgba($primary-color-en, 0.5);
+                
+                h2{
+                    // @include each(font-size, 128px, 29px);
+                    // color: rgba($primary-color-en, 0.5);
+                    display: inline-block;
+                    color: rgba(154, 129, 151, 0.20);
+                    font-family: Poppins;
+                    font-size: 125px;
+                    font-style: normal;
+                    font-weight: 700;
+                    // line-height: 144px; /* 115.2% */
+                    
+                    
+                }
+                h3 {
+                    // @include each(font-size, 64px, 29px);
+                    // color: rgba($primary-color-en, 0.5);
+                    // display: flex;
+                    // width: 415px;
+                    // height: 36px;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    // flex-shrink: 0;
+                    margin-top: 30px;
+                    color: #9A8197;
+
+                    font-family: Poppins;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 400;
+                    // line-height: 36px; /* 100% */
+                    // letter-spacing: 1px;
+
                 }
                 h2.lang-ko {
                     color: rgba($primary-color-ko, 0.5);
@@ -933,7 +963,7 @@ body {
                     color: rgba($primary-color-zh, 0.5);
                 }
                 p {
-                    @include each(margin-top, 52px, 18px);
+                    @include each(margin-top, 30px, 18px);
                     @include each(font-size, 17px, 13px);
                     line-height: 1.76;
                     color: #555;
