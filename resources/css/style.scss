@@ -33,11 +33,9 @@ body {
     width: 100%;
     @include each(height, $headerW, $headerM);
     @include flex(row, nowrap, center, center);
-    color: $primary-color-en;
 
-    .lang-ko {
-        color: $primary-color-ko;
-    }
+    background-color: $primary-color-en;
+    color: $primary-color-en;
 
     &:not(.fixed) {
         position: relative;
@@ -55,7 +53,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        background: rgba(#fff, 0.95);
+        // background: rgba(#fff, 0.95);
     }
     &.temp:not(.opened) {
         @include each(top, -$headerW, -$headerM);
@@ -240,166 +238,20 @@ body {
     }
 }
 
-//Visual
-.vi {
-    z-index: 0;
-    position: relative;
-    @include flex(column, nowrap, center, center);
-    @include each(margin-top, -$headerW, -$headerM);
-    @include vhcalc(height, " - 0px");
-    @include each(min-height, 700px, 500px);
-    @include each(max-height, 1006px, 554px);
-    @include each(padding-top, 180px, 169px);
-    @include middle {
-        #header.opened + &,
-        #header.fixed + & {
-            margin-top: 0;
-        }
-    }
-    header {
-        position: relative;
-        @include flex(column, nowrap, flex-start, flex-start);
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        max-width: 1400px + $space + $space;
-        padding-left: $space;
-        padding-right: $space;
-        h1 {
-            z-index: 2;
-            position: relative;
-            @include hiddentxt;
-            @include each(width, 369px, 188px);
-            @include each(height, 171px, 88px);
-            background: url("../images/logo2-en.svg") no-repeat center/100%;
-        }
-        
-        h1.lang-ko {
-            background: url("../images/logo2-ko.svg") no-repeat center/100%;
-        }
-        h1.lang-zh {
-            background: url("../images/logo2-zh.svg") no-repeat center/100%;
-        }
-        
-        p {
-            z-index: 2;
-            position: relative;
-            @include each(margin-top, 46px, 32px);
-            @include each(font-size, 20px, 13px);
-            font-weight: 300;
-            line-height: 1.538;
-            color: #fff;
-            @media screen and (max-width: 565px) {
-                br {
-                    display: none;
-                }
-            }
-        }
-        ul {
-            z-index: 2;
-            position: relative;
-            @include inlineflex(row, nowrap, flex-start, center);
-            @include each(margin-top, 43px, 24px);
-            li {
-                @include middle {
-                    &:first-child {
-                        margin-left: -8px;
-                    }
-                }
-                & + li {
-                    position: relative;
-                    @include each(margin-left, 26px, 5px);
-                    @include each(padding-left, 26px, 5px);
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        bottom: 0;
-                        margin: auto;
-                        width: 1px;
-                        @include each(height, 33px, 17px);
-                        background: #e6e7e8;
-                    }
-                }
-            }
-            a {
-                width: 33px;
-                height: 33px;
-                @include each(background-size, 100%, 17px);
-            }
-        }
-        aside {
-            z-index: 2;
-            position: absolute;
-            right: $space;
-            bottom: 0;
-            @include flex(column, nowrap, center, center);
-            color: #fff;
-            @include middle {
-                @include hidden;
-            }
-            span {
-                padding-bottom: 4px;
-                font-size: 18px;
-                writing-mode: vertical-lr;
-                text-orientation: mixed;
-            }
-            a {
-                $list: instagram, twitter;
-                @include hiddentxt;
-                margin-top: 17px;
-                width: 20px;
-                height: 20px;
-                @each $sns in $list {
-                    &.#{$sns} {
-                        background-image: url("../images/sns_#{$sns}.svg");
-                    }
-                }
-            }
-        }
-    }
-    .swiper {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        height: 100%;
-        .swiper-slide {
-            background-size: cover;
-            @for $i from 1 through 3 {
-                &:nth-child(#{$i}) {
-                    background-image: url("../images/vi#{$i}.jpg");
-                    @include narrowest {
-                        background-image: url("../images/vi#{$i}_m.jpg");
-                    }
-                }
-            }
-        }
-    }
-    .swiper-pagination-vi {
-        @include each(bottom, 43px, 17px);
-        span {
-            @include each(margin, 0 5px !important, 0 4px !important);
-            @include each(height, 10px !important, 8px !important);
-            @include each(border-radius, 5px !important, 4px !important);
-            background: transparent !important;
-            &:not(.swiper-pagination-bullet-active) {
-                @include each(width, 10px !important, 8px !important);
-                border: 1px solid #fff;
-                opacity: 1;
-            }
-            &.swiper-pagination-bullet-active {
-                @include each(width, 60px !important, 40px !important);
-                border: 1px solid #9b8298;
-            }
-        }
-    }
+#header.lang-ko {
+    background-color: $primary-color-ko;
+    color: $primary-color-ko;
 }
+
+#header.lang-zh {
+    background-color: $primary-color-zh;
+    color: $primary-color-zh;
+}
+
 
 // //HowItWorks
 .howitworks {
-    background-color: #b4ad1e;
+    
     @include wide {
         @include flex(row, nowrap, flex-start, flex-start);
         position: relative;
@@ -409,7 +261,10 @@ body {
         position: relative;
         // padding-bottom: 24px;
     }
+    
     .swiper {
+        background-color: $primary-color-en;
+        padding-right:250px;
         //     position: absolute;
         //     left: 0;
         //     right: 0;
@@ -417,7 +272,7 @@ body {
         // height: 100%;
         @include wide {
             width: 100%; //calc(50% - 10px);
-            height: 300px;
+            height: 890px;
         }
         @include middle {
             // @include vhcalc(height, '+ 215px');
@@ -425,7 +280,7 @@ body {
             // max-height: 717px;
             // border-radius: 0 0 75px 0;
             // overflow: hidden;
-            height: 300px;
+            height: 503px;
         }
         .swiper-wrapper {
             counter-reset: numbering;
@@ -434,16 +289,104 @@ body {
             // }
         }
         .swiper-slide {
+            position: relative;
+            margin-left: 240px;
+            margin-right: 240px;
+            padding-bottom: 100px;
+            background-color: $primary-color-en;
             background-size: cover;
-            @for $i from 1 through 3 {
-                &:nth-child(#{$i}) {
-                    background-image: url("../images/vi#{$i}.jpg");
-                    @include narrowest {
-                        background-image: url("../images/vi#{$i}_m.jpg");
-                    }
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) div {
+                    // background-size: cover;             /* Scale the image to cover the element */
+                    // background-position: center;        /* Center the image */
+                    // border: none;                       /* Hide the border */
+                    background-image: url("../images/howitworks#{$i}.png");
+                    // @include narrowest {
+                        // background-image: url("../images/vi#{$i}_m.jpg");
+                    // }
                 }
             }
         }
+        .swiper-slide.lang-ko{
+            background-color: $primary-color-ko;
+        }
+        .swiper-slide.lang-zh{
+            background-color: $primary-color-zh;
+        }
+
+        .swiper-slide h2 {
+            padding-top: 100px;
+            color: #F7C74F;
+            font-family: Poppins;
+            font-size: 80px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 85px; /* 106.25% */    
+            max-width: 856px;
+        }
+
+        .swiper-slide h3 {
+            color: #FFF;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Poppins;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            max-width: 856px;
+        }
+
+        .swiper-slide p {
+            color: #FFF;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 30px; /* 166.667% */
+            max-width: 856px;
+        }
+
+        .swiper-slide div {
+            // background-color: #1e39b4;
+            border: 0px solid transparent;
+            position: absolute;  /* Set the image to absolute positioning */
+            margin-right:284px;
+            bottom: 0;           /* Align the image to the bottom of the wrapper */
+            right: 0;            /* Align the image to the right of the wrapper */
+            width: 485px;         /* Optional: Set a fixed width for the image */
+            height: 485px;        /* Keep the image's aspect ratio */
+            opacity: 0.0;
+            // margin-right: 44px;
+            transform: translateX(
+                100%
+            ); /* Start the image off-screen to the right */
+            transition: transform 0.5s ease-out, opacity 1s ease-out;
+        }
+
+        .swiper-slide {
+            &:nth-child(1) div {
+                opacity: 1.0;
+                transform: translateX(
+                    0%
+                ); /* Start the image off-screen to the right */
+            }
+        }
+        
+    }
+
+    .swiper.lang-ko {
+        background-color: $primary-color-ko;
+    }
+
+    .swiper.lang-zh {
+        background-color: $primary-color-zh;
+    }
+
+    .swiper-pagination {
+        margin-right: 240px;
     }
 
     .swiper-pagination-bullet {
@@ -462,7 +405,7 @@ body {
         @include each(border-radius, 5px !important, 4px !important);
         background: transparent !important;
         @include each(height, 60px !important, 40px !important);
-        border: 1px solid #9b8298;
+        border: 1px solid #F7C74F;
     }
 
     // .pagination-how-it-works {
@@ -637,6 +580,164 @@ body {
     //         }
     //     }
 }
+
+//Visual
+.vi {
+    z-index: 0;
+    position: relative;
+    @include flex(column, nowrap, center, center);
+    // @include each(margin-top, -$headerW, -$headerM);
+    @include vhcalc(height, " - 0px");
+    @include each(min-height, 700px, 500px);
+    @include each(max-height, 1006px, 554px);
+    @include each(padding-top, 180px, 169px);
+    @include middle {
+        #header.opened + &,
+        #header.fixed + & {
+            margin-top: 0;
+        }
+    }
+    header {
+        position: relative;
+        @include flex(column, nowrap, flex-start, flex-start);
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 1400px + $space + $space;
+        padding-left: $space;
+        padding-right: $space;
+        h1 {
+            z-index: 2;
+            position: relative;
+            @include hiddentxt;
+            @include each(width, 369px, 188px);
+            @include each(height, 171px, 88px);
+            background: url("../images/logo2-en.svg") no-repeat center/100%;
+        }
+        
+        h1.lang-ko {
+            background: url("../images/logo2-ko.svg") no-repeat center/100%;
+        }
+        h1.lang-zh {
+            background: url("../images/logo2-zh.svg") no-repeat center/100%;
+        }
+        
+        p {
+            z-index: 2;
+            position: relative;
+            @include each(margin-top, 46px, 32px);
+            @include each(font-size, 20px, 13px);
+            font-weight: 300;
+            line-height: 1.538;
+            color: #fff;
+            @media screen and (max-width: 565px) {
+                br {
+                    display: none;
+                }
+            }
+        }
+        ul {
+            z-index: 2;
+            position: relative;
+            @include inlineflex(row, nowrap, flex-start, center);
+            @include each(margin-top, 43px, 24px);
+            li {
+                @include middle {
+                    &:first-child {
+                        margin-left: -8px;
+                    }
+                }
+                & + li {
+                    position: relative;
+                    @include each(margin-left, 26px, 5px);
+                    @include each(padding-left, 26px, 5px);
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 1px;
+                        @include each(height, 33px, 17px);
+                        background: #e6e7e8;
+                    }
+                }
+            }
+            a {
+                width: 33px;
+                height: 33px;
+                @include each(background-size, 100%, 17px);
+            }
+        }
+        aside {
+            z-index: 2;
+            position: absolute;
+            right: $space;
+            bottom: 0;
+            @include flex(column, nowrap, center, center);
+            color: #fff;
+            @include middle {
+                @include hidden;
+            }
+            span {
+                padding-bottom: 4px;
+                font-size: 18px;
+                writing-mode: vertical-lr;
+                text-orientation: mixed;
+            }
+            a {
+                $list: instagram, twitter;
+                @include hiddentxt;
+                margin-top: 17px;
+                width: 20px;
+                height: 20px;
+                @each $sns in $list {
+                    &.#{$sns} {
+                        background-image: url("../images/sns_#{$sns}.svg");
+                    }
+                }
+            }
+        }
+    }
+    .swiper {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        .swiper-slide {
+            background-size: cover;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    background-image: url("../images/vi#{$i}.jpg");
+                    @include narrowest {
+                        background-image: url("../images/vi#{$i}_m.jpg");
+                    }
+                }
+            }
+        }
+    }
+    .swiper-pagination-vi {
+        @include each(bottom, 43px, 17px);
+        span {
+            @include each(margin, 0 5px !important, 0 4px !important);
+            @include each(height, 10px !important, 8px !important);
+            @include each(border-radius, 5px !important, 4px !important);
+            background: transparent !important;
+            &:not(.swiper-pagination-bullet-active) {
+                @include each(width, 10px !important, 8px !important);
+                border: 1px solid #fff;
+                opacity: 1;
+            }
+            &.swiper-pagination-bullet-active {
+                @include each(width, 60px !important, 40px !important);
+                border: 1px solid #9b8298;
+            }
+        }
+    }
+}
+
 
 //Production
 .production {
@@ -924,43 +1025,34 @@ body {
                 }
                 
                 h2{
-                    // @include each(font-size, 128px, 29px);
-                    // color: rgba($primary-color-en, 0.5);
                     display: inline-block;
-                    color: rgba(154, 129, 151, 0.20);
+                    color: rgb($primary-color-en, 0.2);
                     font-family: Poppins;
                     font-size: 125px;
                     font-style: normal;
-                    font-weight: 700;
-                    // line-height: 144px; /* 115.2% */
-                    
-                    
+                    font-weight: 700; 
                 }
-                h3 {
-                    // @include each(font-size, 64px, 29px);
-                    // color: rgba($primary-color-en, 0.5);
-                    // display: flex;
-                    // width: 415px;
-                    // height: 36px;
-                    // flex-direction: column;
-                    // justify-content: center;
-                    // flex-shrink: 0;
-                    margin-top: 30px;
-                    color: #9A8197;
 
+                h2.lang-ko {
+                    color: rgb($primary-color-ko, 0.2);
+                }
+                h2.lang-zh {
+                    color: rgb($primary-color-zh, 0.2);
+                }
+
+                h3 {
+                    margin-top: 30px;
+                    color: $primary-color-en;
                     font-family: Poppins;
                     font-size: 36px;
                     font-style: normal;
                     font-weight: 400;
-                    // line-height: 36px; /* 100% */
-                    // letter-spacing: 1px;
-
                 }
-                h2.lang-ko {
-                    color: rgba($primary-color-ko, 0.5);
+                h3.lang-ko {
+                    color: $primary-color-ko;
                 }
-                h2.lang-zh {
-                    color: rgba($primary-color-zh, 0.5);
+                h3.lang-zh {
+                    color: $primary-color-zh;
                 }
                 p {
                     @include each(margin-top, 30px, 18px);

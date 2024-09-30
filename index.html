@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, target-densityDpi=device-dpi">
     <script src="resources/js/jquery-3.6.4.min.js"></script>
     <script src="resources/js/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="resources/js/ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
     <script src="resources/js/cursor.js"></script>
@@ -74,6 +76,56 @@
     </div></header>
     <!-- //Header -->
 
+    <!-- How it works -->
+    <section class="howitworks" id="howitworks">
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <h2>Focus on only one thing.</h2>
+                    <h3>Keep your focus on growing your sales. Don't let anything else distract you.</h3>
+                    <p>ARK WITH GLOBAL will handle complex and confusing processes of product development, 
+                        production, transportation, fulfillment, sales management, and inventory management 
+                        all in one place.</p>
+                    <div id="howitworks_image_1"/>
+                </li>
+                <li class="swiper-slide">
+                    <h2>Where and how can I bring to life the product I have in mind?</h2>
+                    <h3>Can I improve the quality and lower the cost of my products?</h3>
+                    <p>With our East Asia branch in China, we provide prompt and accurate 
+                        consultation and services for sampling, production, and quality control.</p>
+                    <div id="howitworks_image_2"/>
+                </li>
+                <li class="swiper-slide">
+                    <h2>How can I efficiently bring my product 
+                        from the factories abroad? What about the customs?	</h2>
+                    <h3>International trade is too complicated and challenging.</h3>
+                    <p>Based on the delivery schedule of each finished product, our Logistics team provides fast 
+                        and transparent services for all trade-related tasks, including Ocean & Air freight, Cutoms, 
+                        FDA Processing, and Delivery.</p>
+                    <div id="howitworks_image_3"/>
+                </li>
+                <li class="swiper-slide">
+                    <h2>I don't have either a warehouse or 
+                        a system. 
+                        What should I do?</h2>
+                    <h3>Through ARK WITH warehouses in the USA, China, and Korea, we offer 
+                        global fulfillment services.</h3>
+                    <p>Our innovative order management and inventory systems allow real-time management for 
+                        fulfillment services.</p>
+                    <div id="howitworks_image_4"/>
+                </li>
+                <li class="swiper-slide">
+                    <h2>ONLY ONE COMPANY!</h2>
+                    <p>ARK WITH GLOBAL is the unparalleled company that offers 
+                        a complete package of product services competitively and all at once.</p>
+                    <div id="howitworks_image_5"/>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-pagination pagination-how-it-works"></div>
+    </section>
+    <!-- //How it works -->
+
     <!-- Vi -->
     <section class="vi">
         <header>
@@ -101,18 +153,7 @@
     </section>
     <!-- //Vi -->
 
-    <!-- How it works -->
-    <section class="howitworks" id="howitworks">
-        <div class="swiper">
-            <ul class="swiper-wrapper">
-                <li class="swiper-slide"></li>
-                <li class="swiper-slide"></li>
-                <li class="swiper-slide"></li>
-            </ul>
-        </div>
-        <div class="swiper-pagination pagination-how-it-works"></div>
-    </section>
-    <!-- //How it works -->
+    
 
     <!-- Production -->
     <div class="production" id="production">
@@ -559,23 +600,76 @@
             }
         });
         var swiper_howitworks = new Swiper(".howitworks .swiper", {
-            slidesPerView: "1",
+            //slidesPerView: "1",
             //loop: true,
             mousewheel: true,
+            speed: 500,
+            
             direction: "vertical",
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
+            
             pagination: {
                 el: ".pagination-how-it-works",
                 clickable: true
             },
-            freeMode: {
-                enabled: true,
-                sticky: true,
-                momentumBounce: true,
-            },
+            watchOverflow : true,
+            on: {
+                slideChange: function() {
+                    setTimeout(function () {
+                        console.log('slide change');
+                        swiper_howitworks.params.touchReleaseOnEdges = false;  
+                        swiper_howitworks.params.mousewheel.releaseOnEdges = false;
+                    });
+                },
+                reachEnd: function() {
+                    setTimeout(function () {
+                        console.log('reach end');
+                        swiper_howitworks.params.touchReleaseOnEdges = true;
+                        swiper_howitworks.params.mousewheel.releaseOnEdges = true;
+                    }, 500);
+                },
+                reachBeginning: function() {
+                    setTimeout(function () {
+                        console.log('reach begin');
+                        swiper_howitworks.params.touchReleaseOnEdges = true;
+                        swiper_howitworks.params.mousewheel.releaseOnEdges = true;
+                    }, 500);
+                }
+
+            }
+            
+            //freeMode: {
+            //   enabled: false,
+            //   sticky: true,
+            //   momentumBounce: false,
+            //},
+        });
+
+        function show_image(currentIndex) {
+            const image = document.getElementById("howitworks_image_" + currentIndex);
+            console.log(image);
+            // Get the vertical scroll position and viewport height
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+    
+            // Offset position at which the image should slide in (for example, when it reaches halfway down the screen)
+            const triggerPosition = windowHeight / 2;
+    
+            // Get the image's position relative to the viewport
+            const imageTop = image.getBoundingClientRect().top;
+    
+            // If the image reaches the trigger point, start the slide-in effect
+            console.log(imageTop+', '+triggerPosition);
+            //if (imageTop < triggerPosition) {
+            image.style.transform = "translateX(0)"; // Slide to original position
+            image.style.opacity = "1"; // Fade in
+            //}
+          }
+          
+        swiper_howitworks.on("slideChangeTransitionEnd", function () {
+            // alert("hi");
+            const currentIndex = swiper_howitworks.activeIndex + 1;
+            // alert(currentIndex);
+            show_image(currentIndex);
         });
 
         
