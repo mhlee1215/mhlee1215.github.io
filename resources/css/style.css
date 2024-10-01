@@ -1833,12 +1833,12 @@ body {
 }
 @media (max-width: 640px) {
   .howitworks .swiper .swiper-slide div {
-    bottom: 180px;
+    bottom: 100px;
   }
 }
 @media (max-width: 480px) {
   .howitworks .swiper .swiper-slide div {
-    bottom: 180px;
+    bottom: 100px;
   }
 }
 @media (min-width: 1281px) {
