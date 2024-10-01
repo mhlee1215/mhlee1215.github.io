@@ -599,6 +599,8 @@
                 clickable: true
             }
         });
+
+        var is_last_slide = false;
         var swiper_howitworks = new Swiper(".howitworks .swiper", {
             //slidesPerView: "1",
             //loop: true,
@@ -615,38 +617,102 @@
             on: {
                 slideChange: function() {
                     setTimeout(function () {
-                        console.log('slide change');
-                        swiper_howitworks.params.touchReleaseOnEdges = false;  
-                        swiper_howitworks.params.mousewheel.releaseOnEdges = false;
+                        is_last_slide = false;
+                        //console.log('slide change');
+                        //swiper_howitworks.params.touchReleaseOnEdges = false;  
+                        //swiper_howitworks.params.mousewheel.releaseOnEdges = false;
                     });
                 },
                 reachEnd: function() {
                     setTimeout(function () {
                         console.log('reach end');
-                        swiper_howitworks.params.touchReleaseOnEdges = true;
-                        swiper_howitworks.params.mousewheel.releaseOnEdges = true;
-                    }, 500);
+                        //is_away_from_swiper = false;
+                        is_last_slide = true;
+                        //swiper_howitworks.params.touchReleaseOnEdges = true;
+                        //swiper_howitworks.params.mousewheel.releaseOnEdges = true;
+                        swiper_howitworks.mousewheel.disable();
+                    }, 1000);
                 },
                 reachBeginning: function() {
                     setTimeout(function () {
-                        console.log('reach begin');
-                        swiper_howitworks.params.touchReleaseOnEdges = true;
-                        swiper_howitworks.params.mousewheel.releaseOnEdges = true;
+                        //console.log('reach begin');
+                        //swiper_howitworks.params.touchReleaseOnEdges = true;
+                        //swiper_howitworks.params.mousewheel.releaseOnEdges = true;
                     }, 500);
                 }
 
-            }
+            },
             
-            //freeMode: {
-            //   enabled: false,
-            //   sticky: true,
-            //   momentumBounce: false,
-            //},
+            freeMode: {
+               enabled: false,
+               sticky: true,
+               momentumBounce: false,
+            },
         });
+
+        var is_away_from_swiper = false;
+        function isSwiperAtMiddle() {
+            const swiperContainer = document.querySelector('.howitworks .swiper');
+            const rect = swiperContainer.getBoundingClientRect();
+        
+            // Get the viewport's center Y position (middle of the screen)
+            const viewportCenterY = window.innerHeight / 2;
+        
+            // Calculate the Swiper's center Y position (taking sticky into account)
+            const swiperCenterY = rect.top + (rect.height / 2);
+        
+            // Check if the Swiper's center is near the viewport center
+            const distanceFromCenter = Math.abs(viewportCenterY - swiperCenterY);
+        
+            // Define a threshold to consider "near the middle"
+            const threshold = 70; // Adjust this value based on precision needs
+            const move_away_threshold = 150;
+            // Check if the element is sticky by seeing if it has a `top: 0` value
+            const isSticky = rect.top === 0;
+        
+            if (distanceFromCenter <= threshold || isSticky) {
+                console.log('Swiper is either near the middle or sticky at the top');
+                if (is_away_from_swiper){
+                    swiper_howitworks.mousewheel.enable();
+                }
+                
+                return true;
+            } else if (distanceFromCenter >= move_away_threshold) {
+                console.log('Swiper is not in the middle of the screen');
+                is_away_from_swiper=true;
+                return false;
+            }
+        }
+
+        // Check if Swiper is in the middle on scroll
+        //window.addEventListener('scroll', isSwiperAtMiddle);
+        
+        // Function to detect if the element is stuck
+        function checkSticky() {
+            stickyElement = document.querySelector('.howitworks .swiper');
+            const rect = stickyElement.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            // Check if the element's top has reached the sticky point (e.g., top: 0)
+            //console.log(rect.bottom);
+            if (rect.bottom >= viewportHeight) {
+                console.log('Element is sticky!');
+                is_away_from_swiper = false;
+                setTimeout(function () {
+                    swiper_howitworks.mousewheel.enable();
+                }, 500);
+            } else {
+                is_away_from_swiper = true;
+                //console.log('Element is not sticky.');
+            }
+        }
+
+        // Add an event listener to check on scroll
+        window.addEventListener('scroll', checkSticky);
 
         function show_image(currentIndex) {
             const image = document.getElementById("howitworks_image_" + currentIndex);
-            console.log(image);
+            //console.log(image);
             // Get the vertical scroll position and viewport height
             const scrollPosition = window.scrollY;
             const windowHeight = window.innerHeight;
@@ -658,7 +724,7 @@
             const imageTop = image.getBoundingClientRect().top;
     
             // If the image reaches the trigger point, start the slide-in effect
-            console.log(imageTop+', '+triggerPosition);
+            //console.log(imageTop+', '+triggerPosition);
             //if (imageTop < triggerPosition) {
             image.style.transform = "translateX(0)"; // Slide to original position
             image.style.opacity = "1"; // Fade in
@@ -671,6 +737,27 @@
             // alert(currentIndex);
             show_image(currentIndex);
         });
+
+        function handleScroll(event) {
+            // Normalize the event for older browsers
+            const delta = event.deltaY || -event.wheelDelta || event.detail;
+        
+            if (delta < 0) {
+                if (!is_away_from_swiper){
+                    setTimeout(function () {
+                        swiper_howitworks.mousewheel.enable();
+                    }, 500);
+                }
+            } else if (delta > 0) {
+                if (is_last_slide){
+                    setTimeout(function () {
+                        swiper_howitworks.mousewheel.disable();
+                    }, 0);
+                }
+            }
+        }
+        
+        window.addEventListener('wheel', handleScroll);
 
         
 

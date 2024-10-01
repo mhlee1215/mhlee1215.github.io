@@ -27,3 +27,18 @@
         #{$property}: $value2;
     }
 }
+
+@mixin each4($property, $value1, $value2, $value3, $value4) {
+    @include wide {
+        #{$property}: $value1;
+    }
+    @include middle {
+        #{$property}: $value2;
+    }
+    @include narrow {
+        #{$property}: $value3;
+    }
+    @include narrowest {
+        #{$property}: $value4;
+    }
+}
