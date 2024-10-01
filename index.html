@@ -155,7 +155,7 @@
     <!-- //How it works -->
 
     <!-- Vi -->
-    <section class="vi">
+    <section id="vi_section" class="vi">
         <header>
             <h1>ARK with Global Inc.</h1>
             <p id="vi_header_p"></p>
@@ -635,7 +635,8 @@
             speed: 500,
             
             direction: "vertical",
-            
+            grabCursor: true,
+            simulateTouch:true,
             pagination: {
                 el: ".pagination-how-it-works",
                 clickable: true
@@ -736,6 +737,29 @@
 
         // Add an event listener to check on scroll
         window.addEventListener('scroll', checkSticky);
+        
+        let previousY = 0;
+        swiper_howitworks.on('touchMove', function (e) {
+            //console.log(e)
+            let mouseX =  e.touches.currentX;
+            let mouseY =  e.touches.currentY;
+
+            // Check if the current Y position is less than the previous Y position (dragging upwards)
+            if (mouseY < previousY) {
+                if (is_last_slide){
+                    console.log('Move to next section!');
+                    document.getElementById('vi_section').scrollIntoView({
+                        behavior: 'smooth'  // Smooth scrolling
+                    });
+                }
+                
+
+            }
+            
+            previousY = mouseY;  // Update previous Y position
+            //console.log(`Mouse is being dragged at X: ${mouseX}, Y: ${mouseY}`);
+        });
+
 
         function show_image(currentIndex) {
             const image = document.getElementById("howitworks_image_" + currentIndex);
