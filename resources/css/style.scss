@@ -1369,6 +1369,14 @@ body {
             &:nth-child(5) p {
                 @include each(top, 64px, 42px);
             }
+            &:nth-child(4) p.lang-ko,
+            &:nth-child(5) p.lang-ko {
+                @include each(top, 108px, 71px);
+            }
+            &:nth-child(4) p.lang-zh,
+            &:nth-child(5) p.lang-zh {
+                @include each(top, 108px, 71px);
+            }
             &:nth-child(5) p {
                 @include each(font-size, 22px, 14px);
                 line-height: 1.6;
@@ -1429,8 +1437,8 @@ body {
                     font-weight: 700;
                     line-height: 20px; /* 62.5% */
                     letter-spacing: -0.32px;
-                    // margin-left: -45px;
                 }
+
 
                 lang-ko-quot-end {
                     color: #FFF;
@@ -1492,6 +1500,14 @@ body {
                     line-height: 40px;
                     letter-spacing: -0.125px;
                 }
+            }
+
+            p.safari > lang-ko-quot-begin {
+                margin-left: -45px;
+            }
+
+            p.safari > lang-zh-quot-begin {
+                margin-left: -45px;
             }
         }
     }

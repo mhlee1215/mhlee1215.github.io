@@ -48,6 +48,9 @@ function changeLanguage(lang) {
 
 function updateLanguageSpecificClass(lang){
     const elements = document.querySelectorAll('*');
+    const ua = navigator.userAgent;
+
+        
 
     // Loop through each element
     elements.forEach(element => {
@@ -61,6 +64,12 @@ function updateLanguageSpecificClass(lang){
 
         // Add the new language-specific class
         element.classList.add(`lang-${lang}`);
+
+        if (ua.includes("Safari") && !ua.includes("Chrome")) {
+            element.classList.add(`safari`);
+        } else if (ua.includes("Chrome")) {
+            element.classList.add(`chrome`);
+        }
     });
 }
 
