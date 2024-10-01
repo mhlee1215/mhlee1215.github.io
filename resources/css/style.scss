@@ -466,7 +466,7 @@ body {
         @include wide {
             width: 100%; //calc(50% - 10px);
             // height: 890px;
-            height: calc(100vh - 117px);
+            height: calc(100vh - 117px - env(safe-area-inset-bottom));
         }
         @include middle {
             // @include vhcalc(height, '+ 215px');
@@ -475,7 +475,7 @@ body {
             // border-radius: 0 0 75px 0;
             // overflow: hidden;
             // height: 503px;
-            height: calc(100vh - 62px);
+            height: calc(100vh - 62px - env(safe-area-inset-bottom));
         }
         .swiper-wrapper {
             counter-reset: numbering;

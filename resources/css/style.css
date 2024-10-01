@@ -1579,12 +1579,12 @@ body {
 @media (min-width: 1281px) {
   .howitworks .swiper {
     width: 100%;
-    height: calc(100vh - 117px);
+    height: calc(100vh - 117px - env(safe-area-inset-bottom));
   }
 }
 @media (max-width: 1280px) {
   .howitworks .swiper {
-    height: calc(100vh - 62px);
+    height: calc(100vh - 62px - env(safe-area-inset-bottom));
   }
 }
 .howitworks .swiper .swiper-wrapper {
