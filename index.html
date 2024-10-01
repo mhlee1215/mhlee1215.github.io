@@ -670,12 +670,6 @@
                 }
 
             },
-            
-            freeMode: {
-               enabled: false,
-               sticky: true,
-               momentumBounce: false,
-            },
         });
 
         var is_away_from_swiper = false;
@@ -912,48 +906,8 @@
             }
         });
 
-
-        // swiper4.on('slideChangeTransitionStart	',function(){
-        //     //$('.fulfillment').addClass('sticky');
-        //     //$('body').css('overflow', 'hidden');
-        //     console.log('slideChangeTransitionStart	');
-        // });
-        // swiper4.on('realIndexChange',function(){
-        //     //console.log('realIndexChange');
-        // });
-        // swiper4.on('progress',function(){
-        //     //console.log('progress');
-        // });
-        // swiper4.on('reachEnd', function(){
-        //     console.log('reachEnd');
-        //     //swiper4.off('setTransition');
-        //     $('.fulfillment').removeClass('sticky');
-        //     $('body').css('overflow', 'auto');
-        // });
-        // swiper4.on('reachBeginning',function(){
-        //     console.log('reachBeginning');
-        //     //swiper4.off('setTransition');
-        //     $('.fulfillment').removeClass('sticky');
-        //     $('body').css('overflow', 'auto');
-        // });
-
-
-        // let lastScrollforSwiper = 0;
-        // $(window).on('scroll', function(){
-        //     let scrollTop = $(this).scrollTop();
-        //     if(scrollTop > lastScrollforSwiper) {
-        //         console.log('down');
-        //     }
-        //     else {
-        //         swiper4.on('setTransition',function(){
-        //             $('.fulfillment').addClass('sticky');
-        //             $('body').css('overflow', 'hidden');
-        //             console.log('setTransition');
-        //         });
-        //         console.log('up');
-        //     }
-        //     lastScrollforSwiper = scrollTop;
-        // });
+        // Init with default language
+        changeLanguage('en');
     </script>
     <!-- //Script -->
 </body>
