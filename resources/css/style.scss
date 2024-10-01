@@ -466,7 +466,7 @@ body {
         @include wide {
             width: 100%; //calc(50% - 10px);
             // height: 890px;
-            height: calc(100vh - 117px - env(safe-area-inset-bottom));
+            height: calc(100vh - 117px);
         }
         @include middle {
             // @include vhcalc(height, '+ 215px');
@@ -475,7 +475,7 @@ body {
             // border-radius: 0 0 75px 0;
             // overflow: hidden;
             // height: 503px;
-            height: calc(100vh - 62px - env(safe-area-inset-bottom));
+            height: calc(100vh - 62px);
         }
         .swiper-wrapper {
             counter-reset: numbering;
@@ -574,7 +574,7 @@ body {
 
             @include each4(margin-right, calc(240px + 44px), calc(66px + 37px), calc(20px + 19px), calc(20px + 19px));
 
-            bottom: 30px;           /* Align the image to the bottom of the wrapper */
+            @include each4(bottom, 30px, 30px, 180px, 180px); //30px;           /* Align the image to the bottom of the wrapper */
             right: 0;            /* Align the image to the right of the wrapper */
             // width: 485px;         /* Optional: Set a fixed width for the image */
             // height: 485px;        /* Keep the image's aspect ratio */

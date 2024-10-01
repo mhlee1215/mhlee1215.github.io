@@ -1579,12 +1579,12 @@ body {
 @media (min-width: 1281px) {
   .howitworks .swiper {
     width: 100%;
-    height: calc(100vh - 117px - env(safe-area-inset-bottom));
+    height: calc(100vh - 117px);
   }
 }
 @media (max-width: 1280px) {
   .howitworks .swiper {
-    height: calc(100vh - 62px - env(safe-area-inset-bottom));
+    height: calc(100vh - 62px);
   }
 }
 .howitworks .swiper .swiper-wrapper {
@@ -1796,7 +1796,6 @@ body {
 .howitworks .swiper .swiper-slide div {
   border: 0px solid transparent;
   position: absolute; /* Set the image to absolute positioning */
-  bottom: 30px; /* Align the image to the bottom of the wrapper */
   right: 0; /* Align the image to the right of the wrapper */
   opacity: 0;
   transform: translateX(100%); /* Start the image off-screen to the right */
@@ -1820,6 +1819,26 @@ body {
 @media (max-width: 480px) {
   .howitworks .swiper .swiper-slide div {
     margin-right: 39px;
+  }
+}
+@media (min-width: 1281px) {
+  .howitworks .swiper .swiper-slide div {
+    bottom: 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .howitworks .swiper .swiper-slide div {
+    bottom: 30px;
+  }
+}
+@media (max-width: 640px) {
+  .howitworks .swiper .swiper-slide div {
+    bottom: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .howitworks .swiper .swiper-slide div {
+    bottom: 180px;
   }
 }
 @media (min-width: 1281px) {
