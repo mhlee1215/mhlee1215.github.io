@@ -3,7 +3,10 @@
     "production_swiper_global_network_p": "Our global office network optimizes and streamlines the production process,  ultimately saving your valuable time and energy.",
     "production_swiper_entire_process_p":"We work closely with you throughout the entire production process, from development to design, manufacturing, and packaging.",
     "production_swiper_experience_p":"Our extensive experience in manufacturing a wide range of products will meet your needs, no matter what type of product your business deals with.",
+
+    "logistics_swiper_slide_1_h3":"Freight Forwarding",
     "logistics_swiper_slide_1_p":"Our team of import/export freight specialists ensures the safe and secure transportation of your valuable cargo, providing you with peace of mind and reliable service every step of the way.",
+    "logistics_swiper_slide_2_h3":"Ocean, Air, Ground",
     "logistics_swiper_slide_2_p":"We partner with local forwarding companies to deliver comprehensive international and domestic transportation solutions, including ocean freight, air freight, and ground trucking services.",
     
     
@@ -19,7 +22,7 @@
     "fullfillment_new_returns_customer_support_span":"RETURNS & CUSTOMER SUPPORT",
     "fullfillment_new_3pl_returns_customer_support_p":"Dealing with customer inquiries and returned orders can be made easier and more cost effective with help of our dedicated customer support team.",
     "fullfillment_new_custom_shipping_supplies_span":"CUSTOM SHIPPING SUPPLIES",
-    "fullfillment_new_3pl_customer_shipping_supplies_p":"Elevate your customer experience with branded packaging, including shipping boxes, bubble mailers, and packing tape, along with options for business cards and promotional inserts.",
+    "fullfillment_new_3pl_customer_shipping_supplies_p":"Elevate your customer experience with personalized packaging featuring your brand logo. Our custom shipping supplies include branded shipping boxes, bubble mailers, and box tape, with the option to include your business card and promotional inserts.",
 
     "metrics_our_metrics_tell_the_story_p":"Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.",
     "metrics_global_office_network_p":"Strategically positioned offices in the USA, China, and Korea to meet your needs and maximize cost-efficiency",
@@ -34,5 +37,25 @@
     "wms_reporting_p":"Our management software collects, organizes, and carefully analyzes a wealth of data to generate comprehensive reports, providing valuable insights for assessing and enhancing your business operations.",
 
     "omnichannel_fullfillment_software_features_p":"ARK empowers your brand to execute enterprise-class fulfillment operations.",
-    "services_4_in_1_cloud_based_software_p":"3PL Partners Can Provide All of the Following:"
+    "services_4_in_1_cloud_based_software_p":"3PL Partners Can Provide All of the Following:",
+
+    "howitworks_li_1_h2":"Focus on only one thing.",
+    "howitworks_li_1_h3":"Keep your focus on growing your sales. Don't let anything else distract you.",
+    "howitworks_li_1_p":"ARK WITH GLOBAL will handle complex and confusing processes of product development, production, transportation, fulfillment, sales management, and inventory management all in one place.",
+
+    "howitworks_li_2_h2":"Where and how can I bring to life the product I have in mind?",
+    "howitworks_li_2_h3":"Can I improve the quality and lower the cost of my products?",
+    "howitworks_li_2_p":"With our East Asia branch in China, we provide prompt and accurate consultation and services for sampling, production, and quality control.",
+
+    "howitworks_li_3_h2":"How can I efficiently bring my product from the factories abroad? What about the customs?",
+    "howitworks_li_3_h3":"International trade is too complicated and challenging.",
+    "howitworks_li_3_p":"Based on the delivery schedule of each finished product, our Logistics team provides fast and transparent services for all trade-related tasks, including Ocean & Air freight, Cutoms, FDA Processing, and Delivery.",
+
+    "howitworks_li_4_h2":"I don't have either a warehouse or a system. What should I do?",
+    "howitworks_li_4_h3":"Through ARK WITH warehouses in the USA, China, and Korea, we offer global fulfillment services.",
+    "howitworks_li_4_p":"Our innovative order management and inventory systems allow real-time management for fulfillment services.",
+
+    "howitworks_li_5_h2":"ONLY ONE COMPANY!",
+    "howitworks_li_5_h3":"",
+    "howitworks_li_5_p":"ARK WITH GLOBAL is the unparalleled company that offers a complete package of product services competitively and all at once."
 }

@@ -1,38 +1,61 @@
 {
-    "vi_header_p": "ARK WITH GLOBAL provides efficient and streamlined end to end product services, <br>from creating products to delivering them to the final customers.",
-    "production_swiper_global_network_p": "Our global office network optimizes and streamlines the production process,  ultimately saving your valuable time and energy.",
-    "production_swiper_entire_process_p":"We work closely with you throughout the entire production process, from development to design, manufacturing, and packaging.",
-    "production_swiper_experience_p":"Our extensive experience in manufacturing a wide range of products will meet your needs, no matter what type of product your business deals with.",
-    "logistics_swiper_slide_1_p":"Our team of import/export freight specialists ensures the safe and secure transportation of your valuable cargo, providing you with peace of mind and reliable service every step of the way.",
-    "logistics_swiper_slide_2_p":"We partner with local forwarding companies to deliver comprehensive international and domestic transportation solutions, including ocean freight, air freight, and ground trucking services.",
+    "vi_header_p": "ARK WITH GLOBAL 提供高效且简化的一站式产品服务，<br>从产品创意到最终交付给客户，全程覆盖。",
+    "production_swiper_global_network_p": "我们在全球的办公室网络优化和简化了生产流程，为您节省宝贵的时间和精力。",
+    "production_swiper_entire_process_p":"从产品开发到设计、生产和包装，我们在每个环节都与您密切合作。",
+    "production_swiper_experience_p":"我们在生产各类产品方面有着丰富的经验，可以满足您业务中的任何需求。",
+
+    "logistics_swiper_slide_1_h3":"国际货运服务",
+    "logistics_swiper_slide_1_p":"我们的进出口货运专家团队确保您的货物安全运输，全程为您提供放心可靠的服务。",
+    "logistics_swiper_slide_2_h3":"海运, 空运, 陆运",
+    "logistics_swiper_slide_2_p":"我们与本地货运公司合作，提供全方位的国际和国内运输服务，包括海运、空运和陆运。",
     
     
-    "fullfillment_new_3pl_benefits_dd":"Third-Party Logistics (3PL) allows merchants of any size to scale more quickly by delegating the challenges of managing omnichannel fulfillment, inventory management, and post-purchase customer cycles.",
+    "fullfillment_new_3pl_benefits_dd":"第三方物流（3PL）帮助各种规模的商家快速发展，将通过多渠道订单履行、库存管理和售后服务等复杂工作委托给专业团队来处理。",
 
     "fullfillment_new_fullfillment_span":"ORDER FULFILLMENT",
-    "fullfillment_new_3pl_order_fullfillment_p":"We handle all shipping and delivery so you can focus on sales and growth.",
+    "fullfillment_new_3pl_order_fullfillment_p":"<lang-zh-quot-begin>“</lang-zh-quot-begin><br><lang-zh>我们为您处理所有运输和配送，让您可以专注于销售和业务发展。</lang-zh><br> <lang-zh-quot-end>”</lang-zh-quot-end>",
     "fullfillment_new_integration_span":"INTEGRATION",
-    "fullfillment_new_3pl_integration_p":"Our fulfillment software seamlessly integrates with your sales channels to connect data such as orders, inventory, and more.",
+    "fullfillment_new_3pl_integration_p":"<lang-zh-quot-begin>“</lang-zh-quot-begin><br><lang-zh>我们的履行软件与您的销售渠道轻松集成，实时同步订单、库存等数据。</lang-zh><br> <lang-zh-quot-end>”</lang-zh-quot-end>",
     "fullfillment_new_b2b_fullfillment_span":"B2B FULFILLMENT",
-    
-    "fullfillment_new_3pl_b2b_fullfillment_p":"Our B2B fulfillment service helps you manage EDI-integrated retail orders as well as manual wholesale orders.",
+
+    "fullfillment_new_3pl_b2b_fullfillment_p":"<lang-zh-quot-begin>“</lang-zh-quot-begin><br><lang-zh>我们的B2B履行服务可以帮助您同时管理EDI系统的零售订单和手动批发订单。</lang-zh><br> <lang-zh-quot-end>”</lang-zh-quot-end>",
     "fullfillment_new_returns_customer_support_span":"RETURNS & CUSTOMER SUPPORT",
-    "fullfillment_new_3pl_returns_customer_support_p":"Dealing with customer inquiries and returned orders can be made easier and more cost effective with help of our dedicated customer support team.",
+    "fullfillment_new_3pl_returns_customer_support_p":"<lang-zh-quot-begin>“</lang-zh-quot-begin><br><lang-zh>有了我们专门的客户支持团队，处理客户咨询和退货订单会变得更加简单和省钱。</lang-zh><br> <lang-zh-quot-end>”</lang-zh-quot-end>",
     "fullfillment_new_custom_shipping_supplies_span":"CUSTOM SHIPPING SUPPLIES",
-    "fullfillment_new_3pl_customer_shipping_supplies_p":"Elevate your customer experience with personalized packaging featuring your brand logo. Our custom shipping supplies include branded shipping boxes, bubble mailers, and box tape, with the option to include your business card and promotional inserts.",
+    "fullfillment_new_3pl_customer_shipping_supplies_p":"<lang-zh-quot-begin>“</lang-zh-quot-begin><br><lang-zh>用印有您品牌标志的个性化包装来提升客户体验。我们的定制包装材料包括品牌运输箱、气泡信封和胶带，还可以放入您的名片和宣传单。</lang-zh><br> <lang-zh-quot-end>”</lang-zh-quot-end>",
 
-    "metrics_our_metrics_tell_the_story_p":"Our metrics component gives you the inside scoop on your success and helps you stay on top of your game in style.",
-    "metrics_global_office_network_p":"Strategically positioned offices in the USA, China, and Korea to meet your needs and maximize cost-efficiency",
-    "metrics_teams_of_specialists_p":"Experts in design, production, logistics, fulfillment, and software/web development working together to optimize workflow",
-    "metrics_extensive_experience_knowledge_p":"Accumulated expertise and know-how from more than 10 years of experience",
-    "metrics_a_wide_range_of_products_p":"A diverse selection of high-quality products manufactured under our meticulous management and strong infrastructure",
+    "metrics_our_metrics_tell_the_story_p":"我们的数据指标为您提供成功的关键信息，帮助您始终保持卓越表现。",
+    "metrics_global_office_network_p":"我们在美国、中国和韩国设有办公室，帮助您满足业务需求并节省成本。",
+    "metrics_teams_of_specialists_p":"我们的设计、生产、物流、订单处理和软件/网页开发专家携手合作，优化整个工作流程。",
+    "metrics_extensive_experience_knowledge_p":"我们有超过10年的经验，积累了大量的专业技能和知识。",
+    "metrics_a_wide_range_of_products_p":"我们在严密管理和强大基础设施下生产出各种高品质的产品，供您选择。",
 
-    "wms_software_p":"All-In-One Management System. <br>Our comprehensive management software enables you to oversee the entire process, <br>from manufacturing your products to fulfilling your orders.",
-    "wms_production_management_p":"From the early stage of product development, our software stores critical information to ensure the timely and quality production of your products.",
-    "wms_inbound_outbound_management_p":"Our management system helps you track your products from the manufacturer to the warehouse and to the customers.",
-    "wms_order_inventory_management_p":"Integrating our system with your marketplaces will expedite order fulfillment and minimize inventory errors.",
-    "wms_reporting_p":"Our management software collects, organizes, and carefully analyzes a wealth of data to generate comprehensive reports, providing valuable insights for assessing and enhancing your business operations.",
+    "wms_software_p":"我们的全方位管理软件帮助您轻松管理从产品生产到订单履行的整个过程。",
+    "wms_production_management_p":"从产品开发初期，我们的软件就会保存重要信息，确保产品能够按时并高质量地完成生产。",
+    "wms_inbound_outbound_management_p":"我们的管理系统帮助您跟踪产品从制造商到仓库，再到客户手中的每一步。",
+    "wms_order_inventory_management_p":"将我们的系统与您的销售平台对接，可以更快地完成订单处理，并减少库存错误。",
+    "wms_reporting_p":"我们的管理软件会收集、整理和分析大量数据，生成详细报告，为您评估和优化业务运营提供有价值的见解。",
 
-    "omnichannel_fullfillment_software_features_p":"ARK empowers your brand to execute enterprise-class fulfillment operations.",
-    "services_4_in_1_cloud_based_software_p":"3PL Partners Can Provide All of the Following:"
+    "omnichannel_fullfillment_software_features_p":"ARK助力您的品牌实现企业级的订单履行操作。",
+    "services_4_in_1_cloud_based_software_p":"第三方物流合作伙伴可以提供以下所有服务",
+
+    "howitworks_li_1_h2":"专注于一件事情",
+    "howitworks_li_1_h3":"把你的注意力集中在增加你的销售额上，不要让其他任何事情分散你的注意力。",
+    "howitworks_li_1_p":"ARK WITH GLOBAL  将在一个地方处理产品开发、生产、运输、履行、销售管理和库存管理过程",
+
+    "howitworks_li_2_h2":"如何把我心中的产品变成现实?",
+    "howitworks_li_2_h3":"我能提高产品的质量并降低成本吗?",
+    "howitworks_li_2_p":"我们在中国设有东亚分公司，为客户提供及时准确的抽样、生产和质量控制、咨询和服务。",
+
+    "howitworks_li_3_h2":"我怎样才能有效地把我的产品从国外工厂运过来?海关呢?",
+    "howitworks_li_3_h3":"国际贸易太复杂，太有挑战性。",
+    "howitworks_li_3_p":"我们的物流团队根据每个成品的交货时间表，为所有与贸易相关的任务提供快速和透明的服务，包括海运和空运，海关，FDA处理和交付。",
+
+    "howitworks_li_4_h2":"我既没有仓库也没有系统，我该怎么办?",
+    "howitworks_li_4_h3":"",
+    "howitworks_li_4_p":"通过 ARK WITH 在美国，中国和韩国的仓库，我们提供全球履行服务。我们创新的订单管理和库存系统允许实时管理履行服务。",
+
+    "howitworks_li_5_h2":"只有一家公司!",
+    "howitworks_li_5_h3":"",
+    "howitworks_li_5_p":"ARK WITH GLOBAL 是一家非常有实力的公司，提供完整的产品服务，具有竞争力。"
 }

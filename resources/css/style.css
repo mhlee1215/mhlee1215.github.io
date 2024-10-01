@@ -1104,6 +1104,33 @@ body {
   left: 0;
   background: rgba(255, 255, 255, 0.95);
 }
+#header.fixed .flag_select {
+  background-image: url("../images/flag_earth.svg");
+}
+#header.fixed aside li:nth-of-type(1) a div {
+  background-image: url("../images/flag_earth.svg");
+}
+#header.fixed aside li:nth-of-type(2) a div {
+  background-image: url("../images/flag_korea.svg");
+}
+#header.fixed aside li:nth-of-type(3) a div {
+  background-image: url("../images/flag_china.svg");
+}
+#header.fixed aside button > div.flag_select.lang-en {
+  background-image: url("../images/flag_earth.svg");
+}
+#header.fixed aside button > div.flag_select.lang-ko {
+  background-image: url("../images/flag_korea.svg");
+}
+#header.fixed aside button > div.flag_select.lang-zh {
+  background-image: url("../images/flag_china.svg");
+}
+#header.fixed aside li > a > h3 {
+  display: none;
+}
+#header.fixed aside button > h3 {
+  display: none;
+}
 @media (min-width: 1281px) {
   #header.temp:not(.opened) {
     top: -118px;
@@ -1160,7 +1187,7 @@ body {
   text-indent: 100%;
   white-space: nowrap;
   font-size: 0.5rem;
-  background: url("../images/logo.svg") no-repeat center/100%;
+  background: url("../images/logo-en.svg") no-repeat center/100%;
 }
 @media (min-width: 1281px) {
   #header h1 button {
@@ -1181,6 +1208,12 @@ body {
   #header h1 button {
     height: 24px;
   }
+}
+#header h1 button.lang-ko {
+  background: url("../images/logo-ko.svg") no-repeat center/100%;
+}
+#header h1 button.lang-zh {
+  background: url("../images/logo-zh.svg") no-repeat center/100%;
 }
 #header > div > button {
   display: inline-block;
@@ -1271,15 +1304,16 @@ body {
 }
 #header aside li {
   position: relative;
+  cursor: pointer;
 }
-#header aside li:nth-of-type(1) a {
-  background-image: url("../images/flag_earth.svg");
+#header aside li:nth-of-type(1) a div {
+  background-image: url("../images/flag_earth_white.svg");
 }
-#header aside li:nth-of-type(2) a {
-  background-image: url("../images/flag_korea.svg");
+#header aside li:nth-of-type(2) a div {
+  background-image: url("../images/flag_korea_white.svg");
 }
-#header aside li:nth-of-type(3) a {
-  background-image: url("../images/flag_china.svg");
+#header aside li:nth-of-type(3) a div {
+  background-image: url("../images/flag_china_white.svg");
 }
 @media (max-width: 1280px) {
   #header aside li {
@@ -1297,41 +1331,141 @@ body {
     background: #e6e7e8;
   }
 }
+#header aside li > a {
+  display: flex; /* Enable flexbox for horizontal alignment */
+  align-items: center;
+  text-align: left;
+}
+#header aside button > div.flag_select.lang-en {
+  background-image: url("../images/flag_earth_white.svg");
+}
+#header aside button > div.flag_select.lang-ko {
+  background-image: url("../images/flag_korea_white.svg");
+}
+#header aside button > div.flag_select.lang-zh {
+  background-image: url("../images/flag_china_white.svg");
+}
+#header aside button > h3.text_ko, #header aside button > h3.text_zh {
+  display: none;
+}
+#header aside button > h3.text_en.lang-en, #header aside button > h3.text_ko.lang-ko, #header aside button > h3.text_zh.lang-zh {
+  display: block;
+}
+#header aside button > h3.text_en.lang-ko, #header aside button > h3.text_en.lang-zh {
+  display: none;
+}
+#header aside button > h3.text_ko.lang-en, #header aside button > h3.text_ko.lang-zh {
+  display: none;
+}
+#header aside button > h3.text_zh.lang-en, #header aside button > h3.text_zh.lang-ko {
+  display: none;
+}
+#header aside li > a.a_flag_global_white {
+  display: none;
+}
+#header aside li > a.a_flag_global_white.lang-ko, #header aside li > a.a_flag_global_white.lang-zh {
+  display: flex;
+}
+#header aside li > a.a_flag_korea_white.lang-ko {
+  display: none;
+}
+#header aside li > a.a_flag_china_white.lang-zh {
+  display: none;
+}
 @media (min-width: 1281px) {
-  #header aside button,
-  #header aside a {
-    width: 31px;
+  #header aside div {
+    width: 32px;
   }
 }
 @media (max-width: 1280px) {
-  #header aside button,
-  #header aside a {
+  #header aside div {
     width: 41px;
   }
 }
 @media (min-width: 1281px) {
-  #header aside button,
-  #header aside a {
-    height: 31px;
+  #header aside div {
+    height: 32px;
   }
 }
 @media (max-width: 1280px) {
-  #header aside button,
-  #header aside a {
+  #header aside div {
     height: 41px;
   }
 }
 @media (min-width: 1281px) {
-  #header aside button,
-  #header aside a {
+  #header aside div {
     background-size: 100%;
   }
 }
 @media (max-width: 1280px) {
-  #header aside button,
-  #header aside a {
+  #header aside div {
     background-size: 21px;
   }
+}
+#header aside button {
+  display: flex; /* Enable flexbox for horizontal alignment */
+  align-items: center;
+}
+@media (min-width: 1281px) {
+  #header aside button {
+    height: 32px;
+  }
+}
+@media (max-width: 1280px) {
+  #header aside button {
+    height: 41px;
+  }
+}
+@media (min-width: 1281px) {
+  #header aside button {
+    background-size: 100%;
+  }
+}
+@media (max-width: 1280px) {
+  #header aside button {
+    background-size: 21px;
+  }
+}
+#header aside button > div {
+  margin-right: 10px;
+}
+#header aside button > div.down_arrow {
+  width: 12px;
+  background-repeat: no-repeat;
+  background-image: url("../images/down_arrow.svg");
+}
+@media (min-width: 1281px) {
+  #header aside button > div.down_arrow {
+    height: 6.55px;
+  }
+}
+@media (max-width: 1280px) {
+  #header aside button > div.down_arrow {
+    height: 6.55px;
+  }
+}
+#header aside li > a > h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 10px;
+}
+#header aside li > a > h3.text_cn {
+  margin-left: 8px;
+}
+#header aside button > h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 18px;
 }
 @media (min-width: 1281px) {
   #header aside a {
@@ -1395,6 +1529,12 @@ body {
     width: 2px;
     background: #9a8197;
   }
+}
+#header nav.lang-ko {
+  color: #91A28F;
+}
+#header nav.lang-zh {
+  color: #DD577A;
 }
 
 @media (min-width: 1281px) {
@@ -1591,7 +1731,7 @@ body {
 }
 @media (min-width: 1281px) {
   .howitworks .swiper .swiper-slide h2 {
-    max-width: 717px;
+    max-width: 867px;
   }
 }
 @media (max-width: 1280px) {
@@ -1630,6 +1770,7 @@ body {
   }
 }
 .howitworks .swiper .swiper-slide h3 {
+  margin-top: 30px;
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
@@ -1638,9 +1779,10 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  max-width: 717px;
+  max-width: 867px;
 }
 .howitworks .swiper .swiper-slide p {
+  margin-top: 30px;
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
@@ -1649,12 +1791,12 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 30px; /* 166.667% */
-  max-width: 717px;
+  max-width: 867px;
 }
 .howitworks .swiper .swiper-slide div {
   border: 0px solid transparent;
   position: absolute; /* Set the image to absolute positioning */
-  bottom: 0; /* Align the image to the bottom of the wrapper */
+  bottom: 30px; /* Align the image to the bottom of the wrapper */
   right: 0; /* Align the image to the right of the wrapper */
   opacity: 0;
   transform: translateX(100%); /* Start the image off-screen to the right */
@@ -1662,22 +1804,22 @@ body {
 }
 @media (min-width: 1281px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 240px;
+    margin-right: 284px;
   }
 }
 @media (max-width: 1280px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 66px;
+    margin-right: 103px;
   }
 }
 @media (max-width: 640px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 20px;
+    margin-right: 39px;
   }
 }
 @media (max-width: 480px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 20px;
+    margin-right: 39px;
   }
 }
 @media (min-width: 1281px) {
@@ -3187,7 +3329,6 @@ body {
   font-weight: 700;
   line-height: 20px; /* 62.5% */
   letter-spacing: -0.32px;
-  margin-left: -45px;
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide p lang-ko-quot-end {
   color: #FFF;
@@ -3201,6 +3342,39 @@ body {
   letter-spacing: -0.32px;
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide p lang-ko {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: NanumMyeongjo;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.125px;
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide p lang-zh-quot-begin {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 62.5% */
+  letter-spacing: -0.32px;
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide p lang-zh-quot-end {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150px; /* 62.5% */
+  letter-spacing: -0.32px;
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide p lang-zh {
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
@@ -6000,15 +6174,35 @@ body {
   background-position: center;
 }
 
+.flag_select {
+  background-image: url("../images/flag_earth_white.svg");
+}
+
 .flag_global {
+  background-image: url("../images/flag_earth.svg");
+}
+
+.flag_global_white {
   background-image: url("../images/flag_earth_white.svg");
 }
 
 .flag_korea {
-  background-image: url("../images/flag_korea_white.svg");
+  background-image: url("../images/flag_korea.svg");
 }
 
 .flag_china {
+  background-image: url("../images/flag_china.svg");
+}
+
+.flag_global.lang-en {
+  background-image: url("../images/flag_earth_white.svg");
+}
+
+.flag_korea.lang-ko {
+  background-image: url("../images/flag_korea_white.svg");
+}
+
+.flag_china.lang-zh {
   background-image: url("../images/flag_china_white.svg");
 }
 

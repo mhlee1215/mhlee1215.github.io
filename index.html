@@ -58,11 +58,24 @@
         <div>
             <button type="button" title="Close menu">x</button>
             <aside>
-                <button type="button" onclick="$(this).next('ul').slideToggle('fast')" class="flag_global">Choose Country</button>
+                <button type="button" onclick="$(this).next('ul').slideToggle('fast')">
+                    <div class="flag_select"></div><h3 class="text_en">EN</h3><h3 class="text_ko">KR</h3><h3 class="text_zh">CN</h3><div class="down_arrow"></div></button>
                 <ul style="display: none;">
-                    <li><a onclick="changeLanguage('en')" class="flag_korea">Global</a></li>
-                    <li><a onclick="changeLanguage('ko')" class="flag_hongkong">South Korea</a></li>
-                    <li><a onclick="changeLanguage('zh')" class="flag_china">China</a></li>
+                    <li>
+                        <a onclick="changeLanguage('en');$(this).parent().parent().slideToggle('fast');" class="a_flag_global_white">
+                            <div class="flag_global_white"></div><h3 class="text_en">EN</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="changeLanguage('ko');$(this).parent().parent().slideToggle('fast');" class="a_flag_korea_white">
+                            <div class="flag_korea_white"></div><h3 class="text_ko">KR</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="changeLanguage('zh');$(this).parent().parent().slideToggle('fast');" class="a_flag_china_white">
+                            <div class="flag_china_white"></div><h3 class="text_zh">CN</h3>
+                        </a>
+                    </li>
                 </ul>
             </aside>
             <nav>
@@ -81,43 +94,58 @@
         <div class="swiper">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                    <h2>Focus on only one thing.</h2>
-                    <h3>Keep your focus on growing your sales. Don't let anything else distract you.</h3>
-                    <p>ARK WITH GLOBAL will handle complex and confusing processes of product development, 
+                    <!-- <h2>Focus on only one thing.</h2> -->
+                    <h2 id="howitworks_li_1_h2"></h2>
+                    <!-- <h3>Keep your focus on growing your sales. Don't let anything else distract you.</h3> -->
+                    <h3 id="howitworks_li_1_h3"></h3>
+                    <!-- <p>ARK WITH GLOBAL will handle complex and confusing processes of product development, 
                         production, transportation, fulfillment, sales management, and inventory management 
-                        all in one place.</p>
+                        all in one place.</p> -->
+                    <p id="howitworks_li_1_p"></p>
                     <div id="howitworks_image_1"/>
                 </li>
                 <li class="swiper-slide">
-                    <h2>Where and how can I bring to life the product I have in mind?</h2>
-                    <h3>Can I improve the quality and lower the cost of my products?</h3>
-                    <p>With our East Asia branch in China, we provide prompt and accurate 
-                        consultation and services for sampling, production, and quality control.</p>
+                    <!-- <h2>Where and how can I bring to life the product I have in mind?</h2> -->
+                    <h2 id="howitworks_li_2_h2"></h2>
+                    <!-- <h3>Can I improve the quality and lower the cost of my products?</h3> -->
+                    <h3 id="howitworks_li_2_h3"></h3>
+                    <!-- <p>With our East Asia branch in China, we provide prompt and accurate  -->
+                        <!-- consultation and services for sampling, production, and quality control.</p> -->
+                    <p id="howitworks_li_2_p"></p>
                     <div id="howitworks_image_2"/>
                 </li>
                 <li class="swiper-slide">
-                    <h2>How can I efficiently bring my product 
-                        from the factories abroad? What about the customs?	</h2>
-                    <h3>International trade is too complicated and challenging.</h3>
-                    <p>Based on the delivery schedule of each finished product, our Logistics team provides fast 
+                    <!-- <h2>How can I efficiently bring my product 
+                        from the factories abroad? What about the customs?	</h2> -->
+                    <h2 id="howitworks_li_3_h2"></h2>
+                    <!-- <h3>International trade is too complicated and challenging.</h3> -->
+                    <h3 id="howitworks_li_3_h3"></h3>
+                    <!-- <p>Based on the delivery schedule of each finished product, our Logistics team provides fast 
                         and transparent services for all trade-related tasks, including Ocean & Air freight, Cutoms, 
-                        FDA Processing, and Delivery.</p>
+                        FDA Processing, and Delivery.</p> -->
+                    <p id="howitworks_li_3_p"></p>
                     <div id="howitworks_image_3"/>
                 </li>
                 <li class="swiper-slide">
-                    <h2>I don't have either a warehouse or 
+                    <!-- <h2>I don't have either a warehouse or 
                         a system. 
-                        What should I do?</h2>
-                    <h3>Through ARK WITH warehouses in the USA, China, and Korea, we offer 
-                        global fulfillment services.</h3>
-                    <p>Our innovative order management and inventory systems allow real-time management for 
-                        fulfillment services.</p>
+                        What should I do?</h2> -->
+                    <h2 id="howitworks_li_4_h2"></h2>
+                    <!-- <h3>Through ARK WITH warehouses in the USA, China, and Korea, we offer 
+                        global fulfillment services.</h3> -->
+                    <h3 id="howitworks_li_4_h3"></h3>
+                    <!-- <p>Our innovative order management and inventory systems allow real-time management for 
+                        fulfillment services.</p> -->
+                    <p id="howitworks_li_4_p"></p>
                     <div id="howitworks_image_4"/>
                 </li>
                 <li class="swiper-slide">
-                    <h2>ONLY ONE COMPANY!</h2>
-                    <p>ARK WITH GLOBAL is the unparalleled company that offers 
-                        a complete package of product services competitively and all at once.</p>
+                    <!-- <h2>ONLY ONE COMPANY!</h2> -->
+                    <h2 id="howitworks_li_5_h2"></h2>
+                    <h3 id="howitworks_li_5_h3"></h2>
+                    <!-- <p>ARK WITH GLOBAL is the unparalleled company that offers 
+                        a complete package of product services competitively and all at once.</p> -->
+                    <p id="howitworks_li_5_p"></p>
                     <div id="howitworks_image_5"/>
                 </li>
             </ul>
@@ -193,13 +221,13 @@
             <ul class="swiper-wrapper">
                 <li class="swiper-slide"><div>
                     <h2><span>Logistics</span></h2>
-                    <h3><span>Freight Forwarding</span></h3>
+                    <h3><span id="logistics_swiper_slide_1_h3"></span></h3>
                     <p id="logistics_swiper_slide_1_p"></p>
                     <!-- <p>Our team of import/export freight specialists ensures the safe and secure transportation of your valuable cargo, providing you with peace of mind and reliable service every step of the way.</p> -->
                 </div></li>
                 <li class="swiper-slide"><div>
                     <h2><span>Logistics</span></h2>
-                    <h3><span>Ocean, Air, Ground</span></h3>
+                    <h3><span id="logistics_swiper_slide_2_h3"></span></h3>
                     <p id="logistics_swiper_slide_2_p"></p>
                     <!-- <p>We partner with local forwarding companies to deliver comprehensive international and domestic transportation solutions, including ocean freight, air freight, and ground trucking services.</p> -->
                 </div></li>
@@ -218,7 +246,7 @@
         <div class="fullfillment_new_inner" style="translate: none; rotate: none; scale: none; inset: 0px auto auto 0px; margin: 0px; max-width: 1500px; width: 1500px; max-height: 1260px; height: 1260px; padding: 0px; transform: translate(0px, 0px);">
             <header  class="mc_title_wrap">
                 <h2>3PL</h2>
-                <span>Fulfillment Service1</span>
+                <span>Fulfillment Service</span>
                 <dl>
                     <dt>3PL Benefits</dt>
                     <dd id="fullfillment_new_3pl_benefits_dd"></dd>
@@ -470,7 +498,6 @@
             <h2>ARK Services</h2>
             <em>4-in-1 Cloud-Based Software</em>
             <p id="services_4_in_1_cloud_based_software_p"></p>
-            <p>3PL Partners Can Provide All of the Following:</p>
         </header>
         <div class="swiper">
             <ul class="swiper-wrapper">
