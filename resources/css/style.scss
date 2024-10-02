@@ -592,7 +592,7 @@ body {
             background-color: $primary-color-zh;
         }
 
-        $extra_text_box_padding: 150px;
+        $extra_text_box_padding: 0px;
         .swiper-slide h2 {    
             @include each4(padding-top, 99px, 66px, 20px, 20px);
             @include each4(font-size, 80px, 40px, 29px, 29px);
