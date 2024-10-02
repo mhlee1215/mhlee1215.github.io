@@ -2957,10 +2957,10 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 0px;
   position: relative;
   margin: 0px 550px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0);
 }
 .fulfillment_new #fulfillment_new .fullfillment_new_container .swiper-slide:hover {
   filter: grayscale(1);
@@ -3240,6 +3240,46 @@ body {
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(5) {
   background-image: url("../images/fulfillment5.jpg");
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(1) {
+  border-right: 15px solid;
+}
+@media (min-width: 1281px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(1) {
+    width: 435px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(1) {
+    width: 273px;
+  }
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(2), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(3), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(4) {
+  border-left: 15px solid;
+  border-right: 15px solid;
+}
+@media (min-width: 1281px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(2), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(3), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(4) {
+    width: 450px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(2), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(3), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(4) {
+    width: 273px;
+  }
+}
+.fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(5) {
+  border-left: 15px solid;
+}
+@media (min-width: 1281px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(5) {
+    width: 435px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(5) {
+    width: 273px;
+  }
 }
 @media (min-width: 1281px) {
   .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(1) p {
@@ -4544,7 +4584,6 @@ body {
 }
 .wms ul li em,
 .wms ul li p {
-  z-index: 4;
   position: relative;
 }
 .wms ul li em {
@@ -4602,7 +4641,6 @@ body {
 }
 
 .companies {
-  z-index: 3;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -4744,30 +4782,30 @@ body {
     background-size: calc(117px * 0.45);
   }
 }
-.companies ul li.forever21 {
-  background-image: url("../images/logo_forever21.png");
+.companies ul li.logo82 {
+  background-image: url("../images/logo_logo82.png");
 }
 @media (min-width: 1281px) {
-  .companies ul li.forever21 {
-    background-size: 180px;
+  .companies ul li.logo82 {
+    background-size: 85px;
   }
 }
 @media (max-width: 1280px) {
-  .companies ul li.forever21 {
-    background-size: calc(180px * 0.45);
+  .companies ul li.logo82 {
+    background-size: calc(85px * 0.45);
   }
 }
-.companies ul li.nova {
-  background-image: url("../images/logo_nova.png");
+.companies ul li.target {
+  background-image: url("../images/logo_target.png");
 }
 @media (min-width: 1281px) {
-  .companies ul li.nova {
-    background-size: 203px;
+  .companies ul li.target {
+    background-size: 45px;
   }
 }
 @media (max-width: 1280px) {
-  .companies ul li.nova {
-    background-size: calc(203px * 0.45);
+  .companies ul li.target {
+    background-size: calc(45px * 0.45);
   }
 }
 .companies ul li.nordstrom {
@@ -6334,10 +6372,12 @@ body {
   mix-blend-mode: difference;
   pointer-events: none;
 }
-.cursor .lang-ko {
+
+.cursor.lang-ko {
   background: #91A28F;
 }
-.cursor .lang-zh {
+
+.cursor.lang-zh {
   background: #DD577A;
 }
 
@@ -6454,10 +6494,12 @@ body.mobile #custom_cursor_text {
   z-index: 1;
   background: #9a8197 no-repeat center center;
 }
-.custom_hover_circle .lang-ko {
+
+.custom_hover_circle.lang-ko {
   background: #91A28F no-repeat center center;
 }
-.custom_hover_circle .lang-zh {
+
+.custom_hover_circle.lang-zh {
   background: #DD577A no-repeat center center;
 }
 

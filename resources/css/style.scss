@@ -1235,10 +1235,10 @@ body {
         height: 100%;
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 0px;
         position: relative;
         margin: 0px 550px;
-        background: #ffffff;
+        background: #ffffff00;
     }
 
     /* hover */
@@ -1358,6 +1358,24 @@ body {
                     background-image: url("../images/fulfillment#{$i}.jpg");
                 }
             }
+
+            &:nth-child(1) {
+                @include each(width, calc(420px + 15px), 273px);
+                border-right: 15px solid;
+            }
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                @include each(width, calc(420px + 30px), 273px);
+                border-left: 15px solid;
+                border-right: 15px solid;
+            }
+
+            &:nth-child(5) {
+                @include each(width, calc(420px + 15px), 273px);
+                border-left: 15px solid;
+            }
+
+
             &:nth-child(1) p {
                 @include each(top, 116px, 76px);
             }
@@ -1935,7 +1953,7 @@ body {
             }
             em,
             p {
-                z-index: 4;
+                // z-index: 4;
                 position: relative;
             }
             em {
@@ -1969,7 +1987,7 @@ body {
 
 //Companies
 .companies {
-    z-index: 3;
+    // z-index: 3;
     position: relative;
     @include each(margin-top, 285px, 70px);
     margin-left: auto;
@@ -2017,8 +2035,8 @@ body {
             $companies: (
                 sm: 140px,
                 kakao: 117px,
-                forever21: 180px,
-                nova: 203px,
+                logo82: 85px,
+                target: 45px,
                 nordstrom: 200px,
                 beneton: 166px,
                 prediction: 127px,
@@ -2720,14 +2738,15 @@ body {
     transition: all 1s ease-in-out;
     mix-blend-mode: difference;
     pointer-events: none;
-
-    .lang-ko {
-        background: $primary-color-ko;
-    }
-    .lang-zh {
-        background: $primary-color-zh;
-    }
 }
+
+.cursor.lang-ko {
+    background: $primary-color-ko;
+}
+.cursor.lang-zh {
+    background: $primary-color-zh;
+}
+
 .cursor.on {
     border: 2px solid #222;
     background: #222;
@@ -2830,13 +2849,15 @@ body.mobile {
 .custom_hover_circle {
     z-index: 1;
     background: $primary-color-en no-repeat center center;
-    .lang-ko {
-        background: $primary-color-ko no-repeat center center;
-    }
-    .lang-zh {
-        background: $primary-color-zh no-repeat center center;
-    }
 }
+
+.custom_hover_circle.lang-ko {
+    background: $primary-color-ko no-repeat center center;
+}
+.custom_hover_circle.lang-zh {
+    background: $primary-color-zh no-repeat center center;
+}
+
 .custom_hover_text {
     z-index: 2;
 }
