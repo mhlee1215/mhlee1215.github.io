@@ -457,22 +457,23 @@ body {
             line-height: normal;
             // margin-right:18px;
             margin-left:10px;
-
-            &:nth-of-type(1) {
-                color: $primary-color-en;
-            }
-            &:nth-of-type(2){
-                color: $primary-color-ko;
-            }
-            &:nth-of-type(3){
-                color: $primary-color-zh;
-            }
         }
 
-
-        li > a > h3.text_cn {
+        li > a > h3.text_en {
+            color: $primary-color-en;
+        }
+        li > a > h3.text_ko {
+            color: $primary-color-ko;
+        }
+        li > a > h3.text_zh {
+            color: $primary-color-zh;
             margin-left:8px;
         }
+
+
+        // li > a > h3.text_cn {
+            
+        // }
 
         @include middle {
             li > a > h3 {

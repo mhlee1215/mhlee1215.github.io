@@ -1542,16 +1542,14 @@ body {
   line-height: normal;
   margin-left: 10px;
 }
-#header aside li > a > h3:nth-of-type(1) {
+#header aside li > a > h3.text_en {
   color: #9a8197;
 }
-#header aside li > a > h3:nth-of-type(2) {
+#header aside li > a > h3.text_ko {
   color: #91A28F;
 }
-#header aside li > a > h3:nth-of-type(3) {
+#header aside li > a > h3.text_zh {
   color: #DD577A;
-}
-#header aside li > a > h3.text_cn {
   margin-left: 8px;
 }
 @media (max-width: 1280px) {
