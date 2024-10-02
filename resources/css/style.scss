@@ -219,6 +219,19 @@ body {
         }
 
         button {
+            border-radius: 100px;
+            border: 1.5px solid #FFF;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 7px;
+            padding-right: 0px;
+            // background-color: lightblue;       /* Background color inside the box */
+            // border: 2px solid white;           /* White border with 5px thickness */
+            // border-radius: 15px;               /* Rounded corners with 15px radius */
+            // width: 300px;                      /* Fixed width for the box */
+            // text-align: center;                /* Center the text inside the box */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+
             @include middle {
                 width: 41px;
             }
@@ -230,15 +243,53 @@ body {
                 @include horizontal;
             }
             li {
+
+
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border: 1.5px solid #FFF;
+                background-color: #FFF;
+                // border-bottom: 1.5px solid #FFF;
+                // border-bottom: 1.5px solid #FFF;
+                // padding-top: 20px;
+                // padding-bottom: 20px;
+                // padding-left: 7px;
+                // padding-right: 0px;
                 
                 &:nth-of-type(1).lang-en {
                     display:none
                 }
-
+                &:nth-of-type(1).lang-ko {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                &:nth-of-type(1).lang-zh {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                
+                &:nth-of-type(2).lang-en {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
                 &:nth-of-type(2).lang-ko {
                     display:none
                 }
-
+                &:nth-of-type(2).lang-zh {
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+                
+                &:nth-of-type(3).lang-en {
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+                &:nth-of-type(3).lang-ko {
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
                 &:nth-of-type(3).lang-zh {
                     display:none
                 }
@@ -249,13 +300,13 @@ body {
             position: relative;
             cursor: pointer;
             &:nth-of-type(1) a div {
-                background-image: url("../images/flag_earth_white.svg");
+                background-image: url("../images/flag_earth.svg");
             }
             &:nth-of-type(2) a div {
-                background-image: url("../images/flag_korea_white.svg");
+                background-image: url("../images/flag_korea.svg");
             }
             &:nth-of-type(3) a div {
-                background-image: url("../images/flag_china_white.svg");
+                background-image: url("../images/flag_china.svg");
             }
             @include middle {
                 padding-left: 14px;
@@ -395,7 +446,7 @@ body {
                 display:none;
             }
         }
-
+        
         li > a > h3 {
             color: #FFF;
             text-align: center;
@@ -406,7 +457,18 @@ body {
             line-height: normal;
             // margin-right:18px;
             margin-left:10px;
+
+            &:nth-of-type(1) {
+                color: $primary-color-en;
+            }
+            &:nth-of-type(2){
+                color: $primary-color-ko;
+            }
+            &:nth-of-type(3){
+                color: $primary-color-zh;
+            }
         }
+
 
         li > a > h3.text_cn {
             margin-left:8px;
@@ -432,7 +494,10 @@ body {
 
         a {
             @include wide {
-                margin-top: 25px;
+                // margin-top: 25px;
+                margin-left: 8px;
+                margin-top: 5px;
+                margin-bottom: 5px;
             }
         }
         button {
@@ -661,14 +726,14 @@ body {
             transition: transform 0.5s ease-out, opacity 1s ease-out;
         }
 
-        .swiper-slide {
-            &:nth-child(1) div {
-                opacity: 1.0;
-                transform: translateX(
-                    0%
-                ); /* Start the image off-screen to the right */
-            }
-        }
+        // .swiper-slide {
+        //     &:nth-child(1) div {
+        //         opacity: 1.0;
+        //         transform: translateX(
+        //             0%
+        //         ); /* Start the image off-screen to the right */
+        //     }
+        // }
         
     }
 

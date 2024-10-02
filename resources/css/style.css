@@ -1291,6 +1291,15 @@ body {
     border-bottom: 1px solid rgba(210, 210, 210, 0.5);
   }
 }
+#header aside button {
+  border-radius: 100px;
+  border: 1.5px solid #FFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 7px;
+  padding-right: 0px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
 @media (max-width: 1280px) {
   #header aside button {
     width: 41px;
@@ -1307,11 +1316,43 @@ body {
     display: inline-block;
   }
 }
+#header aside ul li {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1.5px solid #FFF;
+  background-color: #FFF;
+}
 #header aside ul li:nth-of-type(1).lang-en {
   display: none;
 }
+#header aside ul li:nth-of-type(1).lang-ko {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#header aside ul li:nth-of-type(1).lang-zh {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#header aside ul li:nth-of-type(2).lang-en {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 #header aside ul li:nth-of-type(2).lang-ko {
   display: none;
+}
+#header aside ul li:nth-of-type(2).lang-zh {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+#header aside ul li:nth-of-type(3).lang-en {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+#header aside ul li:nth-of-type(3).lang-ko {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 #header aside ul li:nth-of-type(3).lang-zh {
   display: none;
@@ -1321,13 +1362,13 @@ body {
   cursor: pointer;
 }
 #header aside li:nth-of-type(1) a div {
-  background-image: url("../images/flag_earth_white.svg");
+  background-image: url("../images/flag_earth.svg");
 }
 #header aside li:nth-of-type(2) a div {
-  background-image: url("../images/flag_korea_white.svg");
+  background-image: url("../images/flag_korea.svg");
 }
 #header aside li:nth-of-type(3) a div {
-  background-image: url("../images/flag_china_white.svg");
+  background-image: url("../images/flag_china.svg");
 }
 @media (max-width: 1280px) {
   #header aside li {
@@ -1501,6 +1542,15 @@ body {
   line-height: normal;
   margin-left: 10px;
 }
+#header aside li > a > h3:nth-of-type(1) {
+  color: #9a8197;
+}
+#header aside li > a > h3:nth-of-type(2) {
+  color: #91A28F;
+}
+#header aside li > a > h3:nth-of-type(3) {
+  color: #DD577A;
+}
 #header aside li > a > h3.text_cn {
   margin-left: 8px;
 }
@@ -1521,7 +1571,9 @@ body {
 }
 @media (min-width: 1281px) {
   #header aside a {
-    margin-top: 25px;
+    margin-left: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 1280px) {
@@ -1932,10 +1984,6 @@ body {
   .howitworks .swiper .swiper-slide div {
     width: 230px;
   }
-}
-.howitworks .swiper .swiper-slide:nth-child(1) div {
-  opacity: 1;
-  transform: translateX(0%); /* Start the image off-screen to the right */
 }
 .howitworks .swiper.lang-ko {
   background-color: #91A28F;
