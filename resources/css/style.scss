@@ -757,7 +757,7 @@ body {
             // margin-right:240px;
             
 
-            @include each6(margin-right, calc(0px + 30px), calc(0px + 30px), calc(103px + 30px), calc(60px + 35px), calc(20px + 19px), calc(20px + 19px));
+            @include each6(margin-right, calc(214px + 30px - 40px), calc(30px + 30px), calc(-20px + 0px), calc(30px + 35px), calc(20px + 19px), calc(20px + 19px));
 
             @include each6(bottom, 100px, 100px, 100px, 100px, 80px, 80px); //30px;           /* Align the image to the bottom of the wrapper */
             right: 0;            /* Align the image to the right of the wrapper */
@@ -796,7 +796,7 @@ body {
 
     .swiper-pagination {
         // @include each4(margin-right, 240px, 66px, 20px, 20px);
-        @include each6(margin-right, calc(214px - 30px), calc(142px - 30px), calc(103px), calc(60px), calc(20px), calc(20px));
+        @include each6(margin-right, calc(214px), calc(142px), calc(103px), calc(60px), calc(20px), calc(20px));
     }
 
     .swiper-pagination-bullet {

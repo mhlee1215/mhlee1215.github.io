@@ -2067,22 +2067,22 @@ body {
 }
 @media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 30px;
+    margin-right: 204px;
   }
 }
 @media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 30px;
+    margin-right: 60px;
   }
 }
 @media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 133px;
+    margin-right: -20px;
   }
 }
 @media (max-width: 1280px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 95px;
+    margin-right: 65px;
   }
 }
 @media (max-width: 640px) {
@@ -2193,12 +2193,12 @@ body {
 }
 @media (min-width: 1921px) {
   .howitworks .swiper-pagination {
-    margin-right: 184px;
+    margin-right: 214px;
   }
 }
 @media (max-width: 1920px) {
   .howitworks .swiper-pagination {
-    margin-right: 112px;
+    margin-right: 142px;
   }
 }
 @media (max-width: 1440px) {
