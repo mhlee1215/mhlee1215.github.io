@@ -66,9 +66,9 @@ function updateLanguageSpecificClass(lang){
         element.classList.add(`lang-${lang}`);
 
         if (ua.includes("Safari") && !ua.includes("Chrome")) {
-            element.classList.add(`safari`);
+            element.classList.add(`safari_style`);
         } else if (ua.includes("Chrome")) {
-            element.classList.add(`chrome`);
+            element.classList.add(`chrome_style`);
         }
     });
 }

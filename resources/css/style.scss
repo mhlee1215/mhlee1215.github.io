@@ -96,13 +96,29 @@ body {
 
             li > a > h3 {
                 // color: $primary-color-en;
-                display: none
+                // display: none
             }
     
     
             button > h3 {
-                // color: $primary-color-en;
-                display: none
+                color: $primary-color-en;
+                // display: none
+            }
+
+            button > h3.lang-ko {
+                color: $primary-color-ko;
+                // display: none
+            }
+            button > h3.lang-zh {
+                color: $primary-color-zh;
+                // display: none
+            }
+
+            button > div.down_arrow {
+                width:12px;
+                @include each(height, 12px, 12px);
+                background-repeat: no-repeat;
+                background-image: url("../images/down_arrow-en.svg");
             }
         }
     }
@@ -219,22 +235,32 @@ body {
         }
 
         button {
-            border-radius: 100px;
-            border: 1.5px solid #FFF;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 7px;
-            padding-right: 0px;
-            // background-color: lightblue;       /* Background color inside the box */
-            // border: 2px solid white;           /* White border with 5px thickness */
-            // border-radius: 15px;               /* Rounded corners with 15px radius */
-            // width: 300px;                      /* Fixed width for the box */
-            // text-align: center;                /* Center the text inside the box */
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+            @include wide {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border: 1.5px solid #FFF;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 7px;
+                padding-right: 0px;
+                // background-color: lightblue;       /* Background color inside the box */
+                // border: 2px solid white;           /* White border with 5px thickness */
+                // border-radius: 15px;               /* Rounded corners with 15px radius */
+                // width: 300px;                      /* Fixed width for the box */
+                // text-align: center;                /* Center the text inside the box */
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+            }
 
             @include middle {
                 width: 41px;
             }
+        }
+
+        button.language_menu_open {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
         }
 
         ul {
@@ -242,56 +268,63 @@ body {
                 display: block !important;
                 @include horizontal;
             }
-            li {
-
-
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
+            @include wide {
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
-                border: 1.5px solid #FFF;
-                background-color: #FFF;
-                // border-bottom: 1.5px solid #FFF;
-                // border-bottom: 1.5px solid #FFF;
-                // padding-top: 20px;
-                // padding-bottom: 20px;
-                // padding-left: 7px;
-                // padding-right: 0px;
-                
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+            }
+
+            li {
                 &:nth-of-type(1).lang-en {
                     display:none
-                }
-                &:nth-of-type(1).lang-ko {
-                    border-bottom-left-radius: 0px;
-                    border-bottom-right-radius: 0px;
-                }
-                &:nth-of-type(1).lang-zh {
-                    border-bottom-left-radius: 0px;
-                    border-bottom-right-radius: 0px;
-                }
-                
-                &:nth-of-type(2).lang-en {
-                    border-bottom-left-radius: 0px;
-                    border-bottom-right-radius: 0px;
                 }
                 &:nth-of-type(2).lang-ko {
                     display:none
                 }
-                &:nth-of-type(2).lang-zh {
-                    border-top-left-radius: 0px;
-                    border-top-right-radius: 0px;
-                }
-                
-                &:nth-of-type(3).lang-en {
-                    border-top-left-radius: 0px;
-                    border-top-right-radius: 0px;
-                }
-                &:nth-of-type(3).lang-ko {
-                    border-top-left-radius: 0px;
-                    border-top-right-radius: 0px;
-                }
                 &:nth-of-type(3).lang-zh {
                     display:none
+                }
+                @include wide {
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    border: 1.5px solid #FFF;
+                    background-color: #FFF;
+                    
+
+                    
+                    &:nth-of-type(1).lang-ko {
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                    &:nth-of-type(1).lang-zh {
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                    
+                    &:nth-of-type(2).lang-en {
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                        box-shadow: 0px;
+                    }
+                    
+                    &:nth-of-type(2).lang-zh {
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+                    
+                    &:nth-of-type(3).lang-en {
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+                    &:nth-of-type(3).lang-ko {
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+                    
                 }
             }
             
@@ -434,12 +467,22 @@ body {
             margin-right:10px;
         }
 
+        button > div.lang-en {
+            margin-right:calc(10px + 1.56px);
+        }
+
+        button > div.lang-ko {
+            margin-right:calc(10px + 1.56px);
+        }
+
         button > div.down_arrow {
             width:12px;
             @include each(height, 6.55px, 6.55px);
             background-repeat: no-repeat;
             background-image: url("../images/down_arrow.svg");
         }
+
+
         
         @include middle {
             button > div.down_arrow {
@@ -467,7 +510,7 @@ body {
         }
         li > a > h3.text_zh {
             color: $primary-color-zh;
-            margin-left:8px;
+            // margin-left:8px;
         }
 
 
@@ -623,8 +666,12 @@ body {
         .swiper-slide {
             position: relative;
 
-            @include each4(margin-left, 240px, 66px, 20px, 20px);
-            @include each4(margin-right, 240px, 66px, 20px, 20px);
+            // @include each4(margin-left, 240px, 66px, 20px, 20px);
+            // @include each4(margin-right, 240px, 66px, 20px, 20px);
+
+            @include each6(margin-left, 214px, 142px, 103px, 60px, 20px, 20px);
+            @include each6(margin-right, 214px, 142px, 103px, 60px, 20px, 20px);
+
             // @include wide {
             //     margin-left: 240px;
             //     margin-right: 240px;
@@ -660,12 +707,12 @@ body {
 
         $extra_text_box_padding: 0px;
         .swiper-slide h2 {    
-            @include each4(padding-top, 99px, 66px, 20px, 20px);
-            @include each4(font-size, 80px, 40px, 29px, 29px);
-            @include each4(line-height, 85px, 54px, 36px, 36px);
-
             
-            @include each4(max-width, calc(717px + $extra_text_box_padding), 717px, 717px, 717px);
+            @include each6(font-size, 80px, 58px, 56px, 50px, 29px, 29px);
+            @include each6(line-height, 85px, 70px, 70px, 60px, 36px, 36px);
+
+            @include each6(padding-top, 100px, 100px, 100px, 100px, 20px, 20px);
+            @include each6(max-width, 856px, 605px, 609px, 609px, 402px, 294px);
 
             color: #F7C74F;
             font-family: Poppins;
@@ -686,7 +733,7 @@ body {
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            max-width: calc(717px + $extra_text_box_padding);
+            @include each6(max-width, 856px, 605px, 609px, 609px, 402px, 294px);
         }
 
         .swiper-slide p {
@@ -699,7 +746,8 @@ body {
             font-style: normal;
             font-weight: 300;
             line-height: 30px; /* 166.667% */
-            max-width: calc(717px + $extra_text_box_padding);
+            // max-width: calc(717px + $extra_text_box_padding);
+            @include each6(max-width, 856px, 605px, 609px, 609px, 402px, 294px);
         }
 
         .swiper-slide div { 
@@ -709,15 +757,15 @@ body {
             // margin-right:240px;
             
 
-            @include each4(margin-right, calc(240px + 44px), calc(66px + 37px), calc(20px + 19px), calc(20px + 19px));
+            @include each6(margin-right, calc(214px + 30px), calc(142px + 30px), calc(103px + 30px), calc(60px + 35px), calc(20px + 19px), calc(20px + 19px));
 
-            @include each4(bottom, 30px, 30px, 80px, 80px); //30px;           /* Align the image to the bottom of the wrapper */
+            @include each6(bottom, 100px, 100px, 100px, 100px, 80px, 80px); //30px;           /* Align the image to the bottom of the wrapper */
             right: 0;            /* Align the image to the right of the wrapper */
             // width: 485px;         /* Optional: Set a fixed width for the image */
             // height: 485px;        /* Keep the image's aspect ratio */
             
-            @include each4(height, 485px, 400px, 230px, 230px);
-            @include each4(width, 485px, 400px, 230px, 230px);
+            @include each6(height, 485px, 400px, 400px, 400px, 230px, 230px);
+            @include each6(width, 485px, 400px, 400px, 400px, 230px, 230px);
 
             opacity: 0.0;
             // margin-right: 44px;
@@ -747,7 +795,8 @@ body {
     }
 
     .swiper-pagination {
-        @include each4(margin-right, 240px, 66px, 20px, 20px);
+        // @include each4(margin-right, 240px, 66px, 20px, 20px);
+        @include each6(margin-right, calc(214px), calc(142px), calc(103px), calc(60px), calc(20px), calc(20px));
     }
 
     .swiper-pagination-bullet {
@@ -1586,11 +1635,11 @@ body {
                 }
             }
 
-            p.safari > lang-ko-quot-begin {
+            p.safari_style > lang-ko-quot-begin {
                 margin-left: -45px;
             }
 
-            p.safari > lang-zh-quot-begin {
+            p.safari_style > lang-zh-quot-begin {
                 margin-left: -45px;
             }
         }
@@ -2089,6 +2138,7 @@ body {
             max-width: 400px;
         }
         li {
+            z-index: 3;
             @include each(margin-top, 105px, 30px);
             @include each(width, 20%, 95px);
             @include each(height, 55px, 25px);
@@ -2116,6 +2166,10 @@ body {
                     @include each(background-size, $width, calc(#{$width} * 0.45));
                 }
             }
+        }
+
+        li.logo82 {
+            z-index: 2;
         }
     }
 }
@@ -2531,7 +2585,19 @@ body {
                     @include each(height, 70px, 32px);
                     background: rgba(#000, 0.1);
                 }
+
+                & + li + li + li::after {
+                    width: 0px;
+                }
+
+                & + li + li + li + li::after {
+                    width: 1px;
+                }
+                
             }
+
+            
+
             span {
                 position: absolute;
                 left: 0;
@@ -2542,6 +2608,10 @@ body {
                 white-space: nowrap;
             }
         }
+
+        // li.has_line {
+        //     width: 1px;
+        // }
     }
 }
 

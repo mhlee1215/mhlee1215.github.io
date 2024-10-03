@@ -58,21 +58,21 @@
         <div>
             <button type="button" title="Close menu">x</button>
             <aside>
-                <button type="button" onclick="$(this).next('ul').slideToggle('fast')">
+                <button id="language_menu_header" type="button" onclick="toggle_language_menu();">
                     <div class="flag_select"></div><h3 class="text_en">EN</h3><h3 class="text_ko">KR</h3><h3 class="text_zh">CN</h3><div class="down_arrow"></div></button>
-                <ul style="display: none;">
+                <ul id="language_menu_body" style="display: none;">
                     <li>
-                        <a onclick="changeLanguage('en');$(this).parent().parent().slideToggle('fast');" class="a_flag_global_white">
+                        <a onclick="changeLanguage('en'); toggle_language_menu();" class="a_flag_global_white">
                             <div class="flag_global_white"></div><h3 class="text_en">EN</h3>
                         </a>
                     </li>
                     <li>
-                        <a onclick="changeLanguage('ko');$(this).parent().parent().slideToggle('fast');" class="a_flag_korea_white">
+                        <a onclick="changeLanguage('ko'); toggle_language_menu();" class="a_flag_korea_white">
                             <div class="flag_korea_white"></div><h3 class="text_ko">KR</h3>
                         </a>
                     </li>
                     <li>
-                        <a onclick="changeLanguage('zh');$(this).parent().parent().slideToggle('fast');" class="a_flag_china_white">
+                        <a onclick="changeLanguage('zh'); toggle_language_menu();" class="a_flag_china_white">
                             <div class="flag_china_white"></div><h3 class="text_zh">CN</h3>
                         </a>
                     </li>

@@ -19,6 +19,7 @@
         @content;
     }
 }
+
 @mixin each($property, $value1, $value2) {
     @include wide {
         #{$property}: $value1;
@@ -40,5 +41,43 @@
     }
     @include narrowest {
         #{$property}: $value4;
+    }
+}
+
+// For how it works
+@mixin wide_1 {
+    @media (max-width: 1366px) {
+      @content;
+    }
+}
+@mixin wide_2 {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin wide_3 {
+    @media (min-width: 1441px) {
+        @content;
+    }
+}
+
+@mixin each6($property, $value1, $value2, $value3, $value4, $value5, $value6) {
+    @include wide_3 {
+        #{$property}: $value1;
+    }
+    @include wide_2 {
+        #{$property}: $value2;
+    }
+    @include wide_1 {
+        #{$property}: $value3;
+    }
+    @include middle {
+        #{$property}: $value4;
+    }
+    @include narrow {
+        #{$property}: $value5;
+    }
+    @include narrowest {
+        #{$property}: $value6;
     }
 }

@@ -48,21 +48,23 @@ $(document).on('click','#header nav a',function(){
 let lastScroll = 0;
 $(window).on('scroll', function(){
   let scrollTop = $(this).scrollTop();
+  console.log(scrollTop);
   headerHeight = $('#header').outerHeight();
   if(scrollTop > $('#howitworks').offset().top - 10) {
-    $('#header nav a:nth-child(1)').addClass('current').siblings('a').removeClass('current');
+    $('#header div nav a:nth-child(1)').addClass('current').siblings('a').removeClass('current');
   }
   if(scrollTop > $('#production').offset().top - 10) {
-    $('#header nav a:nth-child(2)').addClass('current').siblings('a').removeClass('current');
+    $('#header div nav a:nth-child(2)').addClass('current').siblings('a').removeClass('current');
   }
+  console.log('logistics: '+$('#logistics').offset().top);
   if(scrollTop > $('#logistics').offset().top - 10) {
-    $('#header nav a:nth-child(3)').addClass('current').siblings('a').removeClass('current');
+    $('#header div nav a:nth-child(3)').addClass('current').siblings('a').removeClass('current');
   }
-  if(scrollTop > $('#fulfillment_new').offset().top - 10) {
-    $('#header nav a:nth-child(4)').addClass('current').siblings('a').removeClass('current');
+  if(scrollTop > $('#fulfillment').offset().top - 10) {
+    $('#header div nav a:nth-child(4)').addClass('current').siblings('a').removeClass('current');
   }
   if(scrollTop > $('#management').offset().top - 10) {
-    $('#header nav a:nth-child(5)').addClass('current').siblings('a').removeClass('current');
+    $('#header div nav a:nth-child(5)').addClass('current').siblings('a').removeClass('current');
   }
   if(scrollTop > lastScroll) {
     $('#header').removeClass('fixed');
@@ -126,3 +128,16 @@ $(window).on('scroll',function(){
   // }
 });
 
+
+function toggle_language_menu(){
+  if (!$('#language_menu_header').hasClass('language_menu_open')){
+      // when open 
+      $('#language_menu_header').toggleClass('language_menu_open');
+      $('#language_menu_body').slideToggle(200, function(){}); 
+  }else{
+      // when close
+      $('#language_menu_body').slideToggle(200, function(){
+          $('#language_menu_header').toggleClass('language_menu_open')
+      }); 
+  }
+}
