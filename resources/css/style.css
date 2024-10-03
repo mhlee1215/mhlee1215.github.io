@@ -1742,17 +1742,17 @@ body {
   background-color: #9a8197;
   background-size: cover;
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide {
     margin-left: 214px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide {
     margin-left: 142px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide {
     margin-left: 103px;
   }
@@ -1772,17 +1772,17 @@ body {
     margin-left: 20px;
   }
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide {
     margin-right: 214px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide {
     margin-right: 142px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide {
     margin-right: 103px;
   }
@@ -1835,17 +1835,17 @@ body {
   font-weight: 700;
   line-height: 85px; /* 106.25% */
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide h2 {
     font-size: 80px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide h2 {
     font-size: 58px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide h2 {
     font-size: 56px;
   }
@@ -1865,17 +1865,17 @@ body {
     font-size: 29px;
   }
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide h2 {
     line-height: 85px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide h2 {
     line-height: 70px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide h2 {
     line-height: 70px;
   }
@@ -1895,17 +1895,17 @@ body {
     line-height: 36px;
   }
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
+  .howitworks .swiper .swiper-slide h2 {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide h2 {
     padding-top: 100px;
   }
 }
 @media (max-width: 1440px) {
-  .howitworks .swiper .swiper-slide h2 {
-    padding-top: 100px;
-  }
-}
-@media (max-width: 1366px) {
   .howitworks .swiper .swiper-slide h2 {
     padding-top: 100px;
   }
@@ -1925,17 +1925,17 @@ body {
     padding-top: 20px;
   }
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide h2 {
     max-width: 856px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide h2 {
     max-width: 605px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide h2 {
     max-width: 609px;
   }
@@ -1986,17 +1986,17 @@ body {
   font-weight: 600;
   line-height: normal;
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide h3 {
     max-width: 856px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide h3 {
     max-width: 605px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide h3 {
     max-width: 609px;
   }
@@ -2027,17 +2027,17 @@ body {
   font-weight: 300;
   line-height: 30px; /* 166.667% */
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide p {
     max-width: 856px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide p {
     max-width: 605px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide p {
     max-width: 609px;
   }
@@ -2065,17 +2065,17 @@ body {
   transform: translateX(100%); /* Start the image off-screen to the right */
   transition: transform 0.5s ease-out, opacity 1s ease-out;
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide div {
-    margin-right: 244px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1920px) {
+  .howitworks .swiper .swiper-slide div {
+    margin-right: 30px;
   }
 }
 @media (max-width: 1440px) {
-  .howitworks .swiper .swiper-slide div {
-    margin-right: 172px;
-  }
-}
-@media (max-width: 1366px) {
   .howitworks .swiper .swiper-slide div {
     margin-right: 133px;
   }
@@ -2095,17 +2095,17 @@ body {
     margin-right: 39px;
   }
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
+  .howitworks .swiper .swiper-slide div {
+    bottom: 100px;
+  }
+}
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide div {
     bottom: 100px;
   }
 }
 @media (max-width: 1440px) {
-  .howitworks .swiper .swiper-slide div {
-    bottom: 100px;
-  }
-}
-@media (max-width: 1366px) {
   .howitworks .swiper .swiper-slide div {
     bottom: 100px;
   }
@@ -2125,17 +2125,17 @@ body {
     bottom: 80px;
   }
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide div {
     height: 485px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide div {
     height: 400px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide div {
     height: 400px;
   }
@@ -2155,17 +2155,17 @@ body {
     height: 230px;
   }
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide div {
     width: 485px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .howitworks .swiper .swiper-slide div {
     width: 400px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .howitworks .swiper .swiper-slide div {
     width: 400px;
   }
@@ -2191,17 +2191,17 @@ body {
 .howitworks .swiper.lang-zh {
   background-color: #DD577A;
 }
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
   .howitworks .swiper-pagination {
-    margin-right: 214px;
+    margin-right: 184px;
+  }
+}
+@media (max-width: 1920px) {
+  .howitworks .swiper-pagination {
+    margin-right: 112px;
   }
 }
 @media (max-width: 1440px) {
-  .howitworks .swiper-pagination {
-    margin-right: 142px;
-  }
-}
-@media (max-width: 1366px) {
   .howitworks .swiper-pagination {
     margin-right: 103px;
   }

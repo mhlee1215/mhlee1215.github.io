@@ -46,17 +46,17 @@
 
 // For how it works
 @mixin wide_1 {
-    @media (max-width: 1366px) {
+    @media (max-width: 1440px) {
       @content;
     }
 }
 @mixin wide_2 {
-    @media (max-width: 1440px) {
+    @media (max-width: 1920px) {
         @content;
     }
 }
 @mixin wide_3 {
-    @media (min-width: 1441px) {
+    @media (min-width: 1921px) {
         @content;
     }
 }
