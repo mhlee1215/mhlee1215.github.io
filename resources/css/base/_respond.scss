@@ -1,4 +1,9 @@
 //Responsive
+@mixin more_narrowest {
+    @media (max-width: 360px) {
+      @content;
+    }
+}
 @mixin narrowest {
     @media (max-width: 480px) {
       @content;
@@ -61,7 +66,7 @@
     }
 }
 
-@mixin each6($property, $value1, $value2, $value3, $value4, $value5, $value6) {
+@mixin each6($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7) {
     @include wide_3 {
         #{$property}: $value1;
     }
@@ -79,5 +84,8 @@
     }
     @include narrowest {
         #{$property}: $value6;
+    }
+    @include more_narrowest {
+        #{$property}: $value7;
     }
 }
