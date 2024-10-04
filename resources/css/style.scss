@@ -72,6 +72,7 @@ body {
         }
 
         aside {
+            // background-color: #fff;
             li {
                 &:nth-of-type(1) a div {
                     background-image: url("../images/flag_earth.svg");
@@ -94,11 +95,23 @@ body {
                 background-image: url("../images/flag_china.svg");
             }
 
-            li > a > h3 {
-                // color: $primary-color-en;
-                // display: none
+            li > a > h3.text_en {
+                color: $primary-color-en;
             }
-    
+            li > a > h3.text_ko {
+                color: $primary-color-ko;
+            }
+            li > a > h3.text_zh {
+                color: $primary-color-zh;
+            }
+            
+            button {
+                background-color: #fff;
+            }
+
+            li {
+                background-color: #fff;
+            }
     
             button > h3 {
                 color: $primary-color-en;
@@ -301,11 +314,13 @@ body {
                         border-bottom-left-radius: 0px;
                         border-bottom-right-radius: 0px;
                         border-bottom: 0px;
+                        border-top: 0px;
                     }
                     &:nth-of-type(1).lang-zh {
                         border-bottom-left-radius: 0px;
                         border-bottom-right-radius: 0px;
                         border-bottom: 0px;
+                        border-top: 0px;
                     }
                     
                     &:nth-of-type(2).lang-en {
@@ -1481,18 +1496,20 @@ body {
 
             &:nth-child(1) {
                 @include each(width, calc(420px + 15px), 273px);
-                border-right: 15px solid;
+                border-right: 20px solid;
             }
 
             &:nth-child(2), &:nth-child(3), &:nth-child(4) {
                 @include each(width, calc(420px + 30px), 273px);
-                border-left: 15px solid;
-                border-right: 15px solid;
+                border-left: 20px solid;
+                border-right: 20px solid;
+                margin-left: -1px;
             }
 
             &:nth-child(5) {
                 @include each(width, calc(420px + 15px), 273px);
-                border-left: 15px solid;
+                border-left: 20px solid;
+                margin-left: -1px;
             }
 
 
@@ -1522,6 +1539,7 @@ body {
             &:hover,
             &:focus {
                 filter: grayscale(1);
+                transition: filter 0.3s ease;
                 p {
                     opacity: 1;
                 }

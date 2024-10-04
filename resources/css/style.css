@@ -1125,6 +1125,21 @@ body {
 #header.fixed aside button > div.flag_select.lang-zh {
   background-image: url("../images/flag_china.svg");
 }
+#header.fixed aside li > a > h3.text_en {
+  color: #9a8197;
+}
+#header.fixed aside li > a > h3.text_ko {
+  color: #91A28F;
+}
+#header.fixed aside li > a > h3.text_zh {
+  color: #DD577A;
+}
+#header.fixed aside button {
+  background-color: #fff;
+}
+#header.fixed aside li {
+  background-color: #fff;
+}
 #header.fixed aside button > h3 {
   color: #9a8197;
 }
@@ -1372,11 +1387,13 @@ body {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom: 0px;
+    border-top: 0px;
   }
   #header aside ul li:nth-of-type(1).lang-zh {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom: 0px;
+    border-top: 0px;
   }
   #header aside ul li:nth-of-type(2).lang-en {
     border-bottom-left-radius: 0px;
@@ -3544,7 +3561,7 @@ body {
   background-image: url("../images/fulfillment5.jpg");
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(1) {
-  border-right: 15px solid;
+  border-right: 20px solid;
 }
 @media (min-width: 1281px) {
   .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(1) {
@@ -3557,8 +3574,9 @@ body {
   }
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(2), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(3), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(4) {
-  border-left: 15px solid;
-  border-right: 15px solid;
+  border-left: 20px solid;
+  border-right: 20px solid;
+  margin-left: -1px;
 }
 @media (min-width: 1281px) {
   .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(2), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(3), .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(4) {
@@ -3571,7 +3589,8 @@ body {
   }
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(5) {
-  border-left: 15px solid;
+  border-left: 20px solid;
+  margin-left: -1px;
 }
 @media (min-width: 1281px) {
   .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(5) {
@@ -3648,6 +3667,7 @@ body {
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide:hover, .fulfillment_new .fullfillment_new_container .swiper-slide:focus {
   filter: grayscale(1);
+  transition: filter 0.3s ease;
 }
 .fulfillment_new .fullfillment_new_container .swiper-slide:hover p, .fulfillment_new .fullfillment_new_container .swiper-slide:focus p {
   opacity: 1;
