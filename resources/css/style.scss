@@ -37,8 +37,8 @@ body {
     
 
     &:not(.fixed) {
-        background-color: $primary-color-en;
-        color: $primary-color-en;
+        // background-color: $primary-color-en;
+        // color: $primary-color-en;
         position: relative;
         h1,
         > div > button {
@@ -49,6 +49,11 @@ body {
                 filter: grayscale(1) brightness(100);
             }
         }
+    }
+
+    &:not(.fixed).lang-en {
+        background-color: $primary-color-en;
+        color: $primary-color-en;
     }
 
     &:not(.fixed).lang-ko {
@@ -645,7 +650,7 @@ body {
     }
     
     .swiper {
-        background-color: $primary-color-en;
+        // background-color: $primary-color-en;
         // padding-right:240px;
         // @include each4(padding-right, calc(240px + 20px), calc(66px + 20px), calc(20px + 20px), calc(20px + 20px));
         // @include wide {
@@ -724,6 +729,9 @@ body {
                     background-image: url("../images/howitworks#{$i}.png");
                 }
             }
+        }
+        .swiper-slide.lang-en{
+            background-color: $primary-color-en;
         }
         .swiper-slide.lang-ko{
             background-color: $primary-color-ko;
@@ -804,6 +812,10 @@ body {
             ); /* Start the image off-screen to the right */
             transition: transform 0.5s ease-out, opacity 1s ease-out;
         }
+    }
+
+    .swiper.lang-en {
+        background-color: $primary-color-en;
     }
 
     .swiper.lang-ko {

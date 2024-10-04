@@ -919,7 +919,13 @@
 
         
         // Init with default language
-        changeLanguage('en');
+        let stored_language = localStorage.getItem('current_language');
+        if (stored_language == null){
+            changeLanguage('en');
+        }else{
+            changeLanguage(stored_language);
+        }
+        
     </script>
     <!-- //Script -->
 </body>

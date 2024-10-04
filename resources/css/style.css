@@ -1077,8 +1077,6 @@ body {
   }
 }
 #header:not(.fixed) {
-  background-color: #9a8197;
-  color: #9a8197;
   position: relative;
 }
 #header:not(.fixed) h1,
@@ -1089,6 +1087,10 @@ body {
   #header:not(.fixed) nav {
     filter: grayscale(1) brightness(100);
   }
+}
+#header:not(.fixed).lang-en {
+  background-color: #9a8197;
+  color: #9a8197;
 }
 #header:not(.fixed).lang-ko {
   background-color: #91A28F;
@@ -1712,7 +1714,6 @@ body {
   }
 }
 .howitworks .swiper {
-  background-color: #9a8197;
   position: sticky;
 }
 @media (min-width: 1281px) {
@@ -1796,6 +1797,9 @@ body {
 .howitworks .swiper .swiper-slide:nth-child(5) div {
   background-size: cover;
   background-image: url("../images/howitworks5.png");
+}
+.howitworks .swiper .swiper-slide.lang-en {
+  background-color: #9a8197;
 }
 .howitworks .swiper .swiper-slide.lang-ko {
   background-color: #91A28F;
@@ -2240,6 +2244,9 @@ body {
   .howitworks .swiper .swiper-slide div {
     margin-left: 414px;
   }
+}
+.howitworks .swiper.lang-en {
+  background-color: #9a8197;
 }
 .howitworks .swiper.lang-ko {
   background-color: #91A28F;

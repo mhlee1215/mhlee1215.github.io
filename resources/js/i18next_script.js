@@ -44,6 +44,8 @@ function changeLanguage(lang) {
         updateLanguageSpecificClass(lang)
         
     });
+
+    localStorage.setItem('current_language', lang);
 }
 
 function updateLanguageSpecificClass(lang){
