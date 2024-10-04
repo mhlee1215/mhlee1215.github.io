@@ -747,7 +747,8 @@ body {
             @include each6(line-height, 85px, 70px, 70px, 60px, 36px, 36px, 36px);
 
             @include each6(padding-top, 100px, 100px, 100px, 100px, 20px, 20px, 20px);
-            @include each6(max-width, 856px, 605px, 609px, 509px, 402px, 332px, 294px);
+            // @include each6(max-width, 856px, 605px, 609px, 509px, 402px, 332px, 294px);
+            @include each88(max-width, 856px, 605px, 609px, 565px, 349px, 402px, 294px, 294px);
 
             color: #F7C74F;
             font-family: Poppins;
@@ -790,10 +791,6 @@ body {
             // background-color: #1e39b4;
             border: 0px solid transparent;
             position: absolute;  /* Set the image to absolute positioning */
-            // margin-right:240px;
-            margin-left:120px;
-            // @include each6(margin-left, calc(214px + 30px - 40px), calc(30px + 30px), calc(-20px + 0px), calc(30px + 35px), calc(20px + 19px), calc(10px + 19px), calc(20px + 19px));
-            // @include each6(margin-right, calc(214px + 30px - 40px), calc(30px + 30px), calc(-20px + 0px), calc(30px + 35px), calc(20px + 19px), calc(10px + 19px), calc(20px + 19px));
             
             @include each6(bottom, 100px, 100px, 100px, 100px, 80px, 80px, 80px); //30px;           /* Align the image to the bottom of the wrapper */
             // right: 0;            /* Align the image to the right of the wrapper */
@@ -803,7 +800,8 @@ body {
 
             @include each88(height, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 230px);
             @include each88(width, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 230px);
-            @include each6_padding(margin-left, 856px, 605px, 609px, 509px, 402px, 332px, 294px, 120px);
+            // @include each6_padding(margin-left, 856px, 605px, 609px, 509px, 402px, 332px, 294px, 120px);
+            @include each88_padding(margin-left, 856px, 605px, 609px, 565px, 349px, 302px, 94px, 4px, 120px);
 
             opacity: 0.0;
             // margin-right: 44px;

@@ -237,30 +237,30 @@
     }
 }
 
-@mixin each88($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) {
+@mixin each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $padding) {
     @include w88 {
-        #{$property}: $value1;
+        #{$property}: calc($value1 + $padding);
     }
     @include w77 {
-        #{$property}: $value2;
+        #{$property}: calc($value2 + $padding);
     }
     @include w66 {
-        #{$property}: $value3;
+        #{$property}: calc($value3 + $padding);
     }
     @include w55 {
-        #{$property}: $value4;
+        #{$property}: calc($value4 + $padding);
     }
     @include w44 {
-        #{$property}: $value5;
+        #{$property}: calc($value5 + $padding);
     }
     @include w33 {
-        #{$property}: $value6;
+        #{$property}: calc($value6 + $padding);
     }
     @include w22 {
-        #{$property}: $value7;
+        #{$property}: calc($value7 + $padding);
     }
     @include w11 {
-        #{$property}: $value8;
+        #{$property}: calc($value8 + $padding);
     }
     @include w00 {
         #{$property}: 50vh;
@@ -269,3 +269,8 @@
         #{$property}: 0px;
     }
 }
+
+@mixin each88($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) {
+    @include each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, 0px);
+}
+

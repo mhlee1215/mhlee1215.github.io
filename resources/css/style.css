@@ -1934,24 +1934,39 @@ body {
     max-width: 609px;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
   .howitworks .swiper .swiper-slide h2 {
-    max-width: 509px;
+    max-width: 565px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 1280px) {
+  .howitworks .swiper .swiper-slide h2 {
+    max-width: 349px;
+  }
+}
+@media (max-width: 960px) {
   .howitworks .swiper .swiper-slide h2 {
     max-width: 402px;
   }
 }
-@media (max-width: 480px) {
-  .howitworks .swiper .swiper-slide h2 {
-    max-width: 332px;
-  }
-}
-@media (max-width: 360px) {
+@media (max-width: 744px) {
   .howitworks .swiper .swiper-slide h2 {
     max-width: 294px;
+  }
+}
+@media (max-width: 480px) and (min-height: 749px) {
+  .howitworks .swiper .swiper-slide h2 {
+    max-width: 294px;
+  }
+}
+@media (max-height: 748px) {
+  .howitworks .swiper .swiper-slide h2 {
+    max-width: 50vh;
+  }
+}
+@media (max-height: 440px) {
+  .howitworks .swiper .swiper-slide h2 {
+    max-width: 0px;
   }
 }
 @media (min-width: 1281px) {
@@ -2070,7 +2085,6 @@ body {
   z-index: 5;
   border: 0px solid transparent;
   position: absolute; /* Set the image to absolute positioning */
-  margin-left: 120px;
   opacity: 0;
   transform: translateX(100%); /* Start the image off-screen to the right */
   transition: transform 0.5s ease-out, opacity 1s ease-out;
@@ -2225,24 +2239,39 @@ body {
     margin-left: 729px;
   }
 }
+@media (max-width: 1366px) {
+  .howitworks .swiper .swiper-slide div {
+    margin-left: 685px;
+  }
+}
 @media (max-width: 1280px) {
   .howitworks .swiper .swiper-slide div {
-    margin-left: 629px;
+    margin-left: 469px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   .howitworks .swiper .swiper-slide div {
-    margin-left: 522px;
+    margin-left: 422px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 744px) {
   .howitworks .swiper .swiper-slide div {
-    margin-left: 452px;
+    margin-left: 214px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) and (min-height: 749px) {
   .howitworks .swiper .swiper-slide div {
-    margin-left: 414px;
+    margin-left: 124px;
+  }
+}
+@media (max-height: 748px) {
+  .howitworks .swiper .swiper-slide div {
+    margin-left: 50vh;
+  }
+}
+@media (max-height: 440px) {
+  .howitworks .swiper .swiper-slide div {
+    margin-left: 0px;
   }
 }
 .howitworks .swiper.lang-en {
