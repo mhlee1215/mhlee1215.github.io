@@ -1542,6 +1542,11 @@ body {
             &:nth-child(5) p.lang-zh {
                 @include each(top, 108px, 71px);
             }
+            &:nth-child(4) p {
+                @include each(font-size, 30px, 14px);
+                // line-height: 36px;
+            }
+
             &:nth-child(5) p {
                 @include each(font-size, 28px, 14px);
                 line-height: 36px;

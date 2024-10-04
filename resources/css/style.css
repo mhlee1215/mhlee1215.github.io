@@ -3688,6 +3688,16 @@ body {
     top: 71px;
   }
 }
+@media (min-width: 1281px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(4) p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(4) p {
+    font-size: 14px;
+  }
+}
 .fulfillment_new .fullfillment_new_container .swiper-slide:nth-child(5) p {
   line-height: 36px;
 }
