@@ -29,7 +29,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 #header {
-    z-index: 2;
+    z-index: 100;
     width: 100%;
     @include each(height, $headerW, $headerM);
     @include flex(row, nowrap, center, center);
@@ -250,7 +250,7 @@ body {
                 // border-radius: 15px;               /* Rounded corners with 15px radius */
                 // width: 300px;                      /* Fixed width for the box */
                 // text-align: center;                /* Center the text inside the box */
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+                // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
             }
 
             @include middle {
@@ -261,6 +261,7 @@ body {
         button.language_menu_open {
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
+            border-bottom: 0px;
         }
 
         ul {
@@ -273,7 +274,7 @@ body {
                 border-top-right-radius: 0px;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+                // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
             }
 
             li {
@@ -292,37 +293,44 @@ body {
                     border-bottom-left-radius: 20px;
                     border-bottom-right-radius: 20px;
                     border: 1.5px solid #FFF;
-                    background-color: #FFF;
+                    // background-color: #FFF;
                     
 
                     
                     &:nth-of-type(1).lang-ko {
                         border-bottom-left-radius: 0px;
                         border-bottom-right-radius: 0px;
+                        border-bottom: 0px;
                     }
                     &:nth-of-type(1).lang-zh {
                         border-bottom-left-radius: 0px;
                         border-bottom-right-radius: 0px;
+                        border-bottom: 0px;
                     }
                     
                     &:nth-of-type(2).lang-en {
                         border-bottom-left-radius: 0px;
                         border-bottom-right-radius: 0px;
                         box-shadow: 0px;
+                        border-bottom: 0px;
+                        border-top: 0px;
                     }
                     
                     &:nth-of-type(2).lang-zh {
                         border-top-left-radius: 0px;
                         border-top-right-radius: 0px;
+                        border-top: 0px;
                     }
                     
                     &:nth-of-type(3).lang-en {
                         border-top-left-radius: 0px;
                         border-top-right-radius: 0px;
+                        border-top: 0px;
                     }
                     &:nth-of-type(3).lang-ko {
                         border-top-left-radius: 0px;
                         border-top-right-radius: 0px;
+                        border-top: 0px;
                     }
                     
                 }
@@ -333,13 +341,13 @@ body {
             position: relative;
             cursor: pointer;
             &:nth-of-type(1) a div {
-                background-image: url("../images/flag_earth.svg");
+                background-image: url("../images/flag_earth_white.svg");
             }
             &:nth-of-type(2) a div {
-                background-image: url("../images/flag_korea.svg");
+                background-image: url("../images/flag_korea_white.svg");
             }
             &:nth-of-type(3) a div {
-                background-image: url("../images/flag_china.svg");
+                background-image: url("../images/flag_china_white.svg");
             }
             @include middle {
                 padding-left: 14px;
@@ -503,13 +511,13 @@ body {
         }
 
         li > a > h3.text_en {
-            color: $primary-color-en;
+            // color: $primary-color-en;
         }
         li > a > h3.text_ko {
-            color: $primary-color-ko;
+            // color: $primary-color-ko;
         }
         li > a > h3.text_zh {
-            color: $primary-color-zh;
+            // color: $primary-color-zh;
             // margin-left:8px;
         }
 
@@ -540,8 +548,8 @@ body {
             @include wide {
                 // margin-top: 25px;
                 margin-left: 8px;
-                margin-top: 5px;
-                margin-bottom: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
             }
         }
         button {
@@ -624,7 +632,7 @@ body {
     .swiper {
         background-color: $primary-color-en;
         // padding-right:240px;
-        @include each4(padding-right, calc(240px + 20px), calc(66px + 20px), calc(20px + 20px), calc(20px + 20px));
+        // @include each4(padding-right, calc(240px + 20px), calc(66px + 20px), calc(20px + 20px), calc(20px + 20px));
         // @include wide {
         //     padding-right: calc(240px + 20px);
         // }
@@ -669,9 +677,13 @@ body {
             // @include each4(margin-left, 240px, 66px, 20px, 20px);
             // @include each4(margin-right, 240px, 66px, 20px, 20px);
 
-            @include each6(margin-left, 214px, 142px, 103px, 60px, 20px, 20px, 20px);
-            @include each6(margin-right, 214px, 142px, 103px, 60px, 20px, 20px, 20px);
-
+            // @include each6(margin-left, 214px, 142px, 103px, 60px, 20px, 20px, 20px);
+            // @include each6(margin-right, 214px, 142px, 103px, 60px, 20px, 20px, 20px);
+            // width: 700px;
+            // @include each6(width, 214px, 142px, 103px, 60px, 20px, 20px, 20px);
+            @include each8(width, 1492px, 1125px, 1049px, 1029px, 729px, 605px, 428px, 320px);
+            margin-left: auto;
+            margin-right: auto; 
             // @include wide {
             //     margin-left: 240px;
             //     margin-right: 240px;
@@ -708,7 +720,7 @@ body {
         $extra_text_box_padding: 0px;
         .swiper-slide h2 {    
             
-            @include each6(font-size, 80px, 58px, 56px, 50px, 29px, 29px, 29px);
+            @include each6(font-size, 80px, 58px, 56px, 48px, 29px, 29px, 29px);
             @include each6(line-height, 85px, 70px, 70px, 60px, 36px, 36px, 36px);
 
             @include each6(padding-top, 100px, 100px, 100px, 100px, 20px, 20px, 20px);
@@ -733,11 +745,11 @@ body {
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            @include each6(max-width, 856px, 605px, 609px, 609px, 402px, 332px, 294px);
+            @include each6(max-width, 610px, 450px, 420px, 400px, 294px, 294px, 294px);
         }
 
         .swiper-slide p {
-            margin-top:30px;
+            margin-top:20px;
             color: #FFF;
             leading-trim: both;
             text-edge: cap;
@@ -747,25 +759,28 @@ body {
             font-weight: 300;
             line-height: 30px; /* 166.667% */
             // max-width: calc(717px + $extra_text_box_padding);
-            @include each6(max-width, 856px, 605px, 609px, 609px, 402px, 332px, 294px);
+            @include each6(max-width, 610px, 450px, 420px, 400px, 294px, 294px, 294px);
         }
 
         .swiper-slide div { 
+            z-index: 5;
             // background-color: #1e39b4;
             border: 0px solid transparent;
             position: absolute;  /* Set the image to absolute positioning */
             // margin-right:240px;
+            margin-left:120px;
+            // @include each6(margin-left, calc(214px + 30px - 40px), calc(30px + 30px), calc(-20px + 0px), calc(30px + 35px), calc(20px + 19px), calc(10px + 19px), calc(20px + 19px));
+            // @include each6(margin-right, calc(214px + 30px - 40px), calc(30px + 30px), calc(-20px + 0px), calc(30px + 35px), calc(20px + 19px), calc(10px + 19px), calc(20px + 19px));
             
-
-            @include each6(margin-right, calc(214px + 30px - 40px), calc(30px + 30px), calc(-20px + 0px), calc(30px + 35px), calc(20px + 19px), calc(10px + 19px), calc(20px + 19px));
-
             @include each6(bottom, 100px, 100px, 100px, 100px, 80px, 80px, 80px); //30px;           /* Align the image to the bottom of the wrapper */
-            right: 0;            /* Align the image to the right of the wrapper */
-            // width: 485px;         /* Optional: Set a fixed width for the image */
-            // height: 485px;        /* Keep the image's aspect ratio */
+            // right: 0;            /* Align the image to the right of the wrapper */
             
-            @include each6(height, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
-            @include each6(width, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
+            // @include each6(height, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
+            // @include each6(width, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
+
+            @include each88(height, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 230px);
+            @include each88(width, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 230px);
+            @include each6_padding(margin-left, 856px, 605px, 609px, 509px, 402px, 332px, 294px, 120px);
 
             opacity: 0.0;
             // margin-right: 44px;
@@ -774,16 +789,6 @@ body {
             ); /* Start the image off-screen to the right */
             transition: transform 0.5s ease-out, opacity 1s ease-out;
         }
-
-        // .swiper-slide {
-        //     &:nth-child(1) div {
-        //         opacity: 1.0;
-        //         transform: translateX(
-        //             0%
-        //         ); /* Start the image off-screen to the right */
-        //     }
-        // }
-        
     }
 
     .swiper.lang-ko {
@@ -1511,8 +1516,8 @@ body {
                 @include each(top, 108px, 71px);
             }
             &:nth-child(5) p {
-                @include each(font-size, 22px, 14px);
-                line-height: 1.6;
+                @include each(font-size, 28px, 14px);
+                line-height: 36px;
             }
             &:hover,
             &:focus {
@@ -2068,7 +2073,7 @@ body {
             }
             em,
             p {
-                // z-index: 4;
+                z-index: 4;
                 position: relative;
             }
             em {

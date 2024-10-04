@@ -67,25 +67,205 @@
 }
 
 @mixin each6($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7) {
+    @include each6_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, 0px);
+}
+
+@mixin each6_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $padding) {
     @include wide_3 {
-        #{$property}: $value1;
+        #{$property}: calc($value1 + $padding);
     }
     @include wide_2 {
-        #{$property}: $value2;
+        #{$property}: calc($value2 + $padding);
     }
     @include wide_1 {
-        #{$property}: $value3;
+        #{$property}: calc($value3 + $padding);
     }
     @include middle {
-        #{$property}: $value4;
+        #{$property}: calc($value4 + $padding);
     }
     @include narrow {
-        #{$property}: $value5;
+        #{$property}: calc($value5 + $padding);
     }
     @include narrowest {
-        #{$property}: $value6;
+        #{$property}: calc($value6 + $padding);
     }
     @include more_narrowest {
+        #{$property}: calc($value7 + $padding);
+    }
+}
+
+
+// @mixin w0 {
+//     @media (max-width: 360px) {
+//       @content;
+//     }
+// }
+
+@mixin w1 {
+    @media (max-width: 480px) {
+      @content;
+    }
+}
+
+@mixin w2 {
+    @media (max-width: 744px) {
+      @content;
+    }
+}
+
+@mixin w3 {
+    @media (max-width: 960px) {
+      @content;
+    }
+}
+
+@mixin w4 {
+    @media (max-width: 1280px) {
+      @content;
+    }
+}
+
+@mixin w5 {
+    @media (max-width: 1366px) {
+      @content;
+    }
+}
+
+@mixin w6 {
+    @media (max-width: 1440px) {
+      @content;
+    }
+}
+
+@mixin w7 {
+    @media (max-width: 1920px) {
+      @content;
+    }
+}
+
+@mixin w8 {
+    @media (min-width: 1921px) {
+      @content;
+    }
+}
+
+
+@mixin w_zero {
+    @media (max-height: 440px) {
+      @content;
+    }
+}
+
+@mixin w00 {
+    @media (max-height: 748px) {
+      @content;
+    }
+}
+
+@mixin w11 {
+    @media (max-width: 480px) and (min-height: 749px) {
+      @content;
+    }
+}
+
+@mixin w22 {
+    @media (max-width: 744px) {
+      @content;
+    }
+}
+
+@mixin w33 {
+    @media (max-width: 960px) {
+      @content;
+    }
+}
+
+@mixin w44 {
+    @media (max-width: 1280px) {
+      @content;
+    }
+}
+
+@mixin w55 {
+    @media (max-width: 1366px) {
+      @content;
+    }
+}
+
+@mixin w66 {
+    @media (max-width: 1440px) {
+      @content;
+    }
+}
+
+@mixin w77 {
+    @media (max-width: 1920px) {
+      @content;
+    }
+}
+
+@mixin w88 {
+    @media (min-width: 1921px) {
+      @content;
+    }
+}
+
+@mixin each8($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) {
+    @include w8 {
+        #{$property}: $value1;
+    }
+    @include w7 {
+        #{$property}: $value2;
+    }
+    @include w6 {
+        #{$property}: $value3;
+    }
+    @include w5 {
+        #{$property}: $value4;
+    }
+    @include w4 {
+        #{$property}: $value5;
+    }
+    @include w3 {
+        #{$property}: $value6;
+    }
+    @include w2 {
         #{$property}: $value7;
+    }
+    @include w1 {
+        #{$property}: $value8;
+    }
+}
+
+@mixin each88($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) {
+    @include w88 {
+        #{$property}: $value1;
+    }
+    @include w77 {
+        #{$property}: $value2;
+    }
+    @include w66 {
+        #{$property}: $value3;
+    }
+    @include w55 {
+        #{$property}: $value4;
+    }
+    @include w44 {
+        #{$property}: $value5;
+    }
+    @include w33 {
+        #{$property}: $value6;
+    }
+    @include w22 {
+        #{$property}: $value7;
+    }
+    @include w11 {
+        #{$property}: $value8;
+    }
+    @include w00 {
+        #{$property}: 50vh;
+    }
+    @include w_zero {
+        #{$property}: 0px;
     }
 }
