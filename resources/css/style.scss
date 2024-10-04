@@ -798,8 +798,8 @@ body {
             // @include each6(height, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
             // @include each6(width, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
 
-            @include each88(height, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 230px);
-            @include each88(width, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 230px);
+            @include each88(height, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 180px);
+            @include each88(width, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 180px);
             // @include each6_padding(margin-left, 856px, 605px, 609px, 509px, 402px, 332px, 294px, 120px);
             @include each88_padding(margin-left, 856px, 605px, 609px, 565px, 349px, 302px, 94px, 4px, 120px);
 

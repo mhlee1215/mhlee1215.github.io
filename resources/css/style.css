@@ -2161,7 +2161,7 @@ body {
 }
 @media (max-width: 480px) and (min-height: 749px) {
   .howitworks .swiper .swiper-slide div {
-    height: 230px;
+    height: 180px;
   }
 }
 @media (max-height: 748px) {
@@ -2211,7 +2211,7 @@ body {
 }
 @media (max-width: 480px) and (min-height: 749px) {
   .howitworks .swiper .swiper-slide div {
-    width: 230px;
+    width: 180px;
   }
 }
 @media (max-height: 748px) {
