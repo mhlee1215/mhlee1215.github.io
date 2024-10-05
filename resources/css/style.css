@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&display=swap");
 .hidden {
   position: absolute;
   display: inline-block;
@@ -1716,6 +1719,15 @@ body {
 .howitworks .swiper {
   position: sticky;
 }
+.howitworks .swiper.lang-en {
+  background-color: #9a8197;
+}
+.howitworks .swiper.lang-ko {
+  background-color: #91A28F;
+}
+.howitworks .swiper.lang-zh {
+  background-color: #DD577A;
+}
 @media (min-width: 1281px) {
   .howitworks .swiper {
     width: 100%;
@@ -2081,6 +2093,9 @@ body {
     max-width: 294px;
   }
 }
+.howitworks .swiper .swiper-slide p.lang-zh {
+  font-weight: 400;
+}
 .howitworks .swiper .swiper-slide div {
   z-index: 5;
   border: 0px solid transparent;
@@ -2273,15 +2288,6 @@ body {
   .howitworks .swiper .swiper-slide div {
     margin-left: 0px;
   }
-}
-.howitworks .swiper.lang-en {
-  background-color: #9a8197;
-}
-.howitworks .swiper.lang-ko {
-  background-color: #91A28F;
-}
-.howitworks .swiper.lang-zh {
-  background-color: #DD577A;
 }
 @media (min-width: 1921px) {
   .howitworks .swiper-pagination {
@@ -3480,6 +3486,10 @@ body {
     font-size: 13px;
   }
 }
+.fulfillment_new header dl dd.lang-zh,
+.fulfillment_new footer dl dd.lang-zh {
+  font-weight: 400;
+}
 .fulfillment_new footer {
   display: flex;
   flex-direction: column;
@@ -3910,13 +3920,6 @@ body {
   line-height: 40px;
   letter-spacing: -0.125px;
 }
-.fulfillment_new .fullfillment_new_container .fullfillment_new_container_background .swiper-slide p.safari_style > lang-ko-quot-begin {
-  margin-left: -45px;
-}
-.fulfillment_new .fullfillment_new_container .fullfillment_new_container_background .swiper-slide p.safari_style > lang-zh-quot-begin {
-  margin-left: -45px;
-}
-
 .fulfillment {
   position: relative;
 }
@@ -4420,6 +4423,7 @@ body {
 }
 .metrics header p.lang-zh {
   color: rgba(221, 87, 122, 0.7);
+  font-weight: 400;
 }
 .metrics ul {
   display: flex;
@@ -5376,6 +5380,9 @@ body {
     font-size: 13px;
   }
 }
+.omnichannel header p.lang-zh {
+  font-weight: 400;
+}
 .omnichannel header .swiper {
   margin-top: 90px;
 }
@@ -5602,6 +5609,9 @@ body {
   .services header p {
     font-size: 13px;
   }
+}
+.services header p.lang-zh {
+  font-weight: 400;
 }
 .services .swiper {
   position: relative;

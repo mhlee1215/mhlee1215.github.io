@@ -8,6 +8,10 @@
 //Components
 @import "component/_swiper.scss"; //Swiper
 
+@import url(https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css); //나눔명조체
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap'); // Reddit mono
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&display=swap'); //Poppin font
+
 $primary-color-en: #9a8197;
 $primary-color-ko: #91A28F;
 $primary-color-zh: #DD577A;
@@ -37,8 +41,6 @@ body {
     
 
     &:not(.fixed) {
-        // background-color: $primary-color-en;
-        // color: $primary-color-en;
         position: relative;
         h1,
         > div > button {
@@ -140,15 +142,6 @@ body {
             }
         }
     }
-
-    // &.fixed.lang-ko {
-        // background: rgba($primary-color-ko, 0.3);
-    // }
-    // &.fixed.lang-zh {
-        // background: rgba($primary-color-zh, 0.3);
-    // }
-
-
 
     &.temp:not(.opened) {
         @include each(top, -$headerW, -$headerM);
@@ -665,6 +658,19 @@ body {
         // @include narrowest {
         //     padding-right: calc(20px + 20px);
         // }
+
+        &.lang-en {
+            background-color: $primary-color-en;
+        }
+    
+        &.lang-ko {
+            background-color: $primary-color-ko;
+        }
+    
+        &.lang-zh {
+            background-color: $primary-color-zh;
+        }
+
         position: sticky;  
         //     position: absolute;
         //     left: 0;
@@ -784,6 +790,10 @@ body {
             line-height: 30px; /* 166.667% */
             // max-width: calc(717px + $extra_text_box_padding);
             @include each6(max-width, 610px, 450px, 420px, 400px, 294px, 294px, 294px);
+
+            &.lang-zh {
+                font-weight: 400;
+            }
         }
 
         .swiper-slide div { 
@@ -812,17 +822,7 @@ body {
         }
     }
 
-    .swiper.lang-en {
-        background-color: $primary-color-en;
-    }
-
-    .swiper.lang-ko {
-        background-color: $primary-color-ko;
-    }
-
-    .swiper.lang-zh {
-        background-color: $primary-color-zh;
-    }
+    
 
     .swiper-pagination {
         // @include each4(margin-right, 240px, 66px, 20px, 20px);
@@ -1465,6 +1465,10 @@ body {
                 font-weight: 300;
                 line-height: 1.538;
                 color: #aaa;
+
+                &.lang-zh {
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -1690,11 +1694,11 @@ body {
                 }
     
                 p.safari_style > lang-ko-quot-begin {
-                    margin-left: -45px;
+                    // margin-left: -45px;
                 }
     
                 p.safari_style > lang-zh-quot-begin {
-                    margin-left: -45px;
+                    // margin-left: -45px;
                 }
             }
         }
@@ -1899,13 +1903,16 @@ body {
             font-weight: 300;
             line-height: 1.5;
             color: rgba($primary-color-en, 0.7);
+
+            &.lang-ko {
+                color: rgba($primary-color-ko, 0.7);
+            }
+            &.lang-zh {
+                color: rgba($primary-color-zh, 0.7);
+                font-weight: 400;
+            }
         }
-        p.lang-ko {
-            color: rgba($primary-color-ko, 0.7);
-        }
-        p.lang-zh {
-            color: rgba($primary-color-zh, 0.7);
-        }
+        
     }
     ul {
         @include flex(row, wrap, space-between, stretch);
@@ -2272,6 +2279,10 @@ body {
             @include each(font-size, 17px, 13px);
             line-height: 1.538;
             color: #aaa;
+
+            &.lang-zh {
+                font-weight: 400;
+            }
         }
         .swiper {
             margin-top: 90px;
@@ -2400,7 +2411,7 @@ body {
             color: $primary-color-zh;
         }
         em {
-            display: block;
+            display: block; 
             margin-top: 18px;
             @include each(font-size, 32px, 21px);
             font-weight: 500;
@@ -2412,6 +2423,10 @@ body {
             font-weight: 300;
             line-height: 1.538;
             color: #999;
+
+            &.lang-zh {
+                font-weight: 400;
+            }
         }
     }
     .swiper {
