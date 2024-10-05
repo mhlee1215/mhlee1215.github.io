@@ -66,33 +66,33 @@
     }
 }
 
-@mixin each6($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7) {
-    @include each6_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, 0px);
-}
+// @mixin each6($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7) {
+//     @include each6_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, 0px);
+// }
 
-@mixin each6_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $padding) {
-    @include wide_3 {
-        #{$property}: calc($value1 + $padding);
-    }
-    @include wide_2 {
-        #{$property}: calc($value2 + $padding);
-    }
-    @include wide_1 {
-        #{$property}: calc($value3 + $padding);
-    }
-    @include middle {
-        #{$property}: calc($value4 + $padding);
-    }
-    @include narrow {
-        #{$property}: calc($value5 + $padding);
-    }
-    @include narrowest {
-        #{$property}: calc($value6 + $padding);
-    }
-    @include more_narrowest {
-        #{$property}: calc($value7 + $padding);
-    }
-}
+// @mixin each6_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $padding) {
+//     @include wide_3 {
+//         #{$property}: calc($value1 + $padding);
+//     }
+//     @include wide_2 {
+//         #{$property}: calc($value2 + $padding);
+//     }
+//     @include wide_1 {
+//         #{$property}: calc($value3 + $padding);
+//     }
+//     @include middle {
+//         #{$property}: calc($value4 + $padding);
+//     }
+//     @include narrow {
+//         #{$property}: calc($value5 + $padding);
+//     }
+//     @include narrowest {
+//         #{$property}: calc($value6 + $padding);
+//     }
+//     @include more_narrowest {
+//         #{$property}: calc($value7 + $padding);
+//     }
+// }
 
 
 // @mixin w0 {
@@ -157,13 +157,49 @@
 }
 
 @mixin w00 {
-    @media (max-height: 748px) {
+    @media (min-width: 481px) and (max-height: 748px) {
+      @content;
+    }
+}
+
+@mixin w000 {
+    @media (min-width: 1281px) and (max-height: 748px) {
+      @content;
+    }
+}
+
+@mixin w001 {
+    @media (min-width: 1281px) and (max-height: 648px) {
+      @content;
+    }
+}
+
+@mixin w002 {
+    @media (min-width: 1281px) and (max-height: 548px) {
+      @content;
+    }
+}
+
+@mixin w003 {
+    @media (min-width: 1281px) and (max-height: 448px) {
       @content;
     }
 }
 
 @mixin w11 {
-    @media (max-width: 480px) and (min-height: 749px) {
+    @media (max-width: 480px){ //} and (min-height: 749px) {
+      @content;
+    }
+}
+
+@mixin w110 {
+    @media (max-width: 480px) and (max-height:700px) { //} and (min-height: 749px) {
+      @content;
+    }
+}
+
+@mixin w111 {
+    @media (max-width: 480px) and (max-height:600px) { //} and (min-height: 749px) {
       @content;
     }
 }
@@ -190,7 +226,7 @@
     @media (max-width: 1366px) {
       @content;
     }
-}
+} 
 
 @mixin w66 {
     @media (max-width: 1440px) {
@@ -237,7 +273,7 @@
     }
 }
 
-@mixin each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $padding) {
+@mixin each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $padding, $type) {
     @include w88 {
         #{$property}: calc($value1 + $padding);
     }
@@ -262,15 +298,68 @@
     @include w11 {
         #{$property}: calc($value8 + $padding);
     }
-    @include w00 {
-        #{$property}: 50vh;
+
+    @if $type == 'image' {
+        @include w00 {
+            #{$property}: 30vh;
+        }
+        
+        // Mobile
+        @include w110 {
+            #{$property}: calc($value7 * 0.9);
+        } 
+
+        @include w110 {
+            #{$property}: calc($value7 * 0.8);
+        } 
+        
+        @include w_zero {
+            #{$property}: 0px;
+        }
+    } @else if $type == 'font' {
+        @include w000 {
+            #{$property}: calc($value4 * 0.9);
+        } 
+
+        @include w001 {
+            #{$property}: calc($value4 * 0.8)
+        } 
+
+        @include w002 {
+            #{$property}: calc($value4 * 0.7)
+        } 
+
+        // Mobile
+        @include w110 {
+            #{$property}: calc($value7 * 0.9);
+        } 
+
+        @include w110 {
+            #{$property}: calc($value7 * 0.8);
+        } 
+    } @else if $type == 'inverse_padding' {
+        @include w110 {
+            #{$property}: calc($value7 * 1.1);
+        } 
+
+        @include w110 {
+            #{$property}: calc($value7 * 1.2);
+        } 
     }
-    @include w_zero {
-        #{$property}: 0px;
-    }
+
+    
+    
 }
 
 @mixin each88($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) {
-    @include each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, 0px);
+    @include each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, 0px, 'others');
+}
+
+@mixin each88_font($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) {
+    @include each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, 0px, 'font');
+}
+
+@mixin each88_property($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $type) {
+    @include each88_padding($property, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, 0px, $type);
 }
 

@@ -27,6 +27,19 @@ body {
     overflow-x: hidden;
 }
 
+.screen-size-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 1000;  /* Ensure it appears above other elements */
+}
+
 //Header
 #header,
 #header > div > div {
@@ -256,12 +269,6 @@ body {
                 padding-bottom: 20px;
                 padding-left: 7px;
                 padding-right: 0px;
-                // background-color: lightblue;       /* Background color inside the box */
-                // border: 2px solid white;           /* White border with 5px thickness */
-                // border-radius: 15px;               /* Rounded corners with 15px radius */
-                // width: 300px;                      /* Fixed width for the box */
-                // text-align: center;                /* Center the text inside the box */
-                // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
             }
 
             @include middle {
@@ -285,7 +292,6 @@ body {
                 border-top-right-radius: 0px;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
-                // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
             }
 
             li {
@@ -746,14 +752,16 @@ body {
             background-color: $primary-color-zh;
         }
 
-        $extra_text_box_padding: 0px;
+
         .swiper-slide h2 {    
             
-            @include each6(font-size, 80px, 58px, 56px, 48px, 29px, 29px, 29px);
-            @include each6(line-height, 85px, 70px, 70px, 60px, 36px, 36px, 36px);
+            // @include each6(font-size, 80px, 58px, 56px, 48px, 29px, 29px, 29px);
+            // @include each6(line-height, 85px, 70px, 70px, 60px, 36px, 36px, 36px);
+            // @include each6(padding-top, 100px, 100px, 100px, 100px, 20px, 20px, 20px);
 
-            @include each6(padding-top, 100px, 100px, 100px, 100px, 20px, 20px, 20px);
-            // @include each6(max-width, 856px, 605px, 609px, 509px, 402px, 332px, 294px);
+            @include each88_font(font-size, 80px, 58px, 56px, 48px, 29px, 29px, 29px, 29px);
+            @include each88_font(line-height, 85px, 70px, 70px, 60px, 36px, 36px, 36px, 36px);
+            @include each88_font(padding-top, 100px, 100px, 100px, 100px, 20px, 20px, 20px, 20px);
             @include each88(max-width, 856px, 605px, 609px, 565px, 349px, 402px, 294px, 294px);
 
             color: #F7C74F;
@@ -762,34 +770,38 @@ body {
             font-weight: 700;
             line-height: 85px; /* 106.25% */    
 
-            @include each4(letter-spacing, 0px, 0px, 0px, -0.29px);
+            @include each88_font(letter-spacing, 0px, 0px, 0px, 0px, -0.29px, -0.29px, -0.29px, -0.29px);
         }
 
         .swiper-slide h3 {
-            margin-top:30px;
+            // margin-top:30px;
             color: #FFF;
             leading-trim: both;
             text-edge: cap;
             font-family: Poppins;
-            font-size: 21px;
+            // font-size: 21px;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            @include each6(max-width, 610px, 450px, 420px, 400px, 294px, 294px, 294px);
+            @include each88_font(margin-top, 30px, 30px, 30px, 30px, 30px, 30px, 30px, 30px);
+            @include each88_font(font-size, 21px, 21px, 21px, 21px, 21px, 21px, 21px, 21px);
+            @include each88(max-width, 610px, 450px, 420px, 400px, 294px, 294px, 294px, 294px);
         }
 
         .swiper-slide p {
-            margin-top:20px;
+            // margin-top:20px;
             color: #FFF;
             leading-trim: both;
             text-edge: cap;
             font-family: Poppins;
-            font-size: 18px;
+            // font-size: 18px;
             font-style: normal;
             font-weight: 300;
             line-height: 30px; /* 166.667% */
             // max-width: calc(717px + $extra_text_box_padding);
-            @include each6(max-width, 610px, 450px, 420px, 400px, 294px, 294px, 294px);
+            @include each88_font(margin-top, 20px, 20px, 20px, 20px, 20px, 20px, 20px, 20px);
+            @include each88_font(font-size, 18px, 18px, 18px, 18px, 18px, 18px, 18px, 18px);
+            @include each88(max-width, 610px, 450px, 420px, 400px, 294px, 294px, 294px, 294px);
 
             &.lang-zh {
                 font-weight: 400;
@@ -802,16 +814,16 @@ body {
             border: 0px solid transparent;
             position: absolute;  /* Set the image to absolute positioning */
             
-            @include each6(bottom, 100px, 100px, 100px, 100px, 80px, 80px, 80px); //30px;           /* Align the image to the bottom of the wrapper */
+            @include each88_property(bottom, 100px, 100px, 100px, 100px, 80px, 80px, 80px, 80px, 'inverse_padding'); //30px;           /* Align the image to the bottom of the wrapper */
             // right: 0;            /* Align the image to the right of the wrapper */
             
             // @include each6(height, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
             // @include each6(width, 485px, 400px, 400px, 230px, 230px, 230px, 230px);
 
-            @include each88(height, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 180px);
-            @include each88(width, 485px, 360px, 320px, 300px, 260px, 230px, 230px, 180px);
+            @include each88_padding(height, 485px, 360px, 320px, 300px, 260px, 230px, 210px, 180px, 0px, 'image');
+            @include each88_padding(width, 485px, 360px, 320px, 300px, 260px, 230px, 210px, 180px, 0px, 'image');
             // @include each6_padding(margin-left, 856px, 605px, 609px, 509px, 402px, 332px, 294px, 120px);
-            @include each88_padding(margin-left, 856px, 605px, 609px, 565px, 349px, 302px, 94px, 4px, 120px);
+            @include each88_padding(margin-left, 856px, 605px, 609px, 565px, 349px, 302px, 94px, 4px, 120px, 'layout');
 
             opacity: 0.0;
             // margin-right: 44px;
@@ -826,7 +838,7 @@ body {
 
     .swiper-pagination {
         // @include each4(margin-right, 240px, 66px, 20px, 20px);
-        @include each6(margin-right, calc(214px), calc(142px), calc(103px), calc(60px), calc(20px), calc(20px), calc(20px));
+        @include each8(margin-right, calc(214px), calc(142px), calc(103px), calc(60px), calc(20px), calc(20px), calc(20px), calc(20px));
     }
 
     .swiper-pagination-bullet {

@@ -51,6 +51,8 @@
     </div>
     <!-- //Mouse Cursor -->
 
+    <div class="screen-size-overlay" id="screenSizeOverlay"></div>
+
     <!-- Header -->
     <header id="header"><div>
         <h1><button type="button">ARK</button></h1>
@@ -926,6 +928,21 @@
         }else{
             changeLanguage(stored_language);
         }
+
+        // script.js
+        function updateScreenSize() {
+            const screenSizeOverlay = document.getElementById('screenSizeOverlay');
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            screenSizeOverlay.textContent = `Viewport: ${viewportWidth}px x ${viewportHeight}px`;
+        }
+
+        // Call the function initially to display the size when the page loads
+        updateScreenSize();
+
+        // Add an event listener to update the size when the window is resized
+        window.addEventListener('resize', updateScreenSize);
         
     </script>
     <!-- //Script -->
