@@ -264,48 +264,49 @@
             </footer>
             
             <div class="fullfillment_new_container" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
-                <li class="swiper-slide">
-                    <h3>
-                        <small>fullfillment</small>
-                        <span id="fullfillment_new_fullfillment_span"></span>
-                    </h3>
-                    <p id="fullfillment_new_3pl_order_fullfillment_p"></p>
-                    <!-- <p>We handle all shipping and delivery so you can focus on sales and growth.</p> -->
-                </li>
-                <li class="swiper-slide">
-                    <h3>
-                        <small>fullfillment</small>
-                        <span id="fullfillment_new_integration_span"></span>
-                    </h3>
-                    <p id="fullfillment_new_3pl_integration_p"></p>
-                    <!-- <p>Our fulfillment software seamlessly integrates with your sales channels to connect data such as orders, inventory, and more.</p> -->
-                </li>
-                <li class="swiper-slide">
-                    <h3>
-                        <small>fullfillment</small>
-                        <span id="fullfillment_new_b2b_fullfillment_span"></span>
-                    </h3>
-                    <p id="fullfillment_new_3pl_b2b_fullfillment_p"></p>
-                    <!-- <p>Our B2B fulfillment service helps you manage EDI-integrated retail orders as well as manual wholesale orders.</p> -->
-                </li>
-                <li class="swiper-slide">
-                    <h3>
-                        <small>fullfillment</small>
-                        <span id="fullfillment_new_returns_customer_support_span"></span>
-                    </h3>
-                    <p id="fullfillment_new_3pl_returns_customer_support_p"></p>
-                    <!-- <p>Dealing with customer inquiries and returned orders can be made easier and more cost effective with help of our dedicated customer support team.</p> -->
-                </li>
-                <li class="swiper-slide">
-                    <h3>
-                        <small>fullfillment</small>
-                        <span id="fullfillment_new_custom_shipping_supplies_span"></span>
-                    </h3>
-                    <p id="fullfillment_new_3pl_customer_shipping_supplies_p"></p>
-                    <!-- <p>Elevate your customer experience with personalized packaging featuring your brand logo. Our custom shipping supplies include branded shipping boxes, bubble mailers, and box tape, with the option to include your business card and promotional inserts.</p> -->
-                </li>
+                <div class="fullfillment_new_container_background">
+                    <li class="swiper-slide">
+                        <h3>
+                            <small>fullfillment</small>
+                            <span id="fullfillment_new_fullfillment_span"></span>
+                        </h3>
+                        <p id="fullfillment_new_3pl_order_fullfillment_p"></p>
+                        <!-- <p>We handle all shipping and delivery so you can focus on sales and growth.</p> -->
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>
+                            <small>fullfillment</small>
+                            <span id="fullfillment_new_integration_span"></span>
+                        </h3>
+                        <p id="fullfillment_new_3pl_integration_p"></p>
+                        <!-- <p>Our fulfillment software seamlessly integrates with your sales channels to connect data such as orders, inventory, and more.</p> -->
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>
+                            <small>fullfillment</small>
+                            <span id="fullfillment_new_b2b_fullfillment_span"></span>
+                        </h3>
+                        <p id="fullfillment_new_3pl_b2b_fullfillment_p"></p>
+                        <!-- <p>Our B2B fulfillment service helps you manage EDI-integrated retail orders as well as manual wholesale orders.</p> -->
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>
+                            <small>fullfillment</small>
+                            <span id="fullfillment_new_returns_customer_support_span"></span>
+                        </h3>
+                        <p id="fullfillment_new_3pl_returns_customer_support_p"></p>
+                        <!-- <p>Dealing with customer inquiries and returned orders can be made easier and more cost effective with help of our dedicated customer support team.</p> -->
+                    </li>
+                    <li class="swiper-slide">
+                        <h3>
+                            <small>fullfillment</small>
+                            <span id="fullfillment_new_custom_shipping_supplies_span"></span>
+                        </h3>
+                        <p id="fullfillment_new_3pl_customer_shipping_supplies_p"></p>
+                        <!-- <p>Elevate your customer experience with personalized packaging featuring your brand logo. Our custom shipping supplies include branded shipping boxes, bubble mailers, and box tape, with the option to include your business card and promotional inserts.</p> -->
+                    </li>
+                </div>
             </div>
-            
         </div>
     </div>
     <!-- //Fullfillment bug fixed for wide only -->
@@ -871,7 +872,7 @@
         console.log('w='+sections.width());
         boxsContainer = $(".fullfillment_new_inner");
         var scrollTween=gsap.to(sections, {
-            x:-(2520 + 150 - 900),
+            x:-(2520 + 150 - 900 + 50),
             scrollTrigger: {
             trigger: boxsContainer,
             start: "top top",
