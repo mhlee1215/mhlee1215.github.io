@@ -2326,7 +2326,72 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: 300;
-  line-height: 30px; /* 166.667% */
+  line-height: normal; /* 166.667% */
+}
+@media (min-width: 1921px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: 30px;
+  }
+}
+@media (max-width: 1920px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal + 0px);
+  }
+}
+@media (max-width: 1440px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal + 0px);
+  }
+}
+@media (max-width: 1366px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal + 0px);
+  }
+}
+@media (max-width: 1280px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal + 0px);
+  }
+}
+@media (max-width: 960px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal + 0px);
+  }
+}
+@media (max-width: 744px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal + 0px);
+  }
+}
+@media (max-width: 480px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal + 0px);
+  }
+}
+@media (min-width: 1281px) and (max-height: 748px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal * 0.9);
+  }
+}
+@media (min-width: 1281px) and (max-height: 648px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal * 0.8);
+  }
+}
+@media (min-width: 1281px) and (max-height: 548px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal * 0.7);
+  }
+}
+@media (max-width: 480px) and (max-height: 700px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal * 0.9);
+  }
+}
+@media (max-width: 480px) and (max-height: 700px) {
+  .howitworks .swiper .swiper-slide p {
+    line-height: calc(normal * 0.8);
+  }
 }
 @media (min-width: 1921px) {
   .howitworks .swiper .swiper-slide p {
@@ -3653,7 +3718,7 @@ body {
 }
 @media (max-width: 480px) {
   .logistics .swiper .swiper-slide div h2 {
-    font-size: 85px;
+    font-size: 60px;
   }
 }
 .logistics .swiper .swiper-slide div h2.lang-ko {
@@ -3666,9 +3731,18 @@ body {
   margin-top: 30px;
   color: #9a8197;
   font-family: Poppins;
-  font-size: 36px;
   font-style: normal;
   font-weight: 400;
+}
+@media (min-width: 1281px) {
+  .logistics .swiper .swiper-slide div h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1280px) {
+  .logistics .swiper .swiper-slide div h3 {
+    font-size: 22px;
+  }
 }
 .logistics .swiper .swiper-slide div h3.lang-ko {
   color: #91A28F;
@@ -4308,7 +4382,7 @@ body {
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150px; /* 62.5% */
+  line-height: 100px; /* 62.5% */
   letter-spacing: -0.32px;
 }
 .fulfillment_new .fullfillment_new_container .fullfillment_new_container_background .swiper-slide p lang-ko {
@@ -4386,6 +4460,10 @@ body {
 .fulfillment footer > * {
   width: 100%;
   max-width: 430px;
+}
+.fulfillment header dl,
+.fulfillment footer dl {
+  max-width: 410px;
 }
 .fulfillment header h2,
 .fulfillment footer h2 {
@@ -4655,17 +4733,27 @@ body {
   }
 }
 @media (min-width: 1281px) {
-  .fulfillment .swiper .swiper-slide:nth-child(4) p, .fulfillment .swiper .swiper-slide:nth-child(5) p {
+  .fulfillment .swiper .swiper-slide:nth-child(4) p {
     top: 64px;
   }
 }
 @media (max-width: 1280px) {
-  .fulfillment .swiper .swiper-slide:nth-child(4) p, .fulfillment .swiper .swiper-slide:nth-child(5) p {
+  .fulfillment .swiper .swiper-slide:nth-child(4) p {
     top: 42px;
   }
 }
 .fulfillment .swiper .swiper-slide:nth-child(5) p {
   line-height: 1.6;
+}
+@media (min-width: 1281px) {
+  .fulfillment .swiper .swiper-slide:nth-child(5) p {
+    top: 64px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment .swiper .swiper-slide:nth-child(5) p {
+    top: 42px;
+  }
 }
 @media (min-width: 1281px) {
   .fulfillment .swiper .swiper-slide:nth-child(5) p {
@@ -4675,6 +4763,60 @@ body {
 @media (max-width: 1280px) {
   .fulfillment .swiper .swiper-slide:nth-child(5) p {
     font-size: 14px;
+  }
+}
+@media (min-width: 1281px) {
+  .fulfillment .swiper .swiper-slide:nth-child(4) p.lang-ko {
+    top: 108px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment .swiper .swiper-slide:nth-child(4) p.lang-ko {
+    top: 71px;
+  }
+}
+.fulfillment .swiper .swiper-slide:nth-child(5) p.lang-ko {
+  padding-right: 1px;
+}
+@media (min-width: 1281px) {
+  .fulfillment .swiper .swiper-slide:nth-child(5) p.lang-ko {
+    top: 108px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment .swiper .swiper-slide:nth-child(5) p.lang-ko {
+    top: 71px;
+  }
+}
+.fulfillment .swiper .swiper-slide:nth-child(4) p > lang-ko {
+  font-size: 16px;
+  line-height: 25px;
+}
+.fulfillment .swiper .swiper-slide:nth-child(5) p > lang-ko {
+  font-size: 16px;
+  line-height: 25px;
+}
+@media (min-width: 1281px) {
+  .fulfillment .swiper .swiper-slide:nth-child(4) p.lang-zh, .fulfillment .swiper .swiper-slide:nth-child(5) p.lang-zh {
+    top: 108px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment .swiper .swiper-slide:nth-child(4) p.lang-zh, .fulfillment .swiper .swiper-slide:nth-child(5) p.lang-zh {
+    top: 71px;
+  }
+}
+.fulfillment .swiper .swiper-slide:nth-child(5) p.lang-ko {
+  line-height: 1.6;
+}
+@media (min-width: 1281px) {
+  .fulfillment .swiper .swiper-slide:nth-child(5) p.lang-ko {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1280px) {
+  .fulfillment .swiper .swiper-slide:nth-child(5) p.lang-ko {
+    font-size: 10px;
   }
 }
 .fulfillment .swiper .swiper-slide:hover, .fulfillment .swiper .swiper-slide:focus {
@@ -4801,6 +4943,72 @@ body {
   .fulfillment .swiper .swiper-slide p {
     font-size: 21px;
   }
+}
+.fulfillment .swiper .swiper-slide p lang-ko-quot-begin {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 62.5% */
+  letter-spacing: -0.32px;
+}
+.fulfillment .swiper .swiper-slide p lang-ko-quot-end {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 62.5% */
+  letter-spacing: -0.32px;
+}
+.fulfillment .swiper .swiper-slide p lang-ko {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: NanumMyeongjo;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.125px;
+}
+.fulfillment .swiper .swiper-slide p lang-zh-quot-begin {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 62.5% */
+  letter-spacing: -0.32px;
+}
+.fulfillment .swiper .swiper-slide p lang-zh-quot-end {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Reddit Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 62.5% */
+  letter-spacing: -0.32px;
+}
+.fulfillment .swiper .swiper-slide p lang-zh {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: NanumMyeongjo;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.125px;
 }
 
 .metrics {
