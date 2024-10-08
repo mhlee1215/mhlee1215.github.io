@@ -4752,7 +4752,7 @@ body {
 }
 @media (max-width: 1280px) {
   .fulfillment .swiper .swiper-slide:nth-child(5) p {
-    top: 42px;
+    top: 55px;
   }
 }
 @media (min-width: 1281px) {
@@ -4762,7 +4762,7 @@ body {
 }
 @media (max-width: 1280px) {
   .fulfillment .swiper .swiper-slide:nth-child(5) p {
-    font-size: 14px;
+    font-size: 17.2px;
   }
 }
 @media (min-width: 1281px) {

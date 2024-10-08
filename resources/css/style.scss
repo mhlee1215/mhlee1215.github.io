@@ -1782,8 +1782,8 @@ body {
                 @include each(top, 64px, 42px);
             }
             &:nth-child(5) p {
-                @include each(top, 64px, 42px);
-                @include each(font-size, 22px, 14px);
+                @include each(top, 64px, 55px);
+                @include each(font-size, 22px, 17.2px);
                 line-height: 1.6;
             }
 
