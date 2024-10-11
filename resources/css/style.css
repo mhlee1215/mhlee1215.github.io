@@ -1051,12 +1051,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: "NanumMyeongjo"; /* Name of the font */
-  src: url("fonts/NanumMyeongjo-Regular.ttf") format("truetype"); /* Path to the font file */
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   overflow-x: hidden;
 }
@@ -4467,7 +4461,7 @@ body {
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
-  font-family: NanumMyeongjo;
+  font-family: Nanum Myeongjo;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -4500,7 +4494,7 @@ body {
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
-  font-family: NanumMyeongjo;
+  font-family: Nanum Myeongjo;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -5048,7 +5042,7 @@ body {
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
-  font-family: NanumMyeongjo;
+  font-family: Nanum Myeongjo;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
@@ -5081,7 +5075,7 @@ body {
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
-  font-family: NanumMyeongjo;
+  font-family: Nanum Myeongjo;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
