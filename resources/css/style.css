@@ -3042,6 +3042,16 @@ body {
     display: none;
   }
 }
+@media (min-width: 1281px) {
+  .vi header p.lang-ko {
+    max-width: 490px;
+  }
+}
+@media (max-width: 1280px) {
+  .vi header p.lang-ko {
+    max-width: 320px;
+  }
+}
 .vi header ul {
   z-index: 2;
   position: relative;
@@ -3569,6 +3579,36 @@ body {
     font-size: 13px;
   }
 }
+@media (min-width: 1281px) {
+  .production .swiper .swiper-slide:nth-child(1) > div > p.lang-ko {
+    padding-right: 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .production .swiper .swiper-slide:nth-child(1) > div > p.lang-ko {
+    padding-right: 13px;
+  }
+}
+@media (min-width: 1281px) {
+  .production .swiper .swiper-slide:nth-child(2) > div > p.lang-ko {
+    padding-right: 22px;
+  }
+}
+@media (max-width: 1280px) {
+  .production .swiper .swiper-slide:nth-child(2) > div > p.lang-ko {
+    padding-right: 13px;
+  }
+}
+@media (min-width: 1281px) {
+  .production .swiper .swiper-slide:nth-child(3) > div > p.lang-ko {
+    padding-right: 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .production .swiper .swiper-slide:nth-child(3) > div > p.lang-ko {
+    padding-right: 13px;
+  }
+}
 
 @media (min-width: 1281px) {
   .logistics {
@@ -3677,6 +3717,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 21.25px 0px 0px 21.25px;
   }
 }
 @media (min-width: 1281px) {
@@ -3751,6 +3792,7 @@ body {
   color: #DD577A;
 }
 .logistics .swiper .swiper-slide div p {
+  min-height: 66px;
   line-height: 1.76;
   color: #555;
 }
@@ -3772,6 +3814,16 @@ body {
 @media (max-width: 1280px) {
   .logistics .swiper .swiper-slide div p {
     font-size: 13px;
+  }
+}
+@media (min-width: 1281px) {
+  .logistics .swiper .swiper-slide:nth-child(2) > div > p.lang-ko {
+    max-width: 546px;
+  }
+}
+@media (max-width: 1280px) {
+  .logistics .swiper .swiper-slide:nth-child(2) > div > p.lang-ko {
+    max-width: 566px;
   }
 }
 
@@ -3873,7 +3925,7 @@ body {
 .fulfillment_new header > *,
 .fulfillment_new footer > * {
   width: 100%;
-  max-width: 430px;
+  width: 430px;
 }
 .fulfillment_new header h2,
 .fulfillment_new footer h2 {

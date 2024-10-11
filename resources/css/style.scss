@@ -8,7 +8,8 @@
 //Components
 @import "component/_swiper.scss"; //Swiper
 
-@import url(https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css); //나눔명조체
+// @import url(https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css); //나눔명조체
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap'); // Reddit mono
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&display=swap'); //Poppin font
 
@@ -852,6 +853,10 @@ body {
                     display: none;
                 }
             }
+
+            &.lang-ko{
+                @include each(max-width, 490px, 320px);    
+            }
         }
         ul {
             z-index: 2;
@@ -1016,6 +1021,8 @@ body {
             @include wide {
                 display: unset;
             }
+
+           
         }
         .swiper-slide {
             position: relative;
@@ -1141,7 +1148,19 @@ body {
                     @include each(font-size, 17px, 13px);
                     line-height: 1.76;
                     color: #555;
+
+                    
                 }
+            }
+
+            &:nth-child(1) > div > p.lang-ko {
+                @include each(padding-right, 30px, 13px);
+            }
+            &:nth-child(2) > div > p.lang-ko {
+                @include each(padding-right, 22px, 13px);
+            }
+            &:nth-child(3) > div > p.lang-ko {
+                @include each(padding-right, 30px, 13px);
             }
         }
     }
@@ -1226,6 +1245,7 @@ body {
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
+                    border-radius: 21.25px 0px 0px 21.25px;
                 }
             }
             div {
@@ -1276,9 +1296,14 @@ body {
                 p {
                     @include each(margin-top, 30px, 18px);
                     @include each(font-size, 17px, 13px);
+                    min-height:66px;
                     line-height: 1.76;
                     color: #555;
                 }
+            }
+
+            &:nth-child(2) > div > p.lang-ko {
+                @include each(max-width, 546px, 566px);
             }
         }
     }
@@ -1378,7 +1403,7 @@ body {
         }
         > * {
             width: 100%;
-            max-width: 430px;
+            width: 430px;
         }
 
         h2 {
@@ -1396,13 +1421,15 @@ body {
             @include each(margin-top, 13px, 8px);
             @include each(font-size, 36px, 22px);
             color: $primary-color-en;
+
+            &.lang-ko {
+                color: $primary-color-ko;
+            }
+            &.lang-zh {
+                color: $primary-color-zh;
+            }
         }
-        span.lang-ko {
-            color: $primary-color-ko;
-        }
-        span.lang-zh {
-            color: $primary-color-zh;
-        }
+        
         dl {
             @include each(margin-top, 119px, 38px);
             dt {
