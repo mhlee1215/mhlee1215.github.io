@@ -954,6 +954,13 @@ body {
             &.swiper-pagination-bullet-active {
                 @include each(width, 60px !important, 40px !important);
                 border: 1px solid #9b8298;
+
+                &.lang-ko {
+                    border: 1px solid $primary-color-ko;
+                }
+                &.lang-zh {
+                    border: 1px solid $primary-color-zh;
+                }
             }
         }
     }
@@ -2998,10 +3005,10 @@ body {
         @include each(width, 40px, 20px);
         background: $primary-color-en;
 
-        .lang-ko {
+        &.lang-ko {
             background: $primary-color-ko;
         }
-        .lang-zh {
+        &.lang-zh {
             background: $primary-color-zh;
         }
     }
