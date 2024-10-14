@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, target-densityDpi=device-dpi">
+    <script src="resources/js/jquery-3.6.4.min.js"></script>
+    <script src="resources/js/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <script src="resources/js/ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <script src="resources/js/cursor.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style_howitworks.css">
+
+    <!-- Include i18next library -->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <!-- Include i18nextXHRBackend plugin to load translations -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@2.6.1/i18nextHttpBackend.min.js"></script>
+    
+    
+    <!-- Include custom script -->
+    <script src="resources/js/i18next_script.js"></script>
+
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
+    <!-- <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.8.0c'></script> -->
+    <script src="resources/js/ScrollTrigger.min.js"></script>
+
+    <preference name="KeyboardShrinksView" value="false" />
+    <title>ARK</title>
+</head>
+<body>
+    <!-- Mouse Cursor -->
+    <div id="custom_cursor">
+        <div class="custom_cursor_inner">
+            <div class="custom_hover_circle">
+            </div>
+        </div>
+    </div>
+    <div id="custom_cursor_text">
+        <div class="custom_cursor_inner">
+            <div class="custom_hover_text">
+                <span>View More</span>
+                <span class="click">Click</span>
+            </div>
+        </div>
+    </div>
+    <!-- //Mouse Cursor -->
+
+    <div class="screen-size-overlay" id="screenSizeOverlay"></div>
+
+    <!-- Header -->
+    <header id="header"><div>
+        <h1><a href="index.html"><button type="button">ARK</button></a></h1>
+        <button type="button">Menu</button>
+        <div>
+            <button type="button" title="Close menu">x</button>
+            <aside>
+                <button id="language_menu_header" type="button" onclick="toggle_language_menu();">
+                    <div class="flag_select"></div><h3 class="text_en">EN</h3><h3 class="text_ko">KR</h3><h3 class="text_zh">CN</h3><div class="down_arrow"></div></button>
+                <ul id="language_menu_body" style="display: none;">
+                    <li>
+                        <a onclick="changeLanguage('en'); toggle_language_menu();" class="a_flag_global_white">
+                            <div class="flag_global_white"></div><h3 class="text_en">EN</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="changeLanguage('ko'); toggle_language_menu();" class="a_flag_korea_white">
+                            <div class="flag_korea_white"></div><h3 class="text_ko">KR</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="changeLanguage('zh'); toggle_language_menu();" class="a_flag_china_white">
+                            <div class="flag_china_white"></div><h3 class="text_zh">CN</h3>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <nav>
+                <a href="#howitworks" class="current">How it Works</a>
+                <a href="#production">Production</a>
+                <a href="#logistics">Logistics</a>
+                <a href="#fulfillment">Fulfillment</a>
+                <a href="#management">Management Software</a>
+            </nav>
+        </div>
+    </div></header>
+    <!-- //Header -->
+
+    <!-- How it works -->
+    <section class="howitworks" id="howitworks">
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+
+                    <h2 id="howitworks_li_1_h2"></h2>
+                    <!-- <h3>Keep your focus on growing your sales. Don't let anything else distract you.</h3> -->
+                    <h3 id="howitworks_li_1_h3"></h3>
+                    <!-- <p>ARK WITH GLOBAL will handle complex and confusing processes of product development, 
+                        production, transportation, fulfillment, sales management, and inventory management 
+                        all in one place.</p> -->
+                    <p id="howitworks_li_1_p"></p>
+                    <div id="howitworks_image_1"/>
+                </li>
+                <li class="swiper-slide">
+                    <!-- <h2>Where and how can I bring to life the product I have in mind?</h2> -->
+                    <h2 id="howitworks_li_2_h2"></h2>
+                    <!-- <h3>Can I improve the quality and lower the cost of my products?</h3> -->
+                    <h3 id="howitworks_li_2_h3"></h3>
+                    <!-- <p>With our East Asia branch in China, we provide prompt and accurate  -->
+                        <!-- consultation and services for sampling, production, and quality control.</p> -->
+                    <p id="howitworks_li_2_p"></p>
+                    <div id="howitworks_image_2"/>
+                </li>
+                <li class="swiper-slide">
+                    <!-- <h2>How can I efficiently bring my product 
+                        from the factories abroad? What about the customs?	</h2> -->
+                    <h2 id="howitworks_li_3_h2"></h2>
+                    <!-- <h3>International trade is too complicated and challenging.</h3> -->
+                    <h3 id="howitworks_li_3_h3"></h3>
+                    <!-- <p>Based on the delivery schedule of each finished product, our Logistics team provides fast 
+                        and transparent services for all trade-related tasks, including Ocean & Air freight, Cutoms, 
+                        FDA Processing, and Delivery.</p> -->
+                    <p id="howitworks_li_3_p"></p>
+                    <div id="howitworks_image_3"/>
+                </li>
+                <li class="swiper-slide">
+                    <!-- <h2>I don't have either a warehouse or 
+                        a system. 
+                        What should I do?</h2> -->
+                    <h2 id="howitworks_li_4_h2"></h2>
+                    <!-- <h3>Through ARK WITH warehouses in the USA, China, and Korea, we offer 
+                        global fulfillment services.</h3> -->
+                    <h3 id="howitworks_li_4_h3"></h3>
+                    <!-- <p>Our innovative order management and inventory systems allow real-time management for 
+                        fulfillment services.</p> -->
+                    <p id="howitworks_li_4_p"></p>
+                    <div id="howitworks_image_4"/>
+                </li>
+                <li class="swiper-slide">
+                    <!-- <h2>ONLY ONE COMPANY!</h2> -->
+                    <h2 id="howitworks_li_5_h2"></h2>
+                    <h3 id="howitworks_li_5_h3"></h2>
+                    <!-- <p>ARK WITH GLOBAL is the unparalleled company that offers 
+                        a complete package of product services competitively and all at once.</p> -->
+                    <p id="howitworks_li_5_p"></p>
+                    <div id="howitworks_image_5"/>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-pagination pagination-how-it-works"></div>
+    </section>
+    <!-- //How it works -->
+
+    
+
+    <!-- Script -->
+    <script>
+        var swiper = new Swiper(".vi .swiper", {
+            slidesPerView: "1",
+            //loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination-vi",
+                clickable: true
+            }
+        });
+
+        var is_last_slide = false;
+        var swiper_howitworks = new Swiper(".howitworks .swiper", {
+            //slidesPerView: "1",
+            //loop: true,
+            mousewheel: true,
+            speed: 500,
+            
+            direction: "vertical",
+            grabCursor: true,
+            simulateTouch:true,
+            pagination: {
+                el: ".pagination-how-it-works",
+                clickable: true
+            },
+            watchOverflow : true,
+            on: {
+                slideChange: function() {
+                    setTimeout(function () {
+                        is_last_slide = false;
+                        //console.log('slide change');
+                        //swiper_howitworks.params.touchReleaseOnEdges = false;  
+                        //swiper_howitworks.params.mousewheel.releaseOnEdges = false;
+                    });
+                },
+                reachEnd: function() {
+                    setTimeout(function () {
+                        console.log('reach end');
+                        //is_away_from_swiper = false;
+                        is_last_slide = true;
+                        //swiper_howitworks.params.touchReleaseOnEdges = true;
+                        //swiper_howitworks.params.mousewheel.releaseOnEdges = true;
+                        swiper_howitworks.mousewheel.disable();
+                    }, 1000);
+                },
+                reachBeginning: function() {
+                    setTimeout(function () {
+                        //show_image(1);
+                        //console.log('reach begin');
+                        //swiper_howitworks.params.touchReleaseOnEdges = true;
+                        //swiper_howitworks.params.mousewheel.releaseOnEdges = true;
+                    }, 500);
+                },
+                init: function() {
+                    setTimeout(function () {
+                        show_image(1);
+                        //console.log('reach begin');
+                        //swiper_howitworks.params.touchReleaseOnEdges = true;
+                        //swiper_howitworks.params.mousewheel.releaseOnEdges = true;
+                    }, 500);
+                }
+
+            },
+        });
+
+        var is_away_from_swiper = false;
+        function isSwiperAtMiddle() {
+            const swiperContainer = document.querySelector('.howitworks .swiper');
+            const rect = swiperContainer.getBoundingClientRect();
+        
+            // Get the viewport's center Y position (middle of the screen)
+            const viewportCenterY = window.innerHeight / 2;
+        
+            // Calculate the Swiper's center Y position (taking sticky into account)
+            const swiperCenterY = rect.top + (rect.height / 2);
+        
+            // Check if the Swiper's center is near the viewport center
+            const distanceFromCenter = Math.abs(viewportCenterY - swiperCenterY);
+        
+            // Define a threshold to consider "near the middle"
+            const threshold = 70; // Adjust this value based on precision needs
+            const move_away_threshold = 150;
+            // Check if the element is sticky by seeing if it has a `top: 0` value
+            const isSticky = rect.top === 0;
+        
+            if (distanceFromCenter <= threshold || isSticky) {
+                console.log('Swiper is either near the middle or sticky at the top');
+                if (is_away_from_swiper){
+                    swiper_howitworks.mousewheel.enable();
+                }
+                
+                return true;
+            } else if (distanceFromCenter >= move_away_threshold) {
+                console.log('Swiper is not in the middle of the screen');
+                is_away_from_swiper=true;
+                return false;
+            }
+        }
+
+        // Check if Swiper is in the middle on scroll
+        //window.addEventListener('scroll', isSwiperAtMiddle);
+        
+        // Function to detect if the element is stuck
+        function checkSticky() {
+            stickyElement = document.querySelector('.howitworks .swiper');
+            const rect = stickyElement.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            // Check if the element's top has reached the sticky point (e.g., top: 0)
+            //console.log(rect.bottom);
+            if (rect.bottom >= viewportHeight) {
+                console.log('Element is sticky!');
+                is_away_from_swiper = false;
+                setTimeout(function () {
+                    swiper_howitworks.mousewheel.enable();
+                }, 500);
+            } else {
+                is_away_from_swiper = true;
+                //console.log('Element is not sticky.');
+            }
+        }
+
+        // Add an event listener to check on scroll
+        window.addEventListener('scroll', checkSticky);
+        
+        let previousY = 0;
+        swiper_howitworks.on('touchMove', function (e) {
+            //console.log(e)
+            let mouseX =  e.touches.currentX;
+            let mouseY =  e.touches.currentY;
+
+            // Check if the current Y position is less than the previous Y position (dragging upwards)
+            if (mouseY < previousY) {
+                if (is_last_slide){
+                    console.log('Move to next section!');
+                    document.getElementById('vi_section').scrollIntoView({
+                        behavior: 'smooth'  // Smooth scrolling
+                    });
+                }
+                
+
+            }
+            
+            previousY = mouseY;  // Update previous Y position
+            //console.log(`Mouse is being dragged at X: ${mouseX}, Y: ${mouseY}`);
+        });
+
+
+        function show_image(currentIndex) {
+            const image = document.getElementById("howitworks_image_" + currentIndex);
+            //console.log(image);
+            // Get the vertical scroll position and viewport height
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+    
+            // Offset position at which the image should slide in (for example, when it reaches halfway down the screen)
+            const triggerPosition = windowHeight / 2;
+    
+            // Get the image's position relative to the viewport
+            const imageTop = image.getBoundingClientRect().top;
+    
+            // If the image reaches the trigger point, start the slide-in effect
+            //console.log(imageTop+', '+triggerPosition);
+            //if (imageTop < triggerPosition) {
+            image.style.transform = "translateX(0)"; // Slide to original position
+            image.style.opacity = "1"; // Fade in
+            //}
+          }
+          
+        swiper_howitworks.on("slideChangeTransitionEnd", function () {
+            // alert("hi");
+            const currentIndex = swiper_howitworks.activeIndex + 1;
+            // alert(currentIndex);
+            show_image(currentIndex);
+        });
+
+        function handleScroll(event) {
+            // Normalize the event for older browsers
+            const delta = event.deltaY || -event.wheelDelta || event.detail;
+        
+            if (delta < 0) {
+                if (!is_away_from_swiper){
+                    setTimeout(function () {
+                        swiper_howitworks.mousewheel.enable();
+                    }, 500);
+                }
+            } else if (delta > 0) {
+                if (is_last_slide){
+                    setTimeout(function () {
+                        swiper_howitworks.mousewheel.disable();
+                    }, 0);
+                }
+            }
+        }
+        
+        window.addEventListener('wheel', handleScroll);
+
+        
+
+
+        var swiper2 = new Swiper(".production .swiper", {
+            slidesPerView: 1,
+            autoplay: {
+                delay: 500000000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pagination",
+                clickable: true
+            }
+        });
+        var swiper3 = new Swiper(".logistics .swiper", {
+            slidesPerView: 1,
+            pagination: {
+                el: ".pagination2",
+                clickable: true
+            }
+        });
+        var swiper4 = new Swiper(".fulfillment .swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            pagination: {
+                el: ".pagination3",
+                clickable: true
+            },
+            breakpoints: {
+                1281: {
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    freeMode: {
+                        enabled: true,
+                        sticky: false,
+                        momentumBounce: false,
+                    },
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: false,
+                        dragSize: 0,
+                    },
+                    mousewheel: {
+                        enabled: true,
+                        sensitivity: 0.5,
+                        releaseOnEdges: true,
+                    },
+                }
+            }
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+        var sections=$('.fullfillment_new_container');
+        console.log('w='+sections.width());
+        boxsContainer = $(".fullfillment_new_inner");
+        var scrollTween=gsap.to(sections, {
+            x:-(2520 + 150 - 900 + 50),
+            scrollTrigger: {
+            trigger: boxsContainer,
+            start: "top top",
+            pin: true,
+            pinSpacing: true,
+            scrub: 1,
+            end: "300%",
+            }
+        });
+
+        var swiper5 = new Swiper(".swiper.thumb", {
+            //loop: true,
+            slidesPerView: "auto",
+            watchSlidesProgress: true,
+        });
+        var swiper6 = new Swiper(".swiper.big", {
+            //loop: true,
+            slidesPerView: "auto",
+            thumbs: {
+                swiper: swiper5,
+            },
+        });
+
+        var swiper7 = new Swiper(".services .swiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pagination4",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".btnNext",
+                prevEl: ".btnPrev",
+            },
+            breakpoints: {
+                768: {
+                    centeredSlides: false,
+                }
+            }
+        });
+
+        
+        // Init with default language
+        let stored_language = localStorage.getItem('current_language');
+        if (stored_language == null){
+            changeLanguage('en');
+        }else{
+            changeLanguage(stored_language);
+        }
+
+        // script.js
+        function updateScreenSize() {
+            const screenSizeOverlay = document.getElementById('screenSizeOverlay');
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            screenSizeOverlay.textContent = `Viewport: ${viewportWidth}px x ${viewportHeight}px`;
+        }
+
+        // Call the function initially to display the size when the page loads
+        updateScreenSize();
+
+        // Add an event listener to update the size when the window is resized
+        window.addEventListener('resize', updateScreenSize);
+        
+    </script>
+    <!-- //Script -->
+</body>
+</html>

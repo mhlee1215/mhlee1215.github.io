@@ -48,7 +48,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 #header {
-    z-index: 100;
+    z-index: 2;
     width: 100%;
     @include each(height, $headerW, $headerM);
     @include flex(row, nowrap, center, center);
@@ -68,20 +68,20 @@ body {
         }
     }
 
-    &:not(.fixed).lang-en {
-        background-color: $primary-color-en;
-        color: $primary-color-en;
-    }
+    // &:not(.fixed).lang-en {
+    //     background-color: $primary-color-en;
+    //     color: $primary-color-en;
+    // }
 
-    &:not(.fixed).lang-ko {
-        background-color: $primary-color-ko;
-        color: $primary-color-ko;
-    }
+    // &:not(.fixed).lang-ko {
+    //     background-color: $primary-color-ko;
+    //     color: $primary-color-ko;
+    // }
     
-    &:not(.fixed).lang-zh {
-        background-color: $primary-color-zh;
-        color: $primary-color-zh;
-    }
+    // &:not(.fixed).lang-zh {
+    //     background-color: $primary-color-zh;
+    //     color: $primary-color-zh;
+    // }
 
     &.fixed {
         position: fixed;
@@ -201,14 +201,10 @@ body {
 
         button.lang-ko {
             background: url("../images/logo-ko.svg") no-repeat center/100%;
-            // background-color: $primary-color-ko;
-            // color: $primary-color-ko;
         }
         
         button.lang-zh {
             background: url("../images/logo-zh.svg") no-repeat center/100%;
-            // background-color: $primary-color-zh;
-            // color: $primary-color-zh;
         }
     }
     > div > button {
@@ -803,7 +799,7 @@ body {
     z-index: 0;
     position: relative;
     @include flex(column, nowrap, center, center);
-    // @include each(margin-top, -$headerW, -$headerM);
+    @include each(margin-top, -$headerW, -$headerM);
     @include vhcalc(height, " - 0px");
     @include each(min-height, 700px, 500px);
     @include each(max-height, 1006px, 554px);
@@ -855,6 +851,10 @@ body {
 
             &.lang-ko{
                 @include each(max-width, 490px, 320px);    
+            }
+
+            &.lang-zh{
+                font-weight: 400;
             }
         }
         ul {
