@@ -798,6 +798,12 @@ body {
     }
 }
 
+*[class^="flag_"] {
+    @include hiddentxt;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .cursor {
     z-index: 9999;
     position: absolute;

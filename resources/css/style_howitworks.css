@@ -2914,6 +2914,16 @@ body {
   }
 }
 
+*[class^=flag_] {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  font-size: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .cursor {
   z-index: 9999;
   position: absolute;
