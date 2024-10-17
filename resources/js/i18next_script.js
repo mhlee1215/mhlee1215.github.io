@@ -18,7 +18,7 @@ i18next
 function updateContent(lang) {
     
     // Fetch JSON data from external file
-    fetch('/locales/dev.json')
+    fetch('locales/dev.json')
     .then(response => response.json()) // Parse the JSON data
     .then(data => {
         console.log('JSON Data Loaded:');
