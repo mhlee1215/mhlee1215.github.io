@@ -5,7 +5,7 @@ i18next
         debug: true,
         lng: 'en', // Default language
         backend: {
-            loadPath: '/locales/{{lng}}.json' // Path to language files
+            loadPath: 'locales/{{lng}}.json' // Path to language files
         }
     }, function(err, t) {
         if (err) return console.error(err);
