@@ -50,9 +50,6 @@ $(window).on('scroll', function(){
   let scrollTop = $(this).scrollTop();
   console.log(scrollTop);
   headerHeight = $('#header').outerHeight();
-  // if(scrollTop > $('#howitworks').offset().top - 10) {
-  //   $('#header div nav a:nth-child(1)').addClass('current').siblings('a').removeClass('current');
-  // }
   if(scrollTop > $('#production').offset().top - 10) {
     $('#header div nav a:nth-child(2)').addClass('current').siblings('a').removeClass('current');
   }
