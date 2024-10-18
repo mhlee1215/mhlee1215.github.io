@@ -2462,9 +2462,9 @@ body {
             @include middle {
                 width: 270px;
             }
-            & + .swiper-slide {
-                @include each(margin-left, 30px, 15px);
-            }
+            // & + .swiper-slide {
+            @include each(margin-right, 30px, 15px);
+            // }
             img {
                 @include each(width, 538px, 270px);
             }

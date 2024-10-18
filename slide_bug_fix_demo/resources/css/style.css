@@ -6174,13 +6174,13 @@ body {
   }
 }
 @media (min-width: 1281px) {
-  .omnichannel > .swiper .swiper-slide + .swiper-slide {
-    margin-left: 30px;
+  .omnichannel > .swiper .swiper-slide {
+    margin-right: 30px;
   }
 }
 @media (max-width: 1280px) {
-  .omnichannel > .swiper .swiper-slide + .swiper-slide {
-    margin-left: 15px;
+  .omnichannel > .swiper .swiper-slide {
+    margin-right: 15px;
   }
 }
 @media (min-width: 1281px) {
