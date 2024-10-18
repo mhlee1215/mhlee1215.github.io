@@ -6183,6 +6183,9 @@ body {
     margin-right: 15px;
   }
 }
+.omnichannel > .swiper .swiper-slide:last-child {
+  margin-right: 200px;
+}
 @media (min-width: 1281px) {
   .omnichannel > .swiper .swiper-slide img {
     width: 538px;
