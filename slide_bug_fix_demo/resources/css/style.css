@@ -6167,6 +6167,9 @@ body {
   .omnichannel > .swiper .swiper-slide {
     width: 538px;
   }
+  .omnichannel > .swiper .swiper-slide:last-child {
+    width: 938px;
+  }
 }
 @media (max-width: 1280px) {
   .omnichannel > .swiper .swiper-slide {

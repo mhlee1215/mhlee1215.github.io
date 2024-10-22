@@ -2454,10 +2454,14 @@ body {
             padding-right: $space;
         }
         .swiper-slide {
+            // width: 538px; 
             @include wide {
                 // &:first-child {
                 width: 538px;
-                // }
+                // } 
+                &:last-child {
+                    width: 938px;
+                } 
             }
             @include middle {
                 width: 270px;
@@ -2467,7 +2471,7 @@ body {
 
             &:last-child {
                 margin-right: 200px;
-            }
+            } 
 
             // }
             img {
